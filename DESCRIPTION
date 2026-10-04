@@ -1,0 +1,29 @@
+Package: trafficanalyzer
+Title: Analyse Web-Server Access Logs of kapsiar.sk
+Version: 0.0.0.9000
+Authors@R: 
+    person("Peter", "Kapsiar", , "kapsiar888n@gmail.com", role = c("aut", "cre"))
+Description: Reads, parses, anonymises and classifies Apache access logs
+    exported from Docker, and aggregates them into traffic metrics for a
+    dashboard.
+License: MIT + file LICENSE
+Config/roxygen2/version: 8.1.0
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Suggests: 
+    devtools,
+    ggplot2,
+    scales,
+    testthat (>= 3.0.0),
+    withr
+Config/testthat/edition: 3
+Imports: 
+    digest,
+    dplyr (>= 1.1.0),
+    jsonlite,
+    readr,
+    rlang,
+    stringr,
+    tibble
+Depends: 
+    R (>= 4.1)

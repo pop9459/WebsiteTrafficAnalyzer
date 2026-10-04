@@ -1,0 +1,10 @@
+{"log":"AH00558: apache2: Could not reliably determine the server's fully qualified domain name\n","stream":"stderr","time":"2026-07-09T21:43:32.269408593Z"}
+{"log":"172.68.1.10 - - [09/Jul/2026:21:48:03 +0000] \"GET / HTTP/1.1\" 200 616 \"-\" \"Mozilla/5.0 (X11; Linux x86_64; rv:152.0) Gecko/20100101 Firefox/152.0\"\n","stream":"stdout","time":"2026-07-09T21:48:03.100000000Z"}
+{"log":"172.68.1.10 - - [09/Jul/2026:21:48:04 +0000] \"GET /favicon.ico HTTP/1.1\" 404 529 \"https://kapsiar.sk/\" \"Mozilla/5.0 (X11; Linux x86_64; rv:152.0) Gecko/20100101 Firefox/152.0\"\n","stream":"stdout","time":"2026-07-09T21:48:04.200000000Z"}
+{"log":"192.0.2.7 - - [10/Jul/2026:03:12:00 +0000] \"GET /.env HTTP/1.1\" 404 437 \"-\" \"Mozilla/5.0\"\n","stream":"stdout","time":"2026-07-10T03:12:00.000000000Z"}
+{"log":"192.0.2.7 - - [10/Jul/2026:03:12:01 +0000] \"GET /.git/config HTTP/1.1\" 200 92 \"-\" \"Mozilla/5.0\"\n","stream":"stdout","time":"2026-07-10T03:12:01.000000000Z"}
+{"log":"198.51.100.20 - - [10/Jul/2026:04:00:00 +0000] \"GET /robots.txt?lang=en HTTP/1.1\" 404 437 \"-\" \"Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)\"\n","stream":"stdout","time":"2026-07-10T04:00:00.000000000Z"}
+{"log":"127.0.0.1 - - [10/Jul/2026:04:00:05 +0000] \"OPTIONS * HTTP/1.0\" 200 126 \"-\" \"Apache/2.4.67 (Debian) PHP/8.2.31 (internal dummy connection)\"\n","stream":"stdout","time":"2026-07-10T04:00:05.000000000Z"}
+{"log":"203.0.113.5 - - [10/Jul/2026:05:00:00 +0000] \"-\" 400 0 \"-\" \"-\"\n","stream":"stdout","time":"2026-07-10T05:00:00.000000000Z"}
+{"log":"203.0.113.5 - - [10/Jul/2026:05:00:01 +0000] \"GET /search?q=\\\"quoted\\\" HTTP/1.1\" 200 - \"-\" \"curl/8.7.1\" 512 0 1534\n","stream":"stdout","time":"2026-07-10T05:00:01.000000000Z"}
+{"log":"this is not an access log line\n","stream":"stdout","time":"2026-07-10T06:00:00.000000000Z"}
