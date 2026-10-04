@@ -49,3 +49,12 @@ test_that("lines that are not access-log lines keep a row with parse_ok = FALSE"
   expect_equal(sum(!req$parse_ok), 1)
   expect_true(is.na(req$status[!req$parse_ok]))
 })
+
+test_that("IPv6 client addresses are parsed", {
+  line <- '2001:db8::7 - - [10/Jul/2026:05:00:00 +0000] "GET / HTTP/2.0" 200 616 "-" "curl/8.7.1"'
+  req <- parse_access_log(line)
+
+  expect_true(req$parse_ok)
+  expect_equal(req$ip, "2001:db8::7")
+  expect_equal(req$protocol, "HTTP/2.0")
+})
