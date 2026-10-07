@@ -58,3 +58,22 @@ test_that("IPv6 client addresses are parsed", {
   expect_equal(req$ip, "2001:db8::7")
   expect_equal(req$protocol, "HTTP/2.0")
 })
+
+test_that("the connection address after %I %O %D is parsed as peer_ip", {
+  line <- paste0(
+    '198.51.100.9 - - [10/Jul/2026:07:00:00 +0000] "GET / HTTP/1.1" 200 616 ',
+    '"-" "curl/8.7.1" 188 1024 2210 172.68.1.10'
+  )
+  req <- parse_access_log(line)
+
+  expect_true(req$parse_ok)
+  expect_equal(req$ip, "198.51.100.9")
+  expect_equal(req$peer_ip, "172.68.1.10")
+  expect_equal(req$bytes_in, 188)
+  expect_equal(req$duration_us, 2210)
+})
+
+test_that("peer_ip is NA for lines without the connection address", {
+  req <- fixture_requests()
+  expect_true(all(is.na(req$peer_ip)))
+})

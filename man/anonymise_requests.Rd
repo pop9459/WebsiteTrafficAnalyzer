@@ -13,10 +13,14 @@ anonymise_requests(requests, salt)
 }
 \value{
 \code{requests} with \code{ip_hash} and \code{via_cloudflare} instead of \code{ip},
-\code{ident} and \code{user}.
+\code{ident}, \code{user} and \code{peer_ip}.
 }
 \description{
 Derives the fields that need the real IP address first (currently
 \code{via_cloudflare}; geo/ASN lookups belong here too), then replaces \code{ip}
-with \code{ip_hash} and drops the \code{ident} and \code{user} fields.
+with \code{ip_hash} and drops the \code{ident}, \code{user} and \code{peer_ip} fields.
+}
+\details{
+\code{via_cloudflare} is based on the connecting address: \code{peer_ip} when the log
+has it (extended format), otherwise \code{ip}.
 }

@@ -68,18 +68,26 @@ hash_ip <- function(ip, salt) {
 #'
 #' Derives the fields that need the real IP address first (currently
 #' `via_cloudflare`; geo/ASN lookups belong here too), then replaces `ip`
-#' with `ip_hash` and drops the `ident` and `user` fields.
+#' with `ip_hash` and drops the `ident`, `user` and `peer_ip` fields.
+#'
+#' `via_cloudflare` is based on the connecting address: `peer_ip` when the log
+#' has it (extended format), otherwise `ip`.
 #'
 #' @param requests Output of [parse_access_log()].
 #' @param salt Secret salt, see [get_salt()].
 #' @return `requests` with `ip_hash` and `via_cloudflare` instead of `ip`,
-#'   `ident` and `user`.
+#'   `ident`, `user` and `peer_ip`.
 #' @export
 anonymise_requests <- function(requests, salt) {
-  requests$via_cloudflare <- in_cloudflare(requests$ip)
+  connecting_ip <- requests$ip
+  if ("peer_ip" %in% names(requests)) {
+    connecting_ip <- dplyr::coalesce(requests$peer_ip, connecting_ip)
+  }
+  requests$via_cloudflare <- in_cloudflare(connecting_ip)
   requests$ip_hash <- hash_ip(requests$ip, salt)
   requests$ip <- NULL
   requests$ident <- NULL
   requests$user <- NULL
+  requests$peer_ip <- NULL
   dplyr::relocate(requests, "ip_hash", "via_cloudflare")
 }

@@ -13,14 +13,20 @@ parse_access_log(lines)
 A tibble with one row per line: \code{ip}, \code{ident}, \code{user}, \code{time}
 (request time, POSIXct UTC), \code{request}, \code{method}, \code{path}, \code{query},
 \code{protocol}, \code{status}, \code{bytes}, \code{referer}, \code{user_agent}, \code{bytes_in},
-\code{bytes_out}, \code{duration_us} and \code{parse_ok}.
+\code{bytes_out}, \code{duration_us}, \code{peer_ip} and \code{parse_ok}.
 }
 \description{
 Parses lines in Apache \code{combined} format, with or without the trailing
-\verb{\%I \%O \%D} fields. Lines that do not match keep their row with
-\code{parse_ok = FALSE}, so data-quality checks can count them.
+\verb{\%I \%O \%D} fields and the connection address \verb{\%\{c\}a} after them. Lines that
+do not match keep their row with \code{parse_ok = FALSE}, so data-quality checks
+can count them.
 }
 \details{
+With the extended log format, \code{ip} is the visitor address (after
+\code{mod_remoteip}) and \code{peer_ip} is the address that actually connected, which
+is a Cloudflare edge address for proxied requests. \code{peer_ip} is \code{NA} for
+older lines, where \code{ip} is already the connecting address.
+
 A \code{-} response size means no body was sent and becomes \code{0}. The request
 line is split into method, path, query and protocol; a malformed request
 line (e.g. a TLS handshake sent to the HTTP port) leaves those fields \code{NA}.

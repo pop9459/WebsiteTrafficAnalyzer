@@ -37,3 +37,19 @@ test_that("get_salt prefers WTA_SALT, then the salt file", {
   expect_match(salt, "^[0-9a-f]{64}$")
   expect_equal(get_salt(path = path), salt)
 })
+
+test_that("via_cloudflare uses the connecting address when peer_ip is logged", {
+  req <- parse_access_log(c(
+    # visitor behind Cloudflare: real IP in `ip`, Cloudflare edge as the peer
+    paste0('198.51.100.9 - - [10/Jul/2026:07:00:00 +0000] "GET / HTTP/1.1" 200 1 ',
+           '"-" "curl/8.7.1" 100 200 300 172.68.1.10'),
+    # direct hit: the peer is the visitor itself
+    paste0('203.0.113.5 - - [10/Jul/2026:07:00:01 +0000] "GET /.env HTTP/1.1" 404 1 ',
+           '"-" "curl/8.7.1" 100 200 300 203.0.113.5')
+  ))
+  anon <- anonymise_requests(req, "test-salt")
+
+  expect_equal(anon$via_cloudflare, c(TRUE, FALSE))
+  expect_false("peer_ip" %in% names(anon))
+  expect_false(any(grepl("172.68.1.10|198.51.100.9|203.0.113.5", unlist(anon))))
+})

@@ -1,18 +1,25 @@
-# Apache "combined" log line, with the optional "%I %O %D" suffix
-# (bytes received, bytes sent, response time in microseconds) that will be
-# added to the log format later. Quoted fields allow backslash escapes.
+# Apache "combined" log line, with the optional "%I %O %D" suffix (bytes
+# received, bytes sent, response time in microseconds) and, after it, the
+# optional "%{c}a" connection address that the extended format of KAP-49 adds.
+# Quoted fields allow backslash escapes.
 quoted <- '"((?:[^"\\\\]|\\\\.)*)"'
 combined_regex <- paste0(
   "^(\\S+) (\\S+) (\\S+) \\[([^\\]]+)\\] ", quoted, " (\\d{3}) (\\S+)",
   "(?: ", quoted, " ", quoted, ")?",
-  "(?: (\\d+) (\\d+) (\\d+))?$"
+  "(?: (\\d+) (\\d+) (\\d+)(?: (\\S+))?)?$"
 )
 
 #' Parse Apache access-log lines
 #'
 #' Parses lines in Apache `combined` format, with or without the trailing
-#' `%I %O %D` fields. Lines that do not match keep their row with
-#' `parse_ok = FALSE`, so data-quality checks can count them.
+#' `%I %O %D` fields and the connection address `%{c}a` after them. Lines that
+#' do not match keep their row with `parse_ok = FALSE`, so data-quality checks
+#' can count them.
+#'
+#' With the extended log format, `ip` is the visitor address (after
+#' `mod_remoteip`) and `peer_ip` is the address that actually connected, which
+#' is a Cloudflare edge address for proxied requests. `peer_ip` is `NA` for
+#' older lines, where `ip` is already the connecting address.
 #'
 #' A `-` response size means no body was sent and becomes `0`. The request
 #' line is split into method, path, query and protocol; a malformed request
@@ -22,7 +29,7 @@ combined_regex <- paste0(
 #' @return A tibble with one row per line: `ip`, `ident`, `user`, `time`
 #'   (request time, POSIXct UTC), `request`, `method`, `path`, `query`,
 #'   `protocol`, `status`, `bytes`, `referer`, `user_agent`, `bytes_in`,
-#'   `bytes_out`, `duration_us` and `parse_ok`.
+#'   `bytes_out`, `duration_us`, `peer_ip` and `parse_ok`.
 #' @export
 parse_access_log <- function(lines) {
   m <- stringr::str_match(lines, combined_regex)
@@ -49,6 +56,7 @@ parse_access_log <- function(lines) {
     bytes_in = as.numeric(m[, 11]),
     bytes_out = as.numeric(m[, 12]),
     duration_us = as.numeric(m[, 13]),
+    peer_ip = m[, 14],
     parse_ok = parse_ok
   )
 }
