@@ -21,6 +21,7 @@ Imports:
     digest,
     dplyr (>= 1.1.0),
     jsonlite,
+    openssl,
     readr,
     rlang,
     stringr,

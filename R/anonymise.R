@@ -18,9 +18,7 @@ get_salt <- function(create = FALSE,
 
   if (!file.exists(path) && create) {
     dir.create(dirname(path), recursive = TRUE, showWarnings = FALSE)
-    con <- file("/dev/urandom", "rb", raw = TRUE)
-    on.exit(close(con))
-    bytes <- readBin(con, "raw", 32)
+    bytes <- openssl::rand_bytes(32)
     writeLines(paste(format(bytes), collapse = ""), path)
     Sys.chmod(path, "0600")
   }
