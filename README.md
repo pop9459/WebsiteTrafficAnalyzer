@@ -1,5 +1,9 @@
 # trafficanalyzer
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/pop9459/WebsiteTrafficAnalyzer/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/pop9459/WebsiteTrafficAnalyzer/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
 Analysis engine for the web-server access logs of [kapsiar.sk](https://kapsiar.sk), built as an R package for the NHL Stenden "Data Dynamics" solo project. The project asks where the site's traffic comes from: humans, bots or scanners.
 
 Pipeline: read raw log → parse → anonymise IPs → classify → aggregate → dashboard.
