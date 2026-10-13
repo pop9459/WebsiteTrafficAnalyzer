@@ -41,6 +41,7 @@ Pipeline: read logs → parse → anonymise → classify (human/bot/scanner) →
 ## Log source
 
 - Apache in `php:8.2-apache` logs to stdout. The history exists only in `docker logs` of the `web` container and is lost when the container is recreated. Persisting the logs is KAP-49.
+- Current logs are persisted on the VPS (`/var/log/website`, extended format with `%I %O %D` and the connecting address, since 7 Oct 10:28 UTC). Fetch them with `scripts/fetch_logs.sh` (read-only forced-command key, no root; see `docs/log_access.md`) into git-ignored `data/raw/vps/`. Do not ssh to the server as root, and keep the server's IP out of the repo (site is behind Cloudflare). The pre-7-Oct history exists only in the manual backup `../data/vps_backup_20261007/`.
 - Format: Apache `combined`. The current backup (`data/raw/personalwebsite_web_1_20261003-json.log.gz`, 9 Jul–3 Oct 2026) is a copy of Docker's **json-file** log (`{"log","stream","time"}` per line; stderr = Apache error log). `%I %O %D` (bytes in, bytes out, response time) are planned additions. Older lines lack them, so the parser handles both formats.
 - The site is behind **Cloudflare**: ~56% of requests are logged with a Cloudflare edge IP, not the visitor's, so per-IP features only mean something for direct-to-origin traffic (`via_cloudflare == FALSE`). Logging `CF-Connecting-IP` is part of KAP-49.
 - The website repo is mounted as the web root (`.:/var/www/html`), so `/.git/`, `docker-compose.yaml` and `.env.example` are publicly served. `/.git/objects/` downloads by scanners are ~95% of all outgoing bytes.

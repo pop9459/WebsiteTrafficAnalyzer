@@ -9,3 +9,4 @@
 ^\.github$
 ^\.Rprofile$
 ^docs$
+^scripts$
