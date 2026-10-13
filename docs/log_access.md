@@ -45,5 +45,7 @@ Remove the key line from the `logreader` user's `authorized_keys` (or delete the
 ## Limits
 
 - Every fetch downloads the whole directory (a few MB). Fine for now; use `rsync` if the logs grow.
-- Rotation keeps few generations (`access.log.1`), so fetch regularly. The history before 7 Oct 2026 is only in the manual backup of that day.
+- The server keeps the logs: logrotate (`docker/logrotate/website-apache` in the website repo) rotates weekly (Sunday 00:00 UTC) and keeps 520 compressed generations, about ten years. Fetching is therefore not urgent, but each snapshot is kept locally anyway.
+- The first generations after the 7 Oct 2026 restart are the only server-side logs so far; the history before that is only in the manual backup of that day (`../data/vps_backup_20261007/`).
+- The tarball contains every generation, so it grows by about 1 MB per week; switch to `rsync` if that ever matters.
 - The scheduled run on the VPS (KAP-60) will make the local copy unnecessary for the dashboard; it stays useful for development and labelling.

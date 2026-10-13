@@ -133,7 +133,7 @@ summary_lines <- c(
   "",
   "- The two periods differ in length and season; rates per day are compared.",
   "- Proxy-style probes (`GET http://...`) are not counted as exposure probes; the server answers them with its normal page.",
-  "- The 10 Oct 23:53 - 11 Oct 00:11 UTC gap in the new logs (log rotation) is not corrected for."
+  "- No requests are logged between 10 Oct 23:53 and 11 Oct 00:11 UTC, around the weekly log rotation. It is not corrected for; it is 18 minutes out of 6.4 days."
 )
 writeLines(summary_lines, "analysis/fix_effect_summary.md")
 cat(summary_lines, sep = "\n")

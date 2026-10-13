@@ -9,7 +9,7 @@ Fix live at 07 Oct 10:28 UTC (restart of the web container, Apache serves only `
 | period | from | to | days | requests | requests/day | MB out/day |
 |---|---|---|---|---|---|---|
 | before | 09 Jul 21:48 UTC | 07 Oct 09:50 UTC | 89.5 | 309,346 | 3,456 | 110.8 |
-| after | 07 Oct 10:28 UTC | 13 Oct 19:31 UTC | 6.4 |  36,556 | 5,733 | 1.8 |
+| after | 07 Oct 10:28 UTC | 13 Oct 19:34 UTC | 6.4 |  36,562 | 5,731 | 1.8 |
 
 ## Exposed files (probe answered with 2xx)
 
@@ -20,7 +20,7 @@ Fix live at 07 Oct 10:28 UTC (restart of the web container, Apache serves only `
 
 - Outgoing bytes per day: 110.8 MB before, 1.83 MB after (98.4% drop).
 - Exposure probes answered with 2xx per day: 83.0 before, 0.00 after (100.0% drop).
-- Requests per day: 3,456 before, 5,733 after: scanners keep coming, but get nothing.
+- Requests per day: 3,456 before, 5,731 after: scanners keep coming, but get nothing.
 
 ## Status of exposure probes
 
@@ -35,4 +35,4 @@ Fix live at 07 Oct 10:28 UTC (restart of the web container, Apache serves only `
 
 - The two periods differ in length and season; rates per day are compared.
 - Proxy-style probes (`GET http://...`) are not counted as exposure probes; the server answers them with its normal page.
-- The 10 Oct 23:53 - 11 Oct 00:11 UTC gap in the new logs (log rotation) is not corrected for.
+- No requests are logged between 10 Oct 23:53 and 11 Oct 00:11 UTC, around the weekly log rotation. It is not corrected for; it is 18 minutes out of 6.4 days.
