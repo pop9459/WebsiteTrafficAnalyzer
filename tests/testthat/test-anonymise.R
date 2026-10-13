@@ -53,3 +53,18 @@ test_that("via_cloudflare uses the connecting address when peer_ip is logged", {
   expect_false("peer_ip" %in% names(anon))
   expect_false(any(grepl("172.68.1.10|198.51.100.9|203.0.113.5", unlist(anon))))
 })
+
+test_that("the committed sample contains no IP addresses", {
+  path <- test_path("../../data/sample/requests_sample.csv")
+  skip_if_not(file.exists(path), "sample data is not part of the built package")
+
+  sample <- readr::read_csv(path, col_types = readr::cols(.default = "c"))
+  expect_false(any(c("ip", "peer_ip", "ident", "user") %in% names(sample)))
+  expect_match(sample$ip_hash, "^[0-9a-f]{16}$")
+
+  # Browser versions such as "Chrome/138.0.0.0" look like IPv4 addresses,
+  # so the user agent is left out of the check.
+  ipv4 <- "(?<![0-9.])([0-9]{1,3}\\.){3}[0-9]{1,3}(?![0-9.])"
+  free_text <- unlist(sample[c("path", "referer")], use.names = FALSE)
+  expect_false(any(grepl(ipv4, free_text, perl = TRUE)))
+})
