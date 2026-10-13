@@ -1,0 +1,201 @@
+id,time,via_cloudflare,method,path,status,bytes,referer,user_agent,label
+1,2026-07-16T04:44:33Z,TRUE,GET,/cache.php,404,528,NA,NA,NA
+2,2026-08-24T06:15:53Z,FALSE,GET,/,200,560,NA,Go-http-client/1.1,NA
+3,2026-09-01T19:17:04Z,TRUE,GET,/,200,615,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",NA
+4,2026-08-20T01:20:47Z,FALSE,GET,/app/.env,404,495,NA,l9explore/1.2.2,NA
+5,2026-08-31T15:20:13Z,TRUE,GET,/scripts/main.js,200,861,kapsiar.sk,"Mozilla/5.0 (iPhone; CPU iPhone OS 26_6_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/152.0.7977.64 Mobile/15E148 Safari/604.1",NA
+6,2026-08-17T01:50:04Z,TRUE,GET,/trace.axd,404,537,NA,meta-externalagent/1.1 (+https://developers.facebook.com/docs/sharing/webmasters/crawler),NA
+7,2026-08-12T14:26:01Z,TRUE,GET,/wp-home.php,404,528,NA,NA,NA
+8,2026-09-28T12:37:54Z,FALSE,POST,/index.php,200,1125,NA,libredtail-http,NA
+9,2026-09-27T00:31:29Z,FALSE,GET,/,200,1089,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",NA
+10,2026-07-30T11:31:19Z,TRUE,GET,/sitemap.xml,404,529,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0; +claudebot@anthropic.com)",NA
+11,2026-07-22T12:08:40Z,FALSE,GET,/,200,560,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.6312.86 Safari/537.36",NA
+12,2026-07-15T05:51:17Z,TRUE,GET,/,200,774,NA,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",NA
+13,2026-08-26T00:20:39Z,TRUE,HEAD,/shop,404,196,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36",NA
+14,2026-09-18T18:34:12Z,FALSE,GET,/,200,579,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",NA
+15,2026-07-10T06:05:50Z,TRUE,GET,/,200,615,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",NA
+16,2026-08-04T08:35:12Z,TRUE,GET,/nginx_status,404,536,NA,CCBot/2.0 (https://commoncrawl.org/faq/),NA
+17,2026-07-19T08:18:41Z,TRUE,GET,/,200,616,NA,Python/3.12 aiohttp/3.13.5,NA
+18,2026-08-16T22:34:06Z,TRUE,GET,/wp-json/,404,529,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36",NA
+19,2026-09-14T18:41:47Z,TRUE,GET,/robots.txt,404,529,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/600.2.5 (KHTML, like Gecko) Version/8.0.2 Safari/600.2.5 (Gort)",NA
+20,2026-08-24T06:20:34Z,FALSE,GET,/ows,404,476,NA,Go-http-client/1.1,NA
+21,2026-08-15T02:58:39Z,TRUE,GET,/lv.php,404,528,NA,NA,NA
+22,2026-10-02T04:39:08Z,TRUE,GET,/css/loadScreen.css,200,495,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",NA
+23,2026-08-12T07:03:55Z,FALSE,GET,/,200,560,NA,Mozilla/5.0 (compatible; CyberConvoyScout/1.0; +https://scout.cyberconvoy.co),NA
+24,2026-09-29T06:51:45Z,TRUE,GET,/,200,774,NA,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",NA
+25,2026-07-10T06:05:40Z,TRUE,GET,/,200,615,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",NA
+26,2026-07-30T06:27:24Z,FALSE,GET,/,200,1089,<ip>:80,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",NA
+27,2026-09-30T00:53:22Z,FALSE,GET,/favicon.ico,404,495,NA,Mozilla/5.0,NA
+28,2026-09-24T20:25:30Z,TRUE,GET,/,200,616,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",NA
+29,2026-09-07T20:02:48Z,FALSE,POST,/,200,579,NA,Mozilla/5.0,NA
+30,2026-08-25T18:48:18Z,TRUE,GET,/kj.php,404,527,NA,NA,NA
+31,2026-07-19T16:56:34Z,TRUE,GET,/trace.axd,404,534,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; Perplexity-User/1.0; +https://perplexity.ai/perplexity-user",NA
+32,2026-08-26T08:36:40Z,TRUE,GET,/.git/objects/9c/ccbf8b99fe4eb35c68f5a48a8c4b0d69a78249,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",NA
+33,2026-08-12T21:41:45Z,TRUE,GET,/css/animations.css,200,620,kapsiar.sk,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.60 Safari/537.36 Edge/12.246",NA
+34,2026-08-20T03:36:19Z,TRUE,POST,/index.php,200,615,kapsiar.sk,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA
+35,2026-07-31T09:11:06Z,TRUE,GET,/,200,615,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",NA
+36,2026-09-17T18:23:38Z,TRUE,GET,/robots.txt,404,533,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/600.2.5 (KHTML, like Gecko) Version/8.0.2 Safari/600.2.5 (Gort)",NA
+37,2026-07-14T23:32:21Z,FALSE,GET,/,200,737,NA,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",NA
+38,2026-07-16T13:13:24Z,FALSE,GET,/,200,616,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36 Edg/90.0.818.46",NA
+39,2026-07-19T23:19:02Z,TRUE,GET,/2.php,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA
+40,2026-07-23T17:57:35Z,TRUE,GET,/.git/objects/11/c57e0f1237738df6a837ac38637a4fa3e649ac,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",NA
+41,2026-07-12T08:42:54Z,TRUE,GET,/robots.txt,404,529,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0; +claudebot@anthropic.com)",NA
+42,2026-07-10T06:05:38Z,TRUE,GET,/,200,615,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",NA
+43,2026-08-20T16:07:15Z,FALSE,GET,/scripts/v3,404,476,NA,feroxbuster/2.13.1,NA
+44,2026-08-22T10:51:48Z,FALSE,GET,/user/.env,404,476,NA,Mozilla/5.0,NA
+45,2026-10-03T02:52:36Z,TRUE,GET,/,200,616,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",NA
+46,2026-08-25T23:16:15Z,TRUE,HEAD,/test,404,196,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36",NA
+47,2026-09-26T23:19:43Z,TRUE,GET,/,200,774,NA,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",NA
+48,2026-09-04T23:35:34Z,TRUE,GET,/css/animations.css,200,620,kapsiar.sk,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.5938.132 Safari/537.36",NA
+49,2026-07-10T06:04:36Z,TRUE,GET,/,200,615,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",NA
+50,2026-08-30T08:41:03Z,TRUE,GET,/%2f%2egitlab%2fmerge_request_templates,404,528,NA,curl/8.7.1,NA
+51,2026-07-10T06:05:52Z,TRUE,GET,/,200,615,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",NA
+52,2026-08-04T22:37:42Z,FALSE,CONNECT,<ip>:80,200,2537,NA,NA,NA
+53,2026-08-23T05:02:14Z,TRUE,GET,/scripts/animations.js,200,2092,kapsiar.sk,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 iubenda-radar/3.30.0",NA
+54,2026-09-07T21:39:53Z,TRUE,GET,/firebase-service-account.json,404,532,NA,Mozilla/5.0 (compatible; MistralAI-User/1.0; +https://mistral.ai/),NA
+55,2026-08-04T01:25:26Z,TRUE,GET,/admin/controller/extension/extension/,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA
+56,2026-07-25T05:22:33Z,TRUE,GET,/,200,616,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36 Edg/91.0.864.54",NA
+57,2026-07-17T14:42:53Z,TRUE,GET,/plugins/editors/jce/jce.xml,404,529,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA
+58,2026-07-30T14:28:51Z,TRUE,GET,/,200,774,NA,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",NA
+59,2026-08-13T08:46:47Z,FALSE,GET,/,200,1089,NA,Mozilla/5.0 (compatible; GenomeCrawlerd/1.0; +https://www.nokia.com/genomecrawler),NA
+60,2026-09-29T05:49:42Z,FALSE,GET,/,200,560,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",NA
+61,2026-08-02T18:36:18Z,TRUE,GET,/sitemap.xml,404,529,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0; +claudebot@anthropic.com)",NA
+62,2026-09-14T16:18:52Z,TRUE,GET,/feed/atom/,404,528,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36",NA
+63,2026-08-15T05:33:45Z,FALSE,GET,/,200,560,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",NA
+64,2026-09-20T08:11:27Z,TRUE,GET,/robots.txt,404,529,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0",NA
+65,2026-09-09T22:10:52Z,TRUE,GET,/scripts/main.js,200,861,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",NA
+66,2026-08-24T06:12:03Z,FALSE,GET,/.m2/settings-security.xml,404,476,NA,Go-http-client/1.1,NA
+67,2026-08-23T09:30:56Z,FALSE,POST,/,200,560,<ip>:80,WordPress/6.4.3,NA
+68,2026-08-24T12:03:01Z,FALSE,GET,/license.txt,404,476,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.6312.86 Safari/537.36",NA
+69,2026-08-24T06:20:34Z,FALSE,GET,/dbadmin,404,476,NA,Go-http-client/1.1,NA
+70,2026-09-29T22:15:07Z,TRUE,GET,/css/colors/coffee/index.php,404,528,NA,NA,NA
+71,2026-07-20T14:33:35Z,TRUE,GET,/,200,616,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",NA
+72,2026-09-29T11:27:40Z,TRUE,GET,/,200,616,NA,curl/8.22.0,NA
+73,2026-09-23T06:14:41Z,FALSE,GET,/,200,1089,NA,curl/7.61.1,NA
+74,2026-09-27T13:12:20Z,TRUE,GET,/,200,616,NA,curl/8.22.0,NA
+75,2026-07-31T03:35:13Z,TRUE,GET,/sitemap.xml,404,529,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0; +claudebot@anthropic.com)",NA
+76,2026-08-17T02:35:37Z,TRUE,GET,/,200,616,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",NA
+77,2026-08-20T15:29:23Z,FALSE,GET,/beta/infos.php,404,476,NA,curl/8.7.1,NA
+78,2026-08-07T07:29:12Z,FALSE,POST,/index.html/1429289abcdefgh.srv,404,532,NA,"Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/134.0.6998.99 Mobile/15E148 Safari/604.1",NA
+79,2026-09-26T08:50:57Z,FALSE,GET,/,200,737,NA,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",NA
+80,2026-08-22T06:24:03Z,FALSE,GET,/.env.old,404,531,NA,"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.132 Safari/537.36 OPR/21.0.1432.57 (Edition Campaign 47)",NA
+81,2026-07-16T20:37:10Z,FALSE,POST,/,200,774,NA,"Mozilla/5.0 (Linux; U; Android 4.4.2; en-US; HM NOTE 1W Build/KOT49H) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 UCBrowser/11.0.5.850 U3/0.8.0 Mobile Safari/534.30",NA
+82,2026-09-04T18:07:10Z,TRUE,GET,/src/profSkillsPortfolio2/PDP/duolingoJune.jpg,200,77095,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36",NA
+83,2026-08-16T21:41:52Z,TRUE,GET,/wp-includes/Requests/library/,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA
+84,2026-09-20T23:12:09Z,FALSE,GET,/debug/vars,404,476,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.0.0",NA
+85,2026-09-21T02:33:18Z,TRUE,GET,/,200,616,NA,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2),NA
+86,2026-07-15T22:59:02Z,FALSE,GET,/,200,579,NA,Linux Gnu (cow),NA
+87,2026-10-01T00:15:32Z,TRUE,GET,/,200,616,NA,curl/8.22.0,NA
+88,2026-10-03T08:45:35Z,TRUE,GET,/,200,616,NA,Mozilla/5.0 (compatible; AhrefsBot/7.0; +http://ahrefs.com/robot/),NA
+89,2026-07-25T13:37:25Z,TRUE,GET,/privatekey.key,404,528,NA,Mozilla/5.0 (compatible; GoogleOther; +http://www.google.com/bot.html),NA
+90,2026-09-29T22:47:20Z,TRUE,GET,/favicon.ico,404,529,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",NA
+91,2026-09-05T00:36:06Z,TRUE,GET,/,200,616,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",NA
+92,2026-09-16T14:04:09Z,FALSE,GET,/php.php5,404,476,NA,NA,NA
+93,2026-07-10T06:04:37Z,TRUE,GET,/,200,615,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",NA
+94,2026-08-24T08:05:33Z,FALSE,GET,/,200,560,NA,Go-http-client/1.1,NA
+95,2026-07-21T09:12:36Z,TRUE,GET,/,200,774,NA,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",NA
+96,2026-08-11T05:57:41Z,FALSE,GET,/,200,560,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36 (compatible; +https://developers.cloudflare.com/security-center/)",NA
+97,2026-08-24T06:22:33Z,FALSE,GET,/,200,560,NA,Go-http-client/1.1,NA
+98,2026-07-30T19:53:08Z,TRUE,GET,/,200,616,NA,Brand360-sk-domain-audit/2.0-rust,NA
+99,2026-07-13T16:31:52Z,TRUE,GET,/,200,774,NA,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",NA
+100,2026-09-14T10:43:26Z,FALSE,GET,/css/cube.css,200,829,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",NA
+101,2026-08-18T12:25:38Z,TRUE,GET,/,200,774,NA,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",NA
+102,2026-09-04T19:18:01Z,TRUE,GET,/scripts/clock.js,200,730,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",NA
+103,2026-08-20T03:36:25Z,TRUE,GET,/index.php,200,773,NA,"Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1",NA
+104,2026-09-17T13:08:59Z,TRUE,GET,/.config/continue/config.yaml,404,529,kapsiar.sk,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",NA
+105,2026-09-25T09:42:25Z,TRUE,GET,/application/.env,404,528,NA,"Mozilla/5.0 (Linux; Android 7.0; SM-J730GM Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.137 Mobile Safari/537.36",NA
+106,2026-09-15T16:50:20Z,FALSE,GET,/exports/.env,404,476,NA,Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html),NA
+107,2026-07-19T14:36:41Z,TRUE,GET,/server.key,404,535,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; MistralAI-User/1.0",NA
+108,2026-09-11T20:50:26Z,TRUE,GET,/scripts/main.js,200,861,kapsiar.sk,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36",NA
+109,2026-08-06T12:58:35Z,TRUE,GET,/,200,774,NA,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",NA
+110,2026-10-01T13:33:09Z,FALSE,GET,/,200,1089,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA
+111,2026-07-18T00:25:19Z,FALSE,GET,/,200,560,NA,"Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.16 (KHTML, like Gecko) Chrome/10.0.648.133 Safari/534.16",NA
+112,2026-09-21T23:03:57Z,TRUE,GET,/,200,774,NA,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",NA
+113,2026-07-21T20:09:47Z,TRUE,GET,/scripts/main.js,200,861,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",NA
+114,2026-08-20T13:46:59Z,TRUE,GET,/docker-compose.yaml,200,622,NA,meta-externalagent/1.1 (+https://developers.facebook.com/docs/sharing/webmasters/crawler),NA
+115,2026-09-03T21:28:14Z,TRUE,GET,/,200,615,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA
+116,2026-09-01T19:07:51Z,FALSE,GET,/mysite/local_settings.py,404,476,NA,Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html),NA
+117,2026-10-02T05:19:12Z,TRUE,GET,/sitemap.xml,404,529,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0; +claudebot@anthropic.com)",NA
+118,2026-10-02T06:20:12Z,FALSE,GET,/,200,1089,NA,Mozilla/5.0 (compatible),NA
+119,2026-08-20T13:19:10Z,TRUE,GET,/,200,774,NA,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",NA
+120,2026-08-24T16:47:20Z,TRUE,GET,/,200,616,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",NA
+121,2026-08-30T21:46:13Z,FALSE,GET,/login.asp,404,532,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",NA
+122,2026-09-20T10:59:26Z,FALSE,GET,/GlobalConfig.json,404,476,NA,Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html),NA
+123,2026-07-15T13:29:02Z,FALSE,GET,/trace.axd,404,495,NA,Mozilla/5.0 (l9scan/2.0.7393e27333e2030313e2637313; +https://leakix.net),NA
+124,2026-09-14T07:07:01Z,TRUE,GET,/,200,615,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",NA
+125,2026-08-29T19:13:00Z,FALSE,GET,/mcp,404,495,NA,Mozilla/5.0 (compatible; Infrawatch/1.0; +https://infrawat.ch/),NA
+126,2026-08-24T05:44:41Z,FALSE,GET,/,200,560,www.google.com,${jndi:ldap://127.0.0.1:1389/a},NA
+127,2026-08-09T18:02:10Z,TRUE,GET,/about.php,404,528,NA,NA,NA
+128,2026-07-21T10:04:48Z,TRUE,GET,/service-account.json,404,528,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; OAI-SearchBot/1.0; +https://openai.com/searchbot",NA
+129,2026-07-16T21:09:30Z,TRUE,GET,/,200,774,NA,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",NA
+130,2026-07-31T17:40:52Z,TRUE,GET,/backend/aws.json,404,529,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; GPTBot/1.4; +https://openai.com/gptbot)",NA
+131,2026-09-14T19:25:24Z,TRUE,GET,/robots.txt,404,529,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36; compatible; OAI-SearchBot/1.4; robots.txt; +https://openai.com/searchbot",NA
+132,2026-09-29T10:54:29Z,FALSE,GET,/,200,616,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36 Edg/90.0.818.46",NA
+133,2026-08-14T19:55:36Z,FALSE,GET,/.git/logs/refs/heads/staging,404,476,NA,Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0,NA
+134,2026-09-07T14:12:36Z,TRUE,GET,/__vite_rsc_findSourceMapURL,404,536,NA,Mozilla/5.0 (compatible; Hunyuan/1.0; +https://hunyuan.tencent.com/),NA
+135,2026-09-20T04:36:22Z,TRUE,GET,/.kube/config,404,529,NA,"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36 [ip:93.41.125.186]",NA
+136,2026-09-24T12:43:41Z,FALSE,GET,/laravel/.env,404,531,NA,Mozilla/5.0 (Windows; U; Windows NT 5.1; de-DE) Chrome/4.0.223.3 Safari/532.2,NA
+137,2026-08-05T19:29:10Z,TRUE,GET,/css/loadScreen.css,200,495,kapsiar.sk,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.5938.132 Safari/537.36",NA
+138,2026-08-24T18:44:40Z,TRUE,GET,/app/.env.test,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",NA
+139,2026-09-16T14:04:11Z,FALSE,GET,/.drone.yml,404,476,NA,"Mozilla/5.0 (Linux; Android 14; SM-S918B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36",NA
+140,2026-10-02T02:33:39Z,FALSE,GET,/,200,616,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36 Edg/90.0.818.46",NA
+141,2026-09-12T10:19:48Z,FALSE,GET,/assets/env.js,404,476,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; OAI-SearchBot/1.3; +https://openai.com/searchbot)",NA
+142,2026-07-23T13:08:10Z,TRUE,GET,/only.php,404,528,NA,NA,NA
+143,2026-08-26T08:36:41Z,TRUE,GET,/.git/objects/03/f211f19b1aa38740df67c2f63a5ddb62946033,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",NA
+144,2026-09-27T16:01:40Z,TRUE,GET,/,200,616,NA,curl/8.22.0,NA
+145,2026-07-26T23:33:10Z,FALSE,GET,/,200,579,NA,Linux Gnu (cow),NA
+146,2026-09-20T20:24:14Z,TRUE,GET,/jkstatus-auth,404,528,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",NA
+147,2026-08-24T23:58:31Z,TRUE,GET,/stripe%252econfig%252ejs,404,528,NA,curl/8.7.1,NA
+148,2026-08-31T00:04:14Z,TRUE,GET,/sitemap.xml,404,533,NA,Go-http-client/1.1,NA
+149,2026-07-10T06:05:43Z,TRUE,GET,/,200,615,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",NA
+150,2026-08-24T06:54:01Z,FALSE,GET,/environment,404,476,NA,Go-http-client/1.1,NA
+151,2026-08-09T18:02:12Z,TRUE,GET,/fox.php,404,528,NA,NA,NA
+152,2026-09-09T22:06:18Z,FALSE,GET,/,200,1089,NA,Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0,NA
+153,2026-07-22T20:15:36Z,FALSE,GET,/,200,1070,NA,"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36",NA
+154,2026-08-28T16:10:42Z,FALSE,GET,/kubernetes.yaml,404,476,NA,Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html),NA
+155,2026-08-27T15:45:10Z,TRUE,GET,/scripts/main.js,200,861,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA
+156,2026-09-24T12:50:46Z,TRUE,GET,/scripts/animations.js,200,2092,kapsiar.sk,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36",NA
+157,2026-08-19T12:36:09Z,TRUE,GET,/,200,774,NA,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",NA
+158,2026-08-04T19:03:57Z,FALSE,GET,/,200,560,NA,Mozilla/5.0 (compatible; CyberConvoyScout/1.0; +https://scout.cyberconvoy.co),NA
+159,2026-10-01T11:16:36Z,TRUE,GET,/,200,616,NA,curl/8.22.0,NA
+160,2026-09-05T11:40:32Z,TRUE,GET,/scripts/main.js,200,861,www.kapsiar.sk,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 (compatible; meta-webindexer/1.1 (+https://developers.facebook.com/docs/sharing/webmasters/crawler))",NA
+161,2026-07-28T07:21:31Z,FALSE,GET,/favicon.ico,404,495,NA,Mozilla/5.0 (compatible),NA
+162,2026-08-30T21:00:12Z,TRUE,GET,/phpinfo.php.bak,404,528,NA,"Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.73 Safari/537.36 OPR/34.0.2036.25",NA
+163,2026-08-27T18:56:27Z,TRUE,GET,/,200,774,NA,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",NA
+164,2026-08-12T09:57:59Z,FALSE,GET,/,200,616,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36 Edg/90.0.818.46",NA
+165,2026-08-15T09:05:20Z,TRUE,GET,/,200,616,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",NA
+166,2026-09-22T08:02:30Z,TRUE,GET,/runtime.js,404,529,NA,Mozilla/5.0 (compatible; Hunyuan/1.0; +https://hunyuan.tencent.com/),NA
+167,2026-07-10T06:06:07Z,TRUE,GET,/,200,615,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",NA
+168,2026-09-05T05:41:56Z,FALSE,GET,/,200,560,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",NA
+169,2026-08-28T06:48:17Z,TRUE,GET,/aa.php,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA
+170,2026-07-17T14:42:56Z,TRUE,GET,/wp-content/plugins/wp_bqhtymr/wp_bqhtymr.php,404,528,NA,python-requests/2.34.2,NA
+171,2026-09-02T21:14:23Z,TRUE,GET,/,200,616,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",NA
+172,2026-10-01T13:43:58Z,FALSE,GET,/,200,616,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36 Edg/90.0.818.46",NA
+173,2026-09-09T00:47:52Z,TRUE,GET,/feed/atom/,404,528,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",NA
+174,2026-09-04T20:48:18Z,TRUE,GET,/css/loadScreen.css.map,404,529,NA,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0,NA
+175,2026-09-15T13:30:26Z,TRUE,GET,/robots.txt,404,529,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/600.2.5 (KHTML, like Gecko) Version/8.0.2 Safari/600.2.5 (Gort)",NA
+176,2026-08-11T02:28:54Z,FALSE,GET,/favicon.ico,404,532,<ip>,Mozilla/5.0 (X11; Linux x86_64; rv:142.0) Gecko/20100101 Firefox/142.0,NA
+177,2026-08-17T22:38:53Z,TRUE,GET,/css/main.css,200,1305,kapsiar.sk,"Mozilla/5.0 (Windows NT 11.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.6998.166 Safari/537.36",NA
+178,2026-08-30T08:40:57Z,TRUE,GET,/%252fstorage%252f.env,404,528,NA,curl/8.7.1,NA
+179,2026-08-03T22:27:00Z,FALSE,GET,/,200,737,NA,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",NA
+180,2026-08-27T10:55:17Z,FALSE,GET,/cgi-bin/luci/;stok=/locale,404,476,NA,NA,NA
+181,2026-09-13T17:52:06Z,FALSE,GET,/,200,1089,NA,Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0,NA
+182,2026-07-25T01:06:17Z,TRUE,GET,/assets/,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36",NA
+183,2026-07-11T02:23:56Z,TRUE,GET,/,200,774,NA,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",NA
+184,2026-10-03T16:10:17Z,FALSE,GET,/,200,1427,NA,"Mozilla/5.0 (Linux; Android 7.0; YS900) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Iron Safari/537.36",NA
+185,2026-07-20T02:12:15Z,FALSE,GET,/,200,737,NA,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",NA
+186,2026-07-11T12:07:45Z,TRUE,GET,/,200,616,NA,Go-http-client/1.1,NA
+187,2026-07-10T06:04:30Z,TRUE,GET,/,200,615,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",NA
+188,2026-07-19T00:41:50Z,TRUE,GET,/ngsw.json,404,534,NA,Mozilla/5.0 (compatible; Amazonbot/0.1; +https://developer.amazon.com/support/amazonbot),NA
+189,2026-07-23T10:46:32Z,TRUE,GET,/,200,774,NA,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",NA
+190,2026-09-26T19:09:10Z,TRUE,GET,/,200,616,NA,curl/8.22.0,NA
+191,2026-07-31T07:15:49Z,TRUE,GET,/uploads/,404,529,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA
+192,2026-07-31T12:45:40Z,TRUE,GET,/,200,774,NA,"Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",NA
+193,2026-10-02T21:08:33Z,TRUE,GET,/sitemap.xml,404,529,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0; +claudebot@anthropic.com)",NA
+194,2026-09-22T19:15:10Z,FALSE,GET,/node/.env,404,531,NA,Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0,NA
+195,2026-07-19T10:19:07Z,FALSE,GET,/favicon.ico,404,495,NA,Mozilla/5.0 (compatible; FlowIQLabsBot/1.0; +https://flowiq-labs.com/scanning-info),NA
+196,2026-09-23T02:00:14Z,FALSE,GET,/,200,579,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",NA
+197,2026-07-11T12:10:40Z,FALSE,POST,/__rsc,404,476,NA,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36,NA
+198,2026-09-09T01:59:31Z,TRUE,GET,/serverless.yaml,404,533,NA,Mozilla/5.0 (compatible; Meta-ExternalAgent/1.0; +https://developers.facebook.com/docs/sharing/webmasters/crawler),NA
+199,2026-08-15T06:57:48Z,FALSE,GET,/plesk/phpinfo.php,404,495,NA,Mozilla/5.0 (compatible; Silovik/2.0),NA
+200,2026-09-20T01:58:50Z,FALSE,GET,/php_errors.log,404,531,NA,Mozilla/5.0 (windows; U; Windows NT 5.1; zh-CN; rv:1.7.12) Gecko/20050919 Firefox/1.0.7,NA

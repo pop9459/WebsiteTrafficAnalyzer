@@ -4,19 +4,27 @@
 \alias{classify_requests}
 \title{Classify requests as human, bot, scanner, internal or unknown}
 \usage{
-classify_requests(requests, min_requests = 20, min_4xx_share = 0.9)
+classify_requests(
+  requests,
+  min_requests = 20,
+  min_4xx_share = 0.9,
+  burst_requests = 100
+)
 }
 \arguments{
 \item{requests}{Output of \code{\link[=anonymise_requests]{anonymise_requests()}}, parsed rows only.}
 
-\item{min_requests, min_4xx_share}{Thresholds for the per-client 4xx rule.}
+\item{min_requests, min_4xx_share}{Thresholds for the 4xx rules.}
+
+\item{burst_requests}{Requests of one user agent within one hour from which
+the traffic counts as automated.}
 }
 \value{
 \code{requests} with the extra columns \code{probe_family} and
 \code{client_class}.
 }
 \description{
-A first, rule-based classification (KAP-55 refines it). Rules, in order:
+A rule-based classification (KAP-55). Rules, in order:
 }
 \details{
 \enumerate{
@@ -24,8 +32,14 @@ A first, rule-based classification (KAP-55 refines it). Rules, in order:
 \item \strong{scanner}: the path belongs to a probe family (see \code{\link[=probe_family]{probe_family()}}),
 the user agent is a known scanning tool, or the client reached the
 origin directly and at least \code{min_requests} of its requests got a 4xx
-with a share of at least \code{min_4xx_share}.
-\item \strong{bot}: a crawler or HTTP-library user agent, or no user agent.
+with a share of at least \code{min_4xx_share}. The same test is applied to
+one user agent within one hour (\code{min_requests} requests, share of 4xx at
+least \code{min_4xx_share}), which catches scanners that hide behind
+Cloudflare and pretend to be a browser.
+\item \strong{bot}: a crawler or HTTP-library user agent, no user agent, a request
+for \code{robots.txt}, a sitemap or \verb{.well-known/}, or a user agent that sends
+at least \code{burst_requests} requests within one hour. A real visitor does
+not do that on a site this size.
 \item \strong{human}: a browser user agent on a request that came through
 Cloudflare.
 \item \strong{unknown}: everything else, including browser user agents that
@@ -33,5 +47,6 @@ reached the origin directly.
 }
 
 The per-client 4xx rule only uses direct requests: behind Cloudflare the
-logged address is a Cloudflare edge server shared by many visitors.
+logged address is a Cloudflare edge server shared by many visitors, which is
+why the user-agent-hour rules exist.
 }
