@@ -9,6 +9,12 @@ Individual data science project (NHL Stenden, Semester 3 "Data Dynamics"). It an
 - Planning lives in Linear: project P-KAP-5 "Solo Project – Web Traffic Log Analysis" (team KAPSLOK, issues `KAP-*`). Check the relevant issue before starting work. Each issue opens with a `**Caveman:**` one-line summary.
 - Course requirements (report sections, rubric, deadlines) are in `../../MB - semester3 - student version - v4.8.pdf`. The pitch deck is `../projectPitchPresentation.pdf`.
 
+## Communication style
+
+Always use the `/caveman` skill (default level `full`) for replies in chat: invoke it at the start of every session. Stay terse. Keep only technical substance.
+
+Write normal prose, not caveman, for anything stored outside the chat: code, comments, commit messages, docs, Linear issues and comments, and memory files.
+
 ## Commands
 
 R package `trafficanalyzer` (usethis + renv + testthat 3e, roxygen docs). Run from the repo root:
