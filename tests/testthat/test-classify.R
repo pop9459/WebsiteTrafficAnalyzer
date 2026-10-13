@@ -61,8 +61,10 @@ test_that("clients with mostly 4xx responses are scanners", {
   req$via_cloudflare <- TRUE
   expect_true(all(classify_requests(req)$client_class == "scanner"))
 
-  # The same requests spread over many hours look like ordinary visitors.
+  # Answered normally and spread over many hours, the requests look like
+  # ordinary visitors (a 404 for an unknown path would still be a probe).
   req$time <- as.POSIXct("2026-07-10 00:00:00", tz = "UTC") + 3600 * 2 * seq_len(n)
+  req$status <- 200L
   expect_true(all(classify_requests(req)$client_class == "human"))
 })
 
@@ -102,4 +104,20 @@ test_that("browsers that bypass Cloudflare stay unknown and tools are scanners",
     user_agent = c("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36", "feroxbuster/2.13.1")
   )
   expect_equal(classify_requests(req)$client_class, c("unknown", "scanner"))
+})
+
+test_that("a 404 for a path the site does not serve is a probe, whatever the user agent", {
+  req <- tibble::tibble(
+    ip_hash = c("a", "b", "c", "d", "e", "f", "g"),
+    via_cloudflare = TRUE,
+    time = as.POSIXct("2026-07-10 12:00:00", tz = "UTC") + (0:6) * 4000,
+    path = c("/shop", "/feed/atom/", "/privatekey.key", "/favicon.ico", "/robots.txt", "/", "/missing-page"),
+    status = c(404L, 404L, 404L, 404L, 404L, 200L, 404L),
+    user_agent = c(browser_ua, browser_ua, "Mozilla/5.0 (compatible; GoogleOther)",
+                   browser_ua, browser_ua, browser_ua, "curl/8.7.1")
+  )
+  expect_equal(
+    classify_requests(req)$client_class,
+    c("scanner", "scanner", "scanner", "human", "bot", "human", "scanner")
+  )
 })

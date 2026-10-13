@@ -50,6 +50,13 @@ browser_ua_regex <- "^mozilla/5\\.0 \\(.*(chrome|firefox|safari|edg)/"
 # Files that only crawlers and tools ask for, whatever the user agent says.
 crawler_path_regex <- "^/(robots\\.txt|sitemap[^/]*\\.xml|ads\\.txt|llms\\.txt|feed/?$|\\.well-known/)"
 
+# The site has only a handful of real pages, so a 404 for any other path is a
+# probe. These 404s are normal for a browser or a crawler and are not.
+benign_404_regex <- paste0(
+  "^/(favicon\\.ico|apple-touch-icon[^/]*\\.png|security\\.txt)$|",
+  crawler_path_regex
+)
+
 #' Map request paths to a probe family
 #'
 #' Groups paths that scanners request into families, e.g. every `.env`
@@ -97,7 +104,10 @@ probe_family <- function(path, site_php = site_php_regex) {
 #'    with a share of at least `min_4xx_share`. The same test is applied to
 #'    one user agent within one hour (`min_requests` requests, share of 4xx at
 #'    least `min_4xx_share`), which catches scanners that hide behind
-#'    Cloudflare and pretend to be a browser.
+#'    Cloudflare and pretend to be a browser. A 404 for any path other than
+#'    the usual browser and crawler requests (favicon, `robots.txt`, sitemaps,
+#'    feeds, `.well-known/`) also counts: the site has only a few real pages,
+#'    so a 404 is a probe, whatever the user agent says.
 #' 3. **bot**: a crawler or HTTP-library user agent, no user agent, a request
 #'    for `robots.txt`, a sitemap or `.well-known/`, or a user agent that sends
 #'    at least `burst_requests` requests within one hour. A real visitor does
@@ -144,6 +154,8 @@ classify_requests <- function(requests, min_requests = 20, min_4xx_share = 0.9,
   has_ua <- !is.na(requests$user_agent)
   noisy_ua_hour <- has_ua & cells$n >= min_requests & cells$share_4xx >= min_4xx_share
   burst <- has_ua & cells$n >= burst_requests
+  junk_404 <- requests$status %in% 404L & !is.na(requests$path) &
+    !grepl(benign_404_regex, tolower(requests$path))
 
   ua <- tolower(requests$user_agent)
   noisy_client <- !requests$via_cloudflare %in% TRUE & requests$ip_hash %in% clients$ip_hash
@@ -154,6 +166,7 @@ classify_requests <- function(requests, min_requests = 20, min_4xx_share = 0.9,
     grepl(scanner_ua_regex, ua) ~ "scanner",
     noisy_client ~ "scanner",
     noisy_ua_hour ~ "scanner",
+    junk_404 ~ "scanner",
     is.na(ua) | grepl(bot_ua_regex, ua) ~ "bot",
     grepl(crawler_path_regex, tolower(requests$path)) ~ "bot",
     burst ~ "bot",

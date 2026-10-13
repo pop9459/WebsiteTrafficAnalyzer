@@ -1,0 +1,22 @@
+id,time,via_cloudflare,method,path,status,bytes,referer,user_agent,label
+13,2026-08-26T00:20:39Z,TRUE,HEAD,/shop,404,196,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36",NA
+20,2026-08-24T06:20:34Z,FALSE,GET,/ows,404,476,NA,Go-http-client/1.1,NA
+31,2026-07-19T16:56:34Z,TRUE,GET,/trace.axd,404,534,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; Perplexity-User/1.0; +https://perplexity.ai/perplexity-user",NA
+46,2026-08-25T23:16:15Z,TRUE,HEAD,/test,404,196,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36",NA
+53,2026-08-23T05:02:14Z,TRUE,GET,/scripts/animations.js,200,2092,kapsiar.sk,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 iubenda-radar/3.30.0",NA
+57,2026-07-17T14:42:53Z,TRUE,GET,/plugins/editors/jce/jce.xml,404,529,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA
+62,2026-09-14T16:18:52Z,TRUE,GET,/feed/atom/,404,528,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36",NA
+66,2026-08-24T06:12:03Z,FALSE,GET,/.m2/settings-security.xml,404,476,NA,Go-http-client/1.1,NA
+69,2026-08-24T06:20:34Z,FALSE,GET,/dbadmin,404,476,NA,Go-http-client/1.1,NA
+89,2026-07-25T13:37:25Z,TRUE,GET,/privatekey.key,404,528,NA,Mozilla/5.0 (compatible; GoogleOther; +http://www.google.com/bot.html),NA
+115,2026-09-03T21:28:14Z,TRUE,GET,/,200,615,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA
+128,2026-07-21T10:04:48Z,TRUE,GET,/service-account.json,404,528,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; OAI-SearchBot/1.0; +https://openai.com/searchbot",NA
+130,2026-07-31T17:40:52Z,TRUE,GET,/backend/aws.json,404,529,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; GPTBot/1.4; +https://openai.com/gptbot)",NA
+135,2026-09-20T04:36:22Z,TRUE,GET,/.kube/config,404,529,NA,"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36 [ip:93.41.125.186]",NA
+150,2026-08-24T06:54:01Z,FALSE,GET,/environment,404,476,NA,Go-http-client/1.1,NA
+173,2026-09-09T00:47:52Z,TRUE,GET,/feed/atom/,404,528,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",NA
+182,2026-07-25T01:06:17Z,TRUE,GET,/assets/,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36",NA
+188,2026-07-19T00:41:50Z,TRUE,GET,/ngsw.json,404,534,NA,Mozilla/5.0 (compatible; Amazonbot/0.1; +https://developer.amazon.com/support/amazonbot),NA
+191,2026-07-31T07:15:49Z,TRUE,GET,/uploads/,404,529,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA
+195,2026-07-19T10:19:07Z,FALSE,GET,/favicon.ico,404,495,NA,Mozilla/5.0 (compatible; FlowIQLabsBot/1.0; +https://flowiq-labs.com/scanning-info),NA
+198,2026-09-09T01:59:31Z,TRUE,GET,/serverless.yaml,404,533,NA,Mozilla/5.0 (compatible; Meta-ExternalAgent/1.0; +https://developers.facebook.com/docs/sharing/webmasters/crawler),NA

@@ -35,7 +35,10 @@ origin directly and at least \code{min_requests} of its requests got a 4xx
 with a share of at least \code{min_4xx_share}. The same test is applied to
 one user agent within one hour (\code{min_requests} requests, share of 4xx at
 least \code{min_4xx_share}), which catches scanners that hide behind
-Cloudflare and pretend to be a browser.
+Cloudflare and pretend to be a browser. A 404 for any path other than
+the usual browser and crawler requests (favicon, \code{robots.txt}, sitemaps,
+feeds, \verb{.well-known/}) also counts: the site has only a few real pages,
+so a 404 is a probe, whatever the user agent says.
 \item \strong{bot}: a crawler or HTTP-library user agent, no user agent, a request
 for \code{robots.txt}, a sitemap or \verb{.well-known/}, or a user agent that sends
 at least \code{burst_requests} requests within one hour. A real visitor does

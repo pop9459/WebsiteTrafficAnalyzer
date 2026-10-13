@@ -109,28 +109,28 @@ cb05345c98be4c61,TRUE,2026-07-18T12:09:05Z,GET,/ntgn.php,HTTP/1.1,404,528,NA,NA,
 cb05345c98be4c61,TRUE,2026-07-18T12:09:13Z,GET,/ahax.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-07-18T12:09:13Z,php_probe,scanner
 cb05345c98be4c61,TRUE,2026-07-18T12:09:14Z,GET,/wp-includes/buy.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-07-18T12:09:14Z,wordpress,scanner
 db7d262aab795d51,TRUE,2026-07-18T12:09:25Z,GET,/asserter.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-07-18T12:09:25Z,php_probe,scanner
-03d615f1ca8866f2,TRUE,2026-07-18T18:01:18Z,GET,/__env.js,HTTP/1.1,404,534,NA,Mozilla/5.0 (compatible; Bytespider; spider-feedback@bytedance.com),NA,NA,NA,TRUE,2026-07-18T18:01:18Z,none,bot
+03d615f1ca8866f2,TRUE,2026-07-18T18:01:18Z,GET,/__env.js,HTTP/1.1,404,534,NA,Mozilla/5.0 (compatible; Bytespider; spider-feedback@bytedance.com),NA,NA,NA,TRUE,2026-07-18T18:01:18Z,none,scanner
 95f67decb4c98e1d,TRUE,2026-07-18T21:52:59Z,GET,/test.php,HTTP/1.1,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-07-18T21:52:59Z,php_probe,scanner
 95f67decb4c98e1d,TRUE,2026-07-18T21:53:00Z,GET,/tmp/byp.php,HTTP/1.1,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-07-18T21:53:00Z,php_probe,scanner
 abbf173ca817895f,FALSE,2026-07-18T23:53:48Z,OPTIONS,*,HTTP/1.0,200,126,NA,Apache/2.4.67 (Debian) PHP/8.2.31 (internal dummy connection),NA,NA,NA,TRUE,2026-07-18T23:53:48Z,none,internal
 682ef1737c727853,FALSE,2026-07-19T01:56:21Z,GET,/SDK/webLanguage,HTTP/1.1,404,532,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36 Edg/90.0.818.46",NA,NA,NA,TRUE,2026-07-19T01:56:21Z,device_exploit,scanner
-9bbf8fcddc62f636,TRUE,2026-07-19T04:14:33Z,GET,/key.json,HTTP/1.1,404,532,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; Claude-SearchBot/1.0; +mailto:support@anthropic.com",NA,NA,NA,TRUE,2026-07-19T04:14:33Z,none,bot
+9bbf8fcddc62f636,TRUE,2026-07-19T04:14:33Z,GET,/key.json,HTTP/1.1,404,532,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; Claude-SearchBot/1.0; +mailto:support@anthropic.com",NA,NA,NA,TRUE,2026-07-19T04:14:33Z,none,scanner
 abbf173ca817895f,FALSE,2026-07-19T04:14:55Z,OPTIONS,*,HTTP/1.0,200,126,NA,Apache/2.4.67 (Debian) PHP/8.2.31 (internal dummy connection),NA,NA,NA,TRUE,2026-07-19T04:14:55Z,none,internal
 abbf173ca817895f,FALSE,2026-07-19T04:15:06Z,OPTIONS,*,HTTP/1.0,200,126,NA,Apache/2.4.67 (Debian) PHP/8.2.31 (internal dummy connection),NA,NA,NA,TRUE,2026-07-19T04:15:06Z,none,internal
-fbcbbe29676c8a52,FALSE,2026-07-19T07:46:40Z,GET,/__debug__/render_panel/,HTTP/1.1,404,531,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-07-19T07:46:40Z,none,unknown
+fbcbbe29676c8a52,FALSE,2026-07-19T07:46:40Z,GET,/__debug__/render_panel/,HTTP/1.1,404,531,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-07-19T07:46:40Z,none,scanner
 c5486fa804ae40bb,TRUE,2026-07-19T11:32:55Z,GET,/wp-admin/maint/admin.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-07-19T11:32:55Z,wordpress,scanner
 097fb1c7d4d84e2f,TRUE,2026-07-19T12:18:35Z,GET,/.openclaw/.env,HTTP/1.1,404,528,NA,meta-externalagent/1.1 (+https://developers.facebook.com/docs/sharing/webmasters/crawler),NA,NA,NA,TRUE,2026-07-19T12:18:35Z,env,scanner
 097fb1c7d4d84e2f,TRUE,2026-07-19T12:18:39Z,GET,/server-status,HTTP/1.1,403,531,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; ClaudeBot/1.0; +mailto:support@anthropic.com",NA,NA,NA,TRUE,2026-07-19T12:18:39Z,config_leak,scanner
 097fb1c7d4d84e2f,TRUE,2026-07-19T12:18:41Z,GET,/dashboard,HTTP/1.1,404,528,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0",NA,NA,NA,TRUE,2026-07-19T12:18:41Z,app_probe,scanner
-4fd19afa74d83529,TRUE,2026-07-19T13:28:45Z,GET,/openapi.json,HTTP/1.1,404,537,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; Claude-SearchBot/1.0; +mailto:support@anthropic.com",NA,NA,NA,TRUE,2026-07-19T13:28:45Z,none,bot
-eb1d14bca2dc93ed,TRUE,2026-07-19T14:36:42Z,GET,/.bashrc,HTTP/1.1,404,535,NA,Mozilla/5.0 (compatible; Amzn-SearchBot/1.0; +https://developer.amazon.com/support/amazonbot),NA,NA,NA,TRUE,2026-07-19T14:36:42Z,none,bot
+4fd19afa74d83529,TRUE,2026-07-19T13:28:45Z,GET,/openapi.json,HTTP/1.1,404,537,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; Claude-SearchBot/1.0; +mailto:support@anthropic.com",NA,NA,NA,TRUE,2026-07-19T13:28:45Z,none,scanner
+eb1d14bca2dc93ed,TRUE,2026-07-19T14:36:42Z,GET,/.bashrc,HTTP/1.1,404,535,NA,Mozilla/5.0 (compatible; Amzn-SearchBot/1.0; +https://developer.amazon.com/support/amazonbot),NA,NA,NA,TRUE,2026-07-19T14:36:42Z,none,scanner
 eb1d14bca2dc93ed,TRUE,2026-07-19T14:36:43Z,GET,/asset-manifest.json,HTTP/1.1,404,535,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0",NA,NA,NA,TRUE,2026-07-19T14:36:43Z,app_probe,scanner
 eb1d14bca2dc93ed,TRUE,2026-07-19T14:36:43Z,GET,/api/v1/settings,HTTP/1.1,404,535,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; MistralAI-User/1.0",NA,NA,NA,TRUE,2026-07-19T14:36:43Z,app_probe,scanner
-eb1d14bca2dc93ed,TRUE,2026-07-19T14:36:45Z,GET,/_profiler/latest,HTTP/1.1,404,535,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; MistralAI-User/1.0",NA,NA,NA,TRUE,2026-07-19T14:36:45Z,none,unknown
+eb1d14bca2dc93ed,TRUE,2026-07-19T14:36:45Z,GET,/_profiler/latest,HTTP/1.1,404,535,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; MistralAI-User/1.0",NA,NA,NA,TRUE,2026-07-19T14:36:45Z,none,scanner
 e8c6ed1ab935989e,TRUE,2026-07-19T15:11:31Z,GET,/config.json,HTTP/1.1,404,532,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; MistralAI-User/1.0",NA,NA,NA,TRUE,2026-07-19T15:11:31Z,config_leak,scanner
 03d615f1ca8866f2,TRUE,2026-07-19T15:11:32Z,GET,/config.js,HTTP/1.1,404,533,NA,Mozilla/5.0 (compatible; GoogleOther; +http://www.google.com/bot.html),NA,NA,NA,TRUE,2026-07-19T15:11:32Z,config_leak,scanner
 abbf173ca817895f,FALSE,2026-07-19T15:11:37Z,OPTIONS,*,HTTP/1.0,200,126,NA,Apache/2.4.67 (Debian) PHP/8.2.31 (internal dummy connection),NA,NA,NA,TRUE,2026-07-19T15:11:37Z,none,internal
-097fb1c7d4d84e2f,TRUE,2026-07-19T15:31:09Z,GET,/serviceAccountKey.json,HTTP/1.1,404,528,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; Claude-SearchBot/1.0; +mailto:support@anthropic.com",NA,NA,NA,TRUE,2026-07-19T15:31:09Z,none,bot
+097fb1c7d4d84e2f,TRUE,2026-07-19T15:31:09Z,GET,/serviceAccountKey.json,HTTP/1.1,404,528,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; Claude-SearchBot/1.0; +mailto:support@anthropic.com",NA,NA,NA,TRUE,2026-07-19T15:31:09Z,none,scanner
 abbf173ca817895f,FALSE,2026-07-19T16:56:47Z,OPTIONS,*,HTTP/1.0,200,126,NA,Apache/2.4.67 (Debian) PHP/8.2.31 (internal dummy connection),NA,NA,NA,TRUE,2026-07-19T16:56:47Z,none,internal
 04b9ff2fea226abc,FALSE,2026-07-19T19:14:53Z,GET,/,HTTP/1.1,200,1089,NA,Mozilla/5.0 (compatible; FlowIQLabsBot/1.0; +https://flowiq-labs.com/scanning-info),NA,NA,NA,TRUE,2026-07-19T19:14:53Z,none,scanner
 9774e3d615ed4b6d,FALSE,2026-07-19T20:36:18Z,GET,/admin/index.html,HTTP/1.1,404,476,NA,Mozilla/5.0 (compatible; GenomeCrawlerd/1.0; +https://www.nokia.com/genomecrawler),NA,NA,NA,TRUE,2026-07-19T20:36:18Z,admin_panel,scanner
@@ -138,7 +138,7 @@ abbf173ca817895f,FALSE,2026-07-19T16:56:47Z,OPTIONS,*,HTTP/1.0,200,126,NA,Apache
 725966c44536d44f,TRUE,2026-07-19T21:52:36Z,GET,/.ssh/config,HTTP/1.1,404,538,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; Claude-User/1.0; +mailto:support@anthropic.com",NA,NA,NA,TRUE,2026-07-19T21:52:36Z,config_leak,scanner
 d15a93f6e26f5498,TRUE,2026-07-19T21:52:36Z,GET,/.vscode/launch.json,HTTP/1.1,404,538,NA,Mozilla/5.0 (compatible; Amzn-SearchBot/1.0; +https://developer.amazon.com/support/amazonbot),NA,NA,NA,TRUE,2026-07-19T21:52:36Z,config_leak,scanner
 725966c44536d44f,TRUE,2026-07-19T21:52:36Z,GET,/id_dsa,HTTP/1.1,404,538,NA,Mozilla/5.0 (compatible; Bytespider; spider-feedback@bytedance.com),NA,NA,NA,TRUE,2026-07-19T21:52:36Z,config_leak,scanner
-725966c44536d44f,TRUE,2026-07-19T21:52:36Z,GET,/host.key,HTTP/1.1,404,538,NA,Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html),NA,NA,NA,TRUE,2026-07-19T21:52:36Z,none,bot
+725966c44536d44f,TRUE,2026-07-19T21:52:36Z,GET,/host.key,HTTP/1.1,404,538,NA,Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html),NA,NA,NA,TRUE,2026-07-19T21:52:36Z,none,scanner
 abbf173ca817895f,FALSE,2026-07-19T21:52:56Z,OPTIONS,*,HTTP/1.0,200,126,NA,Apache/2.4.67 (Debian) PHP/8.2.31 (internal dummy connection),NA,NA,NA,TRUE,2026-07-19T21:52:56Z,none,internal
 9ead8e738b52d437,TRUE,2026-07-19T23:18:48Z,GET,/term.php,HTTP/1.1,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-07-19T23:18:48Z,php_probe,scanner
 6ebd8fa679b0f0e5,FALSE,2026-07-20T03:34:32Z,GET,/yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php,HTTP/1.1,404,531,NA,libredtail-http,NA,NA,NA,TRUE,2026-07-20T03:34:32Z,device_exploit,scanner
@@ -163,7 +163,7 @@ abbf173ca817895f,FALSE,2026-07-21T04:14:00Z,OPTIONS,*,HTTP/1.0,200,126,NA,Apache
 4bb6f5f56988e7d2,TRUE,2026-07-21T04:14:00Z,GET,/phpinfo.php,HTTP/1.1,404,532,NA,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36,NA,NA,NA,TRUE,2026-07-21T04:14:00Z,php_probe,scanner
 3110a1b6547795c2,TRUE,2026-07-21T04:14:02Z,GET,/config/production.php,HTTP/1.1,404,532,NA,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36,NA,NA,NA,TRUE,2026-07-21T04:14:02Z,app_probe,scanner
 9cf10a288fc39a4d,TRUE,2026-07-21T04:14:04Z,GET,/secrets.json,HTTP/1.1,404,532,NA,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36,NA,NA,NA,TRUE,2026-07-21T04:14:04Z,config_leak,scanner
-455e4cc5741343b7,TRUE,2026-07-21T10:04:39Z,GET,/.gitlab-ci.yml,HTTP/1.1,404,534,NA,Mozilla/5.0 (compatible; GoogleOther; +http://www.google.com/bot.html),NA,NA,NA,TRUE,2026-07-21T10:04:39Z,none,bot
+455e4cc5741343b7,TRUE,2026-07-21T10:04:39Z,GET,/.gitlab-ci.yml,HTTP/1.1,404,534,NA,Mozilla/5.0 (compatible; GoogleOther; +http://www.google.com/bot.html),NA,NA,NA,TRUE,2026-07-21T10:04:39Z,none,scanner
 455e4cc5741343b7,TRUE,2026-07-21T10:04:43Z,GET,/.ssh/config,HTTP/1.1,404,534,NA,Mozilla/5.0 (compatible; Diffbot/1.0; +https://diffbot.com),NA,NA,NA,TRUE,2026-07-21T10:04:43Z,config_leak,scanner
 e7d5b230a2dfd9ca,TRUE,2026-07-21T16:47:40Z,GET,/sixxis.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-07-21T16:47:40Z,php_probe,scanner
 cff9ac013ddd1591,FALSE,2026-07-21T22:29:35Z,GET,/,HTTP/1.1,200,737,NA,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",NA,NA,NA,TRUE,2026-07-21T22:29:35Z,none,unknown
@@ -186,7 +186,7 @@ cceb45914328d453,FALSE,2026-07-23T18:52:28Z,GET,/server-status,HTTP/1.1,403,498,
 9a61fb086dd57d7c,TRUE,2026-07-24T11:56:16Z,GET,/admin/controller/extension/,HTTP/1.1,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-07-24T11:56:16Z,admin_panel,scanner
 673e37a652cdb8ba,TRUE,2026-07-24T11:56:20Z,GET,/themes.php,HTTP/1.1,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-07-24T11:56:20Z,php_probe,scanner
 1cc9bef27fad6d46,FALSE,2026-07-24T12:18:38Z,GET,/,HTTP/1.0,200,1089,NA,SonyEricssonW660i/R6AD Browser/NetFront/3.3 Profile/MIDP-2.0 Configuration/CLDC-1.1,NA,NA,NA,TRUE,2026-07-24T12:18:38Z,none,unknown
-9267926b3508aab1,FALSE,2026-07-24T13:33:40Z,GET,/+CSCOE+/logon.html,HTTP/1.1,404,476,NA,Mozilla/5.0 (compatible; GenomeCrawlerd/1.0; +https://www.nokia.com/genomecrawler),NA,NA,NA,TRUE,2026-07-24T13:33:40Z,none,bot
+9267926b3508aab1,FALSE,2026-07-24T13:33:40Z,GET,/+CSCOE+/logon.html,HTTP/1.1,404,476,NA,Mozilla/5.0 (compatible; GenomeCrawlerd/1.0; +https://www.nokia.com/genomecrawler),NA,NA,NA,TRUE,2026-07-24T13:33:40Z,none,scanner
 98a8fde7d2419279,TRUE,2026-07-24T14:53:17Z,GET,/dljpy.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-07-24T14:53:17Z,php_probe,scanner
 39c38a83c0a17e25,TRUE,2026-07-24T14:56:56Z,GET,/robots.txt,HTTP/1.1,404,529,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0; +claudebot@anthropic.com)",NA,NA,NA,TRUE,2026-07-24T14:56:56Z,none,bot
 561b554360422e7d,TRUE,2026-07-24T15:05:44Z,GET,/website/wp-includes/wlwmanifest.xml,HTTP/1.1,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",NA,NA,NA,TRUE,2026-07-24T15:05:44Z,wordpress,scanner
@@ -219,7 +219,7 @@ d7bab1f9be9c943b,TRUE,2026-07-26T10:24:16Z,GET,/clientaccesspolicy.xml,HTTP/1.1,
 4d6662eac945298c,FALSE,2026-07-26T19:08:09Z,GET,/staging/.env,HTTP/1.1,404,531,NA,"Mozilla/5.0 (Linux; U; Android 4.1.2; en-us; LG-P659 Build/JZO54K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",NA,NA,NA,TRUE,2026-07-26T19:08:09Z,env,scanner
 4d6662eac945298c,FALSE,2026-07-26T19:08:10Z,GET,/web/.env.local,HTTP/1.1,404,531,NA,"Mozilla/5.0 (Linux; U; Android 4.1.2; en-us; LG-P659 Build/JZO54K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",NA,NA,NA,TRUE,2026-07-26T19:08:10Z,env,scanner
 4558edb8b2a98399,FALSE,2026-07-26T21:00:38Z,GET,/.ssh/id_rsa,HTTP/1.1,404,495,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-07-26T21:00:38Z,config_leak,scanner
-4558edb8b2a98399,FALSE,2026-07-26T21:00:38Z,GET,/.npmrc,HTTP/1.1,404,495,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 14_4_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-07-26T21:00:38Z,none,unknown
+4558edb8b2a98399,FALSE,2026-07-26T21:00:38Z,GET,/.npmrc,HTTP/1.1,404,495,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 14_4_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-07-26T21:00:38Z,none,scanner
 63a2f5fa449aa8f9,TRUE,2026-07-26T21:38:48Z,GET,/.hermes/auth.json,HTTP/1.1,404,536,NA,CCBot/2.0 (https://commoncrawl.org/faq/),NA,NA,NA,TRUE,2026-07-26T21:38:48Z,none,scanner
 f9e2f3fe193e1e4b,TRUE,2026-07-26T21:39:05Z,POST,/v1/graphql,HTTP/1.1,404,528,kapsiar.sk,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0",NA,NA,NA,TRUE,2026-07-26T21:39:05Z,config_leak,scanner
 0959c7a7ca9e15ac,TRUE,2026-07-26T21:40:02Z,GET,/lock360.php,HTTP/1.1,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-07-26T21:40:02Z,php_probe,scanner
@@ -257,7 +257,7 @@ bb1c3fcb203a83d2,FALSE,2026-07-27T17:46:31Z,GET,/phpunit/Util/PHP/eval-stdin.php
 abbf173ca817895f,FALSE,2026-07-27T19:46:11Z,OPTIONS,*,HTTP/1.0,200,126,NA,Apache/2.4.67 (Debian) PHP/8.2.31 (internal dummy connection),NA,NA,NA,TRUE,2026-07-27T19:46:11Z,none,internal
 abbf173ca817895f,FALSE,2026-07-28T00:30:34Z,OPTIONS,*,HTTP/1.0,200,126,NA,Apache/2.4.67 (Debian) PHP/8.2.31 (internal dummy connection),NA,NA,NA,TRUE,2026-07-28T00:30:34Z,none,internal
 0bcb387e1dcebe92,FALSE,2026-07-28T02:11:37Z,GET,/SDK/webLanguage,HTTP/1.1,404,532,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36 Edg/90.0.818.46",NA,NA,NA,TRUE,2026-07-28T02:11:37Z,device_exploit,scanner
-df9833abd2f14b8f,FALSE,2026-07-28T03:44:01Z,GET,/myip,HTTP/1.1,404,494,NA,curl/8,NA,NA,NA,TRUE,2026-07-28T03:44:01Z,none,bot
+df9833abd2f14b8f,FALSE,2026-07-28T03:44:01Z,GET,/myip,HTTP/1.1,404,494,NA,curl/8,NA,NA,NA,TRUE,2026-07-28T03:44:01Z,none,scanner
 abbf173ca817895f,FALSE,2026-07-28T05:24:19Z,OPTIONS,*,HTTP/1.0,200,126,NA,Apache/2.4.67 (Debian) PHP/8.2.31 (internal dummy connection),NA,NA,NA,TRUE,2026-07-28T05:24:19Z,none,internal
 39c38a83c0a17e25,TRUE,2026-07-28T05:29:07Z,GET,/robots.txt,HTTP/1.1,404,529,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0; +claudebot@anthropic.com)",NA,NA,NA,TRUE,2026-07-28T05:29:07Z,none,bot
 9d25a4e367a623ec,TRUE,2026-07-28T06:32:28Z,GET,/crgio.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-07-28T06:32:28Z,php_probe,scanner
@@ -269,15 +269,15 @@ c5486fa804ae40bb,TRUE,2026-07-28T08:08:57Z,GET,/wp-includes/style-engine/index.p
 b5e1bf290e87875e,TRUE,2026-07-28T15:02:45Z,GET,/wp-includes/sodium_compat/,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-07-28T15:02:45Z,wordpress,scanner
 b5e1bf290e87875e,TRUE,2026-07-28T15:02:45Z,GET,/aa.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-07-28T15:02:45Z,php_probe,scanner
 b5e1bf290e87875e,TRUE,2026-07-28T15:02:46Z,GET,/wp-admin/options-privacy.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-07-28T15:02:46Z,wordpress,scanner
-5d91104e70603a0c,TRUE,2026-07-28T21:43:13Z,HEAD,/Wp,HTTP/1.1,404,196,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36",NA,NA,NA,TRUE,2026-07-28T21:43:13Z,none,human
+5d91104e70603a0c,TRUE,2026-07-28T21:43:13Z,HEAD,/Wp,HTTP/1.1,404,196,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36",NA,NA,NA,TRUE,2026-07-28T21:43:13Z,none,scanner
 acf65fa21efd1915,TRUE,2026-07-28T21:45:51Z,GET,/wp-login.php,HTTP/1.1,404,529,NA,NA,NA,NA,NA,TRUE,2026-07-28T21:45:51Z,wordpress,scanner
 82799b550c52d0a3,TRUE,2026-07-28T21:46:04Z,GET,/jo.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-07-28T21:46:04Z,php_probe,scanner
-9a036b3a72809577,FALSE,2026-07-29T04:32:29Z,POST,/pages/createpage-entervariables.action,HTTP/1.1,404,476,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-07-29T04:32:29Z,none,unknown
+9a036b3a72809577,FALSE,2026-07-29T04:32:29Z,POST,/pages/createpage-entervariables.action,HTTP/1.1,404,476,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-07-29T04:32:29Z,none,scanner
 bedf1e66bec09efe,FALSE,2026-07-29T05:10:56Z,GET,/,HTTP/1.1,200,560,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-07-29T05:10:56Z,none,unknown
 f44a1cf59e663b8a,TRUE,2026-07-29T13:05:54Z,GET,/wp-content/themes/index.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-07-29T13:05:54Z,wordpress,scanner
 f41b40ffdd1016db,TRUE,2026-07-29T17:35:57Z,GET,/log.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-07-29T17:35:57Z,php_probe,scanner
 5cc51a0fd3510f58,TRUE,2026-07-29T17:35:57Z,GET,/uninstall.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-07-29T17:35:57Z,php_probe,scanner
-df9833abd2f14b8f,FALSE,2026-07-29T17:49:28Z,GET,/myip,HTTP/1.1,404,498,NA,curl/8,NA,NA,NA,TRUE,2026-07-29T17:49:28Z,none,bot
+df9833abd2f14b8f,FALSE,2026-07-29T17:49:28Z,GET,/myip,HTTP/1.1,404,498,NA,curl/8,NA,NA,NA,TRUE,2026-07-29T17:49:28Z,none,scanner
 96b16f443f53d768,TRUE,2026-07-29T20:42:33Z,GET,/atex1.php,HTTP/1.1,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-07-29T20:42:33Z,php_probe,scanner
 96b16f443f53d768,TRUE,2026-07-29T20:42:33Z,GET,/class-t.api.php,HTTP/1.1,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-07-29T20:42:33Z,php_probe,scanner
 90f84db283fb832d,FALSE,2026-07-29T21:06:39Z,GET,/robots.txt,HTTP/1.1,404,476,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-07-29T21:06:39Z,none,bot
@@ -316,7 +316,7 @@ abbf173ca817895f,FALSE,2026-07-31T09:53:08Z,OPTIONS,*,HTTP/1.0,200,126,NA,Apache
 981f0b3359a7aaa3,FALSE,2026-07-31T15:20:32Z,GET,/.env,HTTP/1.1,404,532,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-07-31T15:20:32Z,env,scanner
 61cd6d39c8ac1a29,FALSE,2026-07-31T17:10:30Z,GET,/.git/logs/refs/remotes/origin/HEAD,HTTP/1.1,200,394,NA,Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0,NA,NA,NA,TRUE,2026-07-31T17:10:30Z,vcs,scanner
 1708fc0bbb3cdeba,TRUE,2026-07-31T17:40:52Z,GET,/app/.env.production,HTTP/1.1,404,529,NA,Mozilla/5.0 (compatible; Bytespider; spider-feedback@bytedance.com),NA,NA,NA,TRUE,2026-07-31T17:40:52Z,env,scanner
-8dcde92cb304f461,TRUE,2026-08-01T00:10:00Z,GET,/.npmrc,HTTP/1.1,404,529,NA,Mozilla/5.0 (compatible; OAI-SearchBot/1.3; +https://openai.com/searchbot),NA,NA,NA,TRUE,2026-08-01T00:10:00Z,none,bot
+8dcde92cb304f461,TRUE,2026-08-01T00:10:00Z,GET,/.npmrc,HTTP/1.1,404,529,NA,Mozilla/5.0 (compatible; OAI-SearchBot/1.3; +https://openai.com/searchbot),NA,NA,NA,TRUE,2026-08-01T00:10:00Z,none,scanner
 40972fcbb1edc6a5,TRUE,2026-08-01T00:37:55Z,GET,/a1.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-08-01T00:37:55Z,php_probe,scanner
 40972fcbb1edc6a5,TRUE,2026-08-01T00:37:55Z,GET,/wp-good.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-08-01T00:37:55Z,php_probe,scanner
 1ae378831c3bcfd8,FALSE,2026-08-01T06:28:39Z,GET,/config/aws.yml,HTTP/1.1,404,476,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-01T06:28:39Z,app_probe,scanner
@@ -329,7 +329,7 @@ e4db44e03318eedd,FALSE,2026-08-01T23:55:52Z,GET,/vendor/vendor/phpunit/phpunit/s
 51fc3cc807880146,TRUE,2026-08-02T01:27:12Z,GET,/1revo.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-08-02T01:27:12Z,php_probe,scanner
 d77b349c8a78cfbf,TRUE,2026-08-02T02:40:33Z,GET,/BDKR28WP.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-08-02T02:40:33Z,php_probe,scanner
 bdb5b74e17c1a323,FALSE,2026-08-02T04:38:45Z,NA,NA,NA,400,524,NA,NA,NA,NA,NA,TRUE,2026-08-02T04:38:45Z,malformed,scanner
-c5486fa804ae40bb,TRUE,2026-08-02T07:13:45Z,GET,/php_info.php~,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-08-02T07:13:45Z,none,bot
+c5486fa804ae40bb,TRUE,2026-08-02T07:13:45Z,GET,/php_info.php~,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-08-02T07:13:45Z,none,scanner
 3b52fb800ddd9fca,TRUE,2026-08-02T11:09:26Z,GET,/this_is_a_new_hello_world.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-08-02T11:09:26Z,php_probe,scanner
 40972fcbb1edc6a5,TRUE,2026-08-02T17:16:29Z,GET,/wp.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-08-02T17:16:29Z,php_probe,scanner
 40972fcbb1edc6a5,TRUE,2026-08-02T17:16:31Z,GET,/admin/controller/extension/,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-08-02T17:16:31Z,admin_panel,scanner
@@ -442,7 +442,7 @@ a0dce11c60740d87,FALSE,2026-08-06T08:03:23Z,CONNECT,<ip>:80,HTTP/1.0,200,2537,NA
 7ffe839814f30042,TRUE,2026-08-06T08:34:55Z,GET,/rip.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-08-06T08:34:55Z,php_probe,scanner
 503c767aedf3f56f,FALSE,2026-08-06T11:42:28Z,CONNECT,<ip>:80,HTTP/1.0,200,2537,NA,NA,NA,NA,NA,TRUE,2026-08-06T11:42:28Z,proxy,scanner
 39f7f2290f784053,TRUE,2026-08-06T21:06:34Z,GET,/shiny.php,HTTP/1.1,404,529,NA,NA,NA,NA,NA,TRUE,2026-08-06T21:06:34Z,php_probe,scanner
-b1bbef2ac18c0610,TRUE,2026-08-06T21:06:39Z,GET,/services/yuding/images/jing.png,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-08-06T21:06:39Z,none,bot
+b1bbef2ac18c0610,TRUE,2026-08-06T21:06:39Z,GET,/services/yuding/images/jing.png,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-08-06T21:06:39Z,none,scanner
 a12b0b3e6f3814e6,TRUE,2026-08-07T00:13:30Z,GET,/main.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-08-07T00:13:30Z,php_probe,scanner
 9b2b516c224f8fd9,FALSE,2026-08-07T05:53:55Z,GET,/.env.backup,HTTP/1.1,404,476,NA,Mozilla/5.0 (compatible; Silovik/2.0),NA,NA,NA,TRUE,2026-08-07T05:53:55Z,env,scanner
 9b2b516c224f8fd9,FALSE,2026-08-07T05:54:00Z,GET,/temp/phpinfo.php,HTTP/1.1,404,476,NA,Mozilla/5.0 (compatible; Silovik/2.0),NA,NA,NA,TRUE,2026-08-07T05:54:00Z,php_probe,scanner
@@ -723,7 +723,7 @@ b5fcc94fdf5b7509,FALSE,2026-08-19T03:48:16Z,GET,/backendfinaltest/.env,HTTP/1.1,
 b5fcc94fdf5b7509,FALSE,2026-08-19T03:48:17Z,GET,/backup/.gitlab-ci.yml,HTTP/1.1,404,476,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-08-19T03:48:17Z,backup,scanner
 b5fcc94fdf5b7509,FALSE,2026-08-19T03:48:18Z,GET,/.docker/config.json,HTTP/1.1,404,476,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-08-19T03:48:18Z,config_leak,scanner
 b5fcc94fdf5b7509,FALSE,2026-08-19T03:48:21Z,GET,/index.js,HTTP/1.1,404,476,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-08-19T03:48:21Z,none,scanner
-37f2a9935babfd6a,TRUE,2026-08-19T06:44:48Z,GET,/.github/funding.yml,HTTP/1.1,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-08-19T06:44:48Z,none,human
+37f2a9935babfd6a,TRUE,2026-08-19T06:44:48Z,GET,/.github/funding.yml,HTTP/1.1,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-08-19T06:44:48Z,none,scanner
 3254e31a03e60832,TRUE,2026-08-19T09:19:27Z,GET,/main.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-08-19T09:19:27Z,php_probe,scanner
 77d172899f2cfc70,TRUE,2026-08-19T11:24:55Z,GET,/.ssh/id_ecdsa,HTTP/1.1,404,536,NA,meta-externalagent/1.1 (+https://developers.facebook.com/docs/sharing/webmasters/crawler),NA,NA,NA,TRUE,2026-08-19T11:24:55Z,config_leak,scanner
 f577c2e0a90ce25d,TRUE,2026-08-19T11:24:57Z,GET,/api/v2/settings,HTTP/1.1,404,536,NA,meta-externalagent/1.1 (+https://developers.facebook.com/docs/sharing/webmasters/crawler),NA,NA,NA,TRUE,2026-08-19T11:24:57Z,app_probe,scanner
@@ -812,7 +812,7 @@ dd4d06efeb6a79e8,FALSE,2026-08-22T10:51:47Z,GET,/htdocs/.env,HTTP/1.1,404,476,NA
 abbf173ca817895f,FALSE,2026-08-22T10:52:07Z,OPTIONS,*,HTTP/1.0,200,126,NA,Apache/2.4.67 (Debian) PHP/8.2.31 (internal dummy connection),NA,NA,NA,TRUE,2026-08-22T10:52:07Z,none,internal
 abbf173ca817895f,FALSE,2026-08-22T10:52:17Z,OPTIONS,*,HTTP/1.0,200,126,NA,Apache/2.4.67 (Debian) PHP/8.2.31 (internal dummy connection),NA,NA,NA,TRUE,2026-08-22T10:52:17Z,none,internal
 73c4c1936357f70b,TRUE,2026-08-22T12:34:12Z,GET,/.git/HEAD,HTTP/1.1,200,279,NA,Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm),NA,NA,NA,TRUE,2026-08-22T12:34:12Z,vcs,scanner
-8510bab42fbbd78c,TRUE,2026-08-22T12:34:14Z,GET,/.netrc,HTTP/1.1,404,529,NA,Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html),NA,NA,NA,TRUE,2026-08-22T12:34:14Z,none,bot
+8510bab42fbbd78c,TRUE,2026-08-22T12:34:14Z,GET,/.netrc,HTTP/1.1,404,529,NA,Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html),NA,NA,NA,TRUE,2026-08-22T12:34:14Z,none,scanner
 abbf173ca817895f,FALSE,2026-08-22T12:35:10Z,OPTIONS,*,HTTP/1.0,200,126,NA,Apache/2.4.67 (Debian) PHP/8.2.31 (internal dummy connection),NA,NA,NA,TRUE,2026-08-22T12:35:10Z,none,internal
 f663a61996cd5587,FALSE,2026-08-22T12:38:24Z,GET,/api/.env,HTTP/1.1,404,476,NA,NA,NA,NA,NA,TRUE,2026-08-22T12:38:24Z,env,scanner
 f663a61996cd5587,FALSE,2026-08-22T12:38:25Z,GET,/api/v1/namespaces/default/secrets,HTTP/1.1,404,476,NA,NA,NA,NA,NA,TRUE,2026-08-22T12:38:25Z,app_probe,scanner
@@ -823,7 +823,7 @@ d73c702b857239fd,FALSE,2026-08-22T14:22:13Z,POST,/,HTTP/1.1,200,2574,NA,NA,NA,NA
 0cbaf806384accf3,FALSE,2026-08-22T15:08:58Z,POST,/,HTTP/1.1,200,560,<ip>:80,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-08-22T15:08:58Z,none,bot
 0cbaf806384accf3,FALSE,2026-08-22T15:08:59Z,POST,/,HTTP/1.1,200,560,<ip>:80,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-08-22T15:08:59Z,none,bot
 8ae3adbc13e3555b,FALSE,2026-08-22T15:54:08Z,GET,/,HTTP/1.1,200,1089,NA,Mozilla/5.0 (l9scan/2.0.7393e27333e2030313e2637313; +https://leakix.net),NA,NA,NA,TRUE,2026-08-22T15:54:08Z,none,scanner
-32d7bcf09292bf2c,FALSE,2026-08-22T16:03:23Z,GET,/web/,HTTP/1.1,404,476,NA,Mozilla/5.0 (compatible; GenomeCrawlerd/1.0; +https://www.nokia.com/genomecrawler),NA,NA,NA,TRUE,2026-08-22T16:03:23Z,none,bot
+32d7bcf09292bf2c,FALSE,2026-08-22T16:03:23Z,GET,/web/,HTTP/1.1,404,476,NA,Mozilla/5.0 (compatible; GenomeCrawlerd/1.0; +https://www.nokia.com/genomecrawler),NA,NA,NA,TRUE,2026-08-22T16:03:23Z,none,scanner
 a41c25fb3c74a0c6,TRUE,2026-08-22T18:29:22Z,GET,/sixxis.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-08-22T18:29:22Z,php_probe,scanner
 a41c25fb3c74a0c6,TRUE,2026-08-22T18:29:22Z,GET,/yj09.php,HTTP/1.1,404,528,NA,NA,NA,NA,NA,TRUE,2026-08-22T18:29:22Z,php_probe,scanner
 d61b93c1ad17ff5e,TRUE,2026-08-22T20:39:44Z,GET,/fetch,HTTP/1.1,404,528,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0; +claudebot@anthropic.com)",NA,NA,NA,TRUE,2026-08-22T20:39:44Z,none,scanner
@@ -871,10 +871,10 @@ ef93cf2d9eb3d5eb,TRUE,2026-08-23T22:12:18Z,GET,/uploads/xsec.php,HTTP/1.1,404,52
 9b2b516c224f8fd9,FALSE,2026-08-24T05:52:51Z,GET,/phpMyAdmin,HTTP/1.1,404,476,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T05:52:51Z,admin_panel,scanner
 9b2b516c224f8fd9,FALSE,2026-08-24T05:53:41Z,GET,/.env.old,HTTP/1.1,404,476,www.google.com,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-08-24T05:53:41Z,env,scanner
 9b2b516c224f8fd9,FALSE,2026-08-24T05:53:41Z,GET,/index.php,HTTP/1.1,200,560,www.google.com,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-08-24T05:53:41Z,none,bot
-9b2b516c224f8fd9,FALSE,2026-08-24T05:53:47Z,GET,/jenkins/script,HTTP/1.1,404,476,www.google.com,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-08-24T05:53:47Z,none,bot
+9b2b516c224f8fd9,FALSE,2026-08-24T05:53:47Z,GET,/jenkins/script,HTTP/1.1,404,476,www.google.com,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-08-24T05:53:47Z,none,scanner
 9b2b516c224f8fd9,FALSE,2026-08-24T05:57:30Z,GET,/view.php,HTTP/1.1,404,476,www.google.com,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-08-24T05:57:30Z,php_probe,scanner
 9b2b516c224f8fd9,FALSE,2026-08-24T05:57:52Z,GET,/read.php,HTTP/1.1,404,476,www.google.com,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-08-24T05:57:52Z,php_probe,scanner
-9b2b516c224f8fd9,FALSE,2026-08-24T06:03:22Z,GET,/.air.conf,HTTP/1.1,404,476,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T06:03:22Z,none,bot
+9b2b516c224f8fd9,FALSE,2026-08-24T06:03:22Z,GET,/.air.conf,HTTP/1.1,404,476,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T06:03:22Z,none,scanner
 9b2b516c224f8fd9,FALSE,2026-08-24T06:03:23Z,GET,/.aws/cli/cache/*.json,HTTP/1.1,404,476,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T06:03:23Z,config_leak,scanner
 9b2b516c224f8fd9,FALSE,2026-08-24T06:04:30Z,NA,NA,NA,408,0,NA,NA,NA,NA,NA,TRUE,2026-08-24T06:04:30Z,malformed,scanner
 9b2b516c224f8fd9,FALSE,2026-08-24T06:08:07Z,GET,/index.php,HTTP/1.1,200,560,www.google.com,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-08-24T06:08:07Z,none,bot
@@ -901,15 +901,15 @@ abbf173ca817895f,FALSE,2026-08-24T06:21:03Z,OPTIONS,*,HTTP/1.0,200,126,NA,Apache
 9b2b516c224f8fd9,FALSE,2026-08-24T06:22:54Z,GET,/,HTTP/1.1,200,560,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T06:22:54Z,none,bot
 9b2b516c224f8fd9,FALSE,2026-08-24T06:23:39Z,GET,/,HTTP/1.1,200,560,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T06:23:39Z,none,bot
 9b2b516c224f8fd9,FALSE,2026-08-24T06:24:19Z,GET,/,HTTP/1.1,200,560,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T06:24:19Z,none,bot
-9b2b516c224f8fd9,FALSE,2026-08-24T06:41:09Z,GET,/client.pem,HTTP/1.1,404,476,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T06:41:09Z,none,bot
+9b2b516c224f8fd9,FALSE,2026-08-24T06:41:09Z,GET,/client.pem,HTTP/1.1,404,476,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T06:41:09Z,none,scanner
 9b2b516c224f8fd9,FALSE,2026-08-24T06:44:41Z,GET,/config/bitbucket.json,HTTP/1.1,404,476,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T06:44:41Z,app_probe,scanner
-9b2b516c224f8fd9,FALSE,2026-08-24T06:48:48Z,GET,/control/,HTTP/1.1,404,476,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T06:48:48Z,none,bot
+9b2b516c224f8fd9,FALSE,2026-08-24T06:48:48Z,GET,/control/,HTTP/1.1,404,476,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T06:48:48Z,none,scanner
 abbf173ca817895f,FALSE,2026-08-24T07:06:25Z,OPTIONS,*,HTTP/1.0,200,126,NA,Apache/2.4.67 (Debian) PHP/8.2.31 (internal dummy connection),NA,NA,NA,TRUE,2026-08-24T07:06:25Z,none,internal
 abbf173ca817895f,FALSE,2026-08-24T07:06:41Z,OPTIONS,*,HTTP/1.0,200,126,NA,Apache/2.4.67 (Debian) PHP/8.2.31 (internal dummy connection),NA,NA,NA,TRUE,2026-08-24T07:06:41Z,none,internal
 abbf173ca817895f,FALSE,2026-08-24T07:07:02Z,OPTIONS,*,HTTP/1.0,200,126,NA,Apache/2.4.67 (Debian) PHP/8.2.31 (internal dummy connection),NA,NA,NA,TRUE,2026-08-24T07:07:02Z,none,internal
 9b2b516c224f8fd9,FALSE,2026-08-24T07:09:54Z,GET,/,HTTP/1.1,200,560,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T07:09:54Z,none,bot
 9b2b516c224f8fd9,FALSE,2026-08-24T07:25:45Z,NA,NA,NA,408,0,NA,NA,NA,NA,NA,TRUE,2026-08-24T07:25:45Z,malformed,scanner
-9b2b516c224f8fd9,FALSE,2026-08-24T07:31:01Z,GET,/samconfig.toml,HTTP/1.1,404,476,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T07:31:01Z,none,bot
+9b2b516c224f8fd9,FALSE,2026-08-24T07:31:01Z,GET,/samconfig.toml,HTTP/1.1,404,476,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T07:31:01Z,none,scanner
 9b2b516c224f8fd9,FALSE,2026-08-24T07:31:03Z,GET,/samples/chatroom/chatroom-spa/.env,HTTP/1.1,404,476,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T07:31:03Z,env,scanner
 9b2b516c224f8fd9,FALSE,2026-08-24T07:45:27Z,GET,/test/integration/env-config/app/.env,HTTP/1.1,404,476,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T07:45:27Z,env,scanner
 9b2b516c224f8fd9,FALSE,2026-08-24T07:51:49Z,GET,/var/backup/.env,HTTP/1.1,404,476,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T07:51:49Z,env,scanner
@@ -919,8 +919,8 @@ b0f66edb1c813700,TRUE,2026-08-24T07:55:47Z,GET,/w.php,HTTP/1.1,404,528,NA,NA,NA,
 c92a7dccba4b040f,TRUE,2026-08-24T08:00:01Z,GET,/.git/refs/remotes/origin/main,HTTP/1.1,200,298,NA,git/2.40.0,NA,NA,NA,TRUE,2026-08-24T08:00:01Z,vcs,scanner
 9b2b516c224f8fd9,FALSE,2026-08-24T08:00:58Z,GET,/backend/site/.env,HTTP/1.1,404,476,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T08:00:58Z,env,scanner
 9b2b516c224f8fd9,FALSE,2026-08-24T08:00:59Z,GET,/backend/config/.env,HTTP/1.1,404,476,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T08:00:59Z,env,scanner
-9b2b516c224f8fd9,FALSE,2026-08-24T08:01:58Z,GET,/ows,HTTP/1.1,404,476,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T08:01:58Z,none,bot
-9b2b516c224f8fd9,FALSE,2026-08-24T08:03:49Z,GET,/explore/repos,HTTP/1.1,404,476,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T08:03:49Z,none,bot
+9b2b516c224f8fd9,FALSE,2026-08-24T08:01:58Z,GET,/ows,HTTP/1.1,404,476,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T08:01:58Z,none,scanner
+9b2b516c224f8fd9,FALSE,2026-08-24T08:03:49Z,GET,/explore/repos,HTTP/1.1,404,476,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T08:03:49Z,none,scanner
 9b2b516c224f8fd9,FALSE,2026-08-24T08:10:51Z,GET,/,HTTP/1.1,200,560,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T08:10:51Z,none,bot
 9b2b516c224f8fd9,FALSE,2026-08-24T08:20:16Z,GET,/api/.env.example,HTTP/1.1,404,476,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-08-24T08:20:16Z,env,scanner
 d5c6c96a2e09e2cf,FALSE,2026-08-24T09:36:51Z,GET,/lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php,HTTP/1.1,404,531,NA,libredtail-http,NA,NA,NA,TRUE,2026-08-24T09:36:51Z,device_exploit,scanner
@@ -1132,7 +1132,7 @@ c5486fa804ae40bb,TRUE,2026-08-29T22:44:57Z,GET,/mh.php,HTTP/1.1,404,528,NA,NA,NA
 401d026b66d28e3b,FALSE,2026-08-30T01:13:50Z,GET,/.env.postgres,HTTP/1.1,404,476,NA,Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html),NA,NA,NA,TRUE,2026-08-30T01:13:50Z,env,scanner
 401d026b66d28e3b,FALSE,2026-08-30T01:13:50Z,GET,/.env.mailgun,HTTP/1.1,404,476,NA,Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html),NA,NA,NA,TRUE,2026-08-30T01:13:50Z,env,scanner
 c3e82cf801a42521,TRUE,2026-08-30T06:23:44Z,GET,/,HTTP/1.1,200,616,NA,Brand360-sk-domain-audit/2.0-rust,NA,NA,NA,TRUE,2026-08-30T06:23:44Z,none,unknown
-59f5d8c8bfaf66f9,FALSE,2026-08-30T06:24:25Z,GET,/agc/,HTTP/1.1,404,476,NA,Mozilla/5.0 (Windows NT 10.0; Win64; x64),NA,NA,NA,TRUE,2026-08-30T06:24:25Z,none,unknown
+59f5d8c8bfaf66f9,FALSE,2026-08-30T06:24:25Z,GET,/agc/,HTTP/1.1,404,476,NA,Mozilla/5.0 (Windows NT 10.0; Win64; x64),NA,NA,NA,TRUE,2026-08-30T06:24:25Z,none,scanner
 b9cc667858249e39,TRUE,2026-08-30T07:27:41Z,GET,/xpw.php,HTTP/1.1,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-08-30T07:27:41Z,php_probe,scanner
 b1bbef2ac18c0610,TRUE,2026-08-30T07:30:14Z,GET,/fm.php,HTTP/1.1,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-08-30T07:30:14Z,php_probe,scanner
 25f4b0b79ffec369,TRUE,2026-08-30T08:40:46Z,GET,/%252fapi%252ftest%252f.env,HTTP/1.1,404,528,NA,curl/8.7.1,NA,NA,NA,TRUE,2026-08-30T08:40:46Z,env,scanner
@@ -1295,7 +1295,7 @@ d8d1bec0cdfc63c5,TRUE,2026-09-04T18:07:09Z,GET,/src/profSkillsPortfolio2/Meeting
 580732fa9987cac8,FALSE,2026-09-04T18:13:20Z,GET,/views/.env.production,HTTP/1.1,404,476,NA,Mozilla/5.0,NA,NA,NA,TRUE,2026-09-04T18:13:20Z,env,scanner
 580732fa9987cac8,FALSE,2026-09-04T18:13:20Z,GET,/users/.env.production,HTTP/1.1,404,476,NA,Mozilla/5.0,NA,NA,NA,TRUE,2026-09-04T18:13:20Z,env,scanner
 591b6114701948c0,FALSE,2026-09-04T18:51:10Z,NA,NA,NA,400,524,NA,NA,NA,NA,NA,TRUE,2026-09-04T18:51:10Z,malformed,scanner
-213162875d73dbf9,TRUE,2026-09-04T21:25:51Z,GET,/OneSignalSDKWorker.js,HTTP/1.1,404,529,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-09-04T21:25:51Z,none,human
+213162875d73dbf9,TRUE,2026-09-04T21:25:51Z,GET,/OneSignalSDKWorker.js,HTTP/1.1,404,529,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-09-04T21:25:51Z,none,scanner
 90caf2336f47c1bd,TRUE,2026-09-04T21:25:53Z,GET,/app-config.js,HTTP/1.1,404,529,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15",NA,NA,NA,TRUE,2026-09-04T21:25:53Z,config_leak,scanner
 7f75d34f14b4cc96,TRUE,2026-09-04T21:25:54Z,GET,/scripts/animations.js,HTTP/1.1,200,2092,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-09-04T21:25:54Z,none,human
 80f6265b3c3c1067,TRUE,2026-09-04T23:35:33Z,GET,/,HTTP/1.1,200,616,bing.com,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.5938.132 Safari/537.36",NA,NA,NA,TRUE,2026-09-04T23:35:33Z,none,human
@@ -1340,8 +1340,8 @@ fc041fd965f8f780,FALSE,2026-09-06T08:27:38Z,GET,/admin/login.asp,HTTP/1.1,404,47
 27a3de0f85ef8b6c,FALSE,2026-09-06T13:51:10Z,POST,/index.php,HTTP/1.1,200,1125,NA,libredtail-http,NA,NA,NA,TRUE,2026-09-06T13:51:10Z,none,scanner
 57733d1f632159d9,TRUE,2026-09-06T15:29:28Z,GET,/tools/.env,HTTP/1.1,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-09-06T15:29:28Z,env,scanner
 6ece8259c13fd7c7,TRUE,2026-09-06T16:25:12Z,GET,/robots.txt,HTTP/1.1,404,529,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0; +claudebot@anthropic.com)",NA,NA,NA,TRUE,2026-09-06T16:25:12Z,none,bot
-50f4d141a1803801,TRUE,2026-09-06T16:51:41Z,GET,/firebase-adminsdk.json,HTTP/1.1,404,538,NA,Mozilla/5.0 (compatible; Google-Extended; +http://www.google.com/bot.html),NA,NA,NA,TRUE,2026-09-06T16:51:41Z,none,bot
-7edcbf3885628700,TRUE,2026-09-06T17:27:57Z,GET,/ssl/server.key,HTTP/1.1,404,539,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; OAI-SearchBot/1.0; +https://openai.com/searchbot)",NA,NA,NA,TRUE,2026-09-06T17:27:57Z,none,bot
+50f4d141a1803801,TRUE,2026-09-06T16:51:41Z,GET,/firebase-adminsdk.json,HTTP/1.1,404,538,NA,Mozilla/5.0 (compatible; Google-Extended; +http://www.google.com/bot.html),NA,NA,NA,TRUE,2026-09-06T16:51:41Z,none,scanner
+7edcbf3885628700,TRUE,2026-09-06T17:27:57Z,GET,/ssl/server.key,HTTP/1.1,404,539,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; OAI-SearchBot/1.0; +https://openai.com/searchbot)",NA,NA,NA,TRUE,2026-09-06T17:27:57Z,none,scanner
 106c8ddf552b789e,FALSE,2026-09-06T18:03:04Z,GET,/www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php,HTTP/1.1,404,531,NA,libredtail-http,NA,NA,NA,TRUE,2026-09-06T18:03:04Z,device_exploit,scanner
 da279594eb4d7095,FALSE,2026-09-07T05:53:33Z,KVPV,/,HTTP/1.1,200,1089,NA,Mozilla/5.0 (compatible),NA,NA,NA,TRUE,2026-09-07T05:53:33Z,none,unknown
 57733d1f632159d9,TRUE,2026-09-07T08:01:55Z,GET,/config.json,HTTP/1.1,404,529,NA,Mozilla/5.0 (compatible; PerplexityBot/1.0; +https://perplexity.ai/perplexitybot),NA,NA,NA,TRUE,2026-09-07T08:01:55Z,config_leak,scanner
@@ -1475,7 +1475,7 @@ abbf173ca817895f,FALSE,2026-09-13T07:10:15Z,OPTIONS,*,HTTP/1.0,200,126,NA,Apache
 54b2274376e65378,FALSE,2026-09-13T07:53:06Z,GET,/scripts/buttons.js,HTTP/1.1,200,6376,NA,"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; es_ES) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7",NA,NA,NA,TRUE,2026-09-13T07:53:06Z,none,scanner
 4dd78fa76b986ef9,FALSE,2026-09-13T08:59:01Z,GET,/containers/json,HTTP/1.1,404,531,NA,libredtail-http,NA,NA,NA,TRUE,2026-09-13T08:59:01Z,device_exploit,scanner
 a8424bf8242bb1f5,TRUE,2026-09-13T10:37:43Z,POST,/graphql,HTTP/1.1,404,535,alipay.kapsiar.sk,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-09-13T10:37:43Z,config_leak,scanner
-a8424bf8242bb1f5,TRUE,2026-09-13T10:37:47Z,GET,/.s3cfg,HTTP/1.1,404,535,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; GPTBot/1.3; +https://openai.com/gptbot)",NA,NA,NA,TRUE,2026-09-13T10:37:47Z,none,bot
+a8424bf8242bb1f5,TRUE,2026-09-13T10:37:47Z,GET,/.s3cfg,HTTP/1.1,404,535,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; GPTBot/1.3; +https://openai.com/gptbot)",NA,NA,NA,TRUE,2026-09-13T10:37:47Z,none,scanner
 a8424bf8242bb1f5,TRUE,2026-09-13T10:37:49Z,GET,/actuator/loggers,HTTP/1.1,404,535,NA,Mozilla/5.0 (compatible; Hunyuan/1.0; +https://hunyuan.tencent.com/),NA,NA,NA,TRUE,2026-09-13T10:37:49Z,config_leak,scanner
 a8424bf8242bb1f5,TRUE,2026-09-13T10:37:49Z,GET,/manage/env,HTTP/1.1,404,535,NA,Mozilla/5.0 (compatible; Bravebot/1.0; +https://brave.com/search/),NA,NA,NA,TRUE,2026-09-13T10:37:49Z,app_probe,scanner
 4d6662eac945298c,FALSE,2026-09-13T18:39:52Z,GET,/dev/.env,HTTP/1.1,404,531,NA,"Mozilla/5.0 (Linux; Android 7.0; 5049Z Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.111 Mobile Safari/537.36",NA,NA,NA,TRUE,2026-09-13T18:39:52Z,env,scanner
@@ -1487,11 +1487,11 @@ c146a6ba2c832c21,TRUE,2026-09-13T19:51:28Z,GET,/seo.php,HTTP/1.1,404,528,NA,NA,N
 93d5eae6f33243be,FALSE,2026-09-14T00:17:50Z,GET,/.git/config,HTTP/1.1,200,544,NA,Python-urllib/3.11,NA,NA,NA,TRUE,2026-09-14T00:17:50Z,vcs,scanner
 df8e6342136def15,TRUE,2026-09-14T06:46:38Z,GET,/mysql/.env,HTTP/1.1,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-09-14T06:46:38Z,env,scanner
 4ff80c882144b176,TRUE,2026-09-14T13:52:23Z,GET,/build/manifest.json,HTTP/1.1,404,534,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-09-14T13:52:23Z,app_probe,scanner
-4ff80c882144b176,TRUE,2026-09-14T13:52:24Z,GET,/.github/workflows/deploy.yml,HTTP/1.1,404,533,NA,CCBot/2.0 (https://commoncrawl.org/faq/),NA,NA,NA,TRUE,2026-09-14T13:52:24Z,none,bot
+4ff80c882144b176,TRUE,2026-09-14T13:52:24Z,GET,/.github/workflows/deploy.yml,HTTP/1.1,404,533,NA,CCBot/2.0 (https://commoncrawl.org/faq/),NA,NA,NA,TRUE,2026-09-14T13:52:24Z,none,scanner
 4ff80c882144b176,TRUE,2026-09-14T13:52:25Z,GET,/env.json,HTTP/1.1,404,533,NA,Mozilla/5.0 (compatible; YouBot/1.0; +https://you.com/bot),NA,NA,NA,TRUE,2026-09-14T13:52:25Z,config_leak,scanner
-4ff80c882144b176,TRUE,2026-09-14T13:52:26Z,GET,/.bash_profile,HTTP/1.1,404,533,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0; +claudebot@anthropic.com)",NA,NA,NA,TRUE,2026-09-14T13:52:26Z,none,bot
+4ff80c882144b176,TRUE,2026-09-14T13:52:26Z,GET,/.bash_profile,HTTP/1.1,404,533,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0; +claudebot@anthropic.com)",NA,NA,NA,TRUE,2026-09-14T13:52:26Z,none,scanner
 4ff80c882144b176,TRUE,2026-09-14T13:52:28Z,GET,//.env,HTTP/1.1,404,533,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; PerplexityBot/1.0; +https://perplexity.ai/perplexitybot)",NA,NA,NA,TRUE,2026-09-14T13:52:28Z,env,scanner
-718ea76cacdbb566,TRUE,2026-09-14T14:01:57Z,GET,/media/system/js/core.js,HTTP/1.1,404,529,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-09-14T14:01:57Z,none,bot
+718ea76cacdbb566,TRUE,2026-09-14T14:01:57Z,GET,/media/system/js/core.js,HTTP/1.1,404,529,NA,Go-http-client/1.1,NA,NA,NA,TRUE,2026-09-14T14:01:57Z,none,scanner
 6cfc465dd06cb9c7,TRUE,2026-09-14T16:18:44Z,GET,/wp-includes/class-wp.php,HTTP/1.1,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36",NA,NA,NA,TRUE,2026-09-14T16:18:44Z,wordpress,scanner
 dc715706debc10ba,TRUE,2026-09-14T16:39:40Z,GET,/wp-json/,HTTP/1.1,404,529,NA,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36,NA,NA,NA,TRUE,2026-09-14T16:39:40Z,wordpress,scanner
 ce6cf0f64d2cf272,FALSE,2026-09-14T16:53:33Z,NA,NA,NA,400,524,NA,NA,NA,NA,NA,TRUE,2026-09-14T16:53:33Z,malformed,scanner
@@ -1575,7 +1575,7 @@ b4320f105fad13b8,FALSE,2026-09-18T08:04:24Z,GET,/phpunit/phpunit/src/Util/PHP/ev
 671a32bb391e08b0,TRUE,2026-09-18T08:18:05Z,GET,/database.sql,HTTP/1.1,404,528,NA,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36,NA,NA,NA,TRUE,2026-09-18T08:18:05Z,backup,scanner
 a45190706b5ea968,TRUE,2026-09-18T08:18:06Z,GET,/stripe.config.js,HTTP/1.1,404,529,NA,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36,NA,NA,NA,TRUE,2026-09-18T08:18:06Z,config_leak,scanner
 7b83ea1030a05c63,TRUE,2026-09-18T09:47:54Z,GET,/.git/objects/f4/,HTTP/1.1,404,529,NA,git/2.34.1,NA,NA,NA,TRUE,2026-09-18T09:47:54Z,vcs,scanner
-394c53546267c45c,TRUE,2026-09-18T11:09:00Z,GET,/rclone.conf,HTTP/1.1,404,534,NA,Mozilla/5.0 (compatible; Hunyuan/1.0; +https://hunyuan.tencent.com/),NA,NA,NA,TRUE,2026-09-18T11:09:00Z,none,unknown
+394c53546267c45c,TRUE,2026-09-18T11:09:00Z,GET,/rclone.conf,HTTP/1.1,404,534,NA,Mozilla/5.0 (compatible; Hunyuan/1.0; +https://hunyuan.tencent.com/),NA,NA,NA,TRUE,2026-09-18T11:09:00Z,none,scanner
 d9038c4d5d7b1931,TRUE,2026-09-18T14:28:33Z,GET,/.authorized_keys,HTTP/1.1,404,528,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",NA,NA,NA,TRUE,2026-09-18T14:28:33Z,none,scanner
 7291f17235bc434e,TRUE,2026-09-18T14:29:00Z,GET,/.git/,HTTP/1.1,403,532,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",NA,NA,NA,TRUE,2026-09-18T14:29:00Z,vcs,scanner
 1cc21ee55619e143,TRUE,2026-09-18T14:29:29Z,GET,/.mcp.json,HTTP/1.1,404,528,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",NA,NA,NA,TRUE,2026-09-18T14:29:29Z,none,scanner
@@ -1625,8 +1625,8 @@ abbf173ca817895f,FALSE,2026-09-20T04:36:48Z,OPTIONS,*,HTTP/1.0,200,126,NA,Apache
 91443432d22c41c4,TRUE,2026-09-20T10:11:46Z,GET,/.env.old,HTTP/1.1,404,529,NA,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36,NA,NA,NA,TRUE,2026-09-20T10:11:46Z,env,scanner
 358aeddaf01d0b6d,TRUE,2026-09-20T10:50:13Z,GET,/.idea/WebServers.xml,HTTP/1.1,404,528,NA,Mozilla/5.0 (compatible; Hunyuan/1.0; +https://hunyuan.tencent.com/),NA,NA,NA,TRUE,2026-09-20T10:50:13Z,config_leak,scanner
 358aeddaf01d0b6d,TRUE,2026-09-20T10:51:07Z,GET,/.env.stage,HTTP/1.1,404,528,NA,Mozilla/5.0 (compatible; ChatGLM-Spider/1.0; +https://zhipuai.cn/),NA,NA,NA,TRUE,2026-09-20T10:51:07Z,env,scanner
-358aeddaf01d0b6d,TRUE,2026-09-20T10:51:07Z,GET,/rclone.conf,HTTP/1.1,404,528,NA,DuckAssistBot/1.1 (https://duckduckgo.com/duckassistbot),NA,NA,NA,TRUE,2026-09-20T10:51:07Z,none,bot
-358aeddaf01d0b6d,TRUE,2026-09-20T10:51:13Z,GET,/userfiles/x,HTTP/1.1,404,528,NA,Mozilla/5.0 (compatible; MoonshotBot/1.0; +https://kimi.ai/),NA,NA,NA,TRUE,2026-09-20T10:51:13Z,none,bot
+358aeddaf01d0b6d,TRUE,2026-09-20T10:51:07Z,GET,/rclone.conf,HTTP/1.1,404,528,NA,DuckAssistBot/1.1 (https://duckduckgo.com/duckassistbot),NA,NA,NA,TRUE,2026-09-20T10:51:07Z,none,scanner
+358aeddaf01d0b6d,TRUE,2026-09-20T10:51:13Z,GET,/userfiles/x,HTTP/1.1,404,528,NA,Mozilla/5.0 (compatible; MoonshotBot/1.0; +https://kimi.ai/),NA,NA,NA,TRUE,2026-09-20T10:51:13Z,none,scanner
 bcb0a64b91062f88,FALSE,2026-09-20T10:59:15Z,GET,/parameters.yml,HTTP/1.1,404,476,NA,Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html),NA,NA,NA,TRUE,2026-09-20T10:59:15Z,none,scanner
 bcb0a64b91062f88,FALSE,2026-09-20T10:59:19Z,GET,/wp-config.save,HTTP/1.1,404,476,NA,Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html),NA,NA,NA,TRUE,2026-09-20T10:59:19Z,wordpress,scanner
 bcb0a64b91062f88,FALSE,2026-09-20T10:59:19Z,GET,/.capistrano/metrics,HTTP/1.1,404,476,NA,Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html),NA,NA,NA,TRUE,2026-09-20T10:59:19Z,none,scanner
@@ -1676,7 +1676,7 @@ abbf173ca817895f,FALSE,2026-09-21T05:02:24Z,OPTIONS,*,HTTP/1.0,200,126,NA,Apache
 8cf4df165bedd610,FALSE,2026-09-21T05:04:08Z,GET,/.git/hooks/commit-msg.sample,HTTP/1.1,200,1100,NA,Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0,NA,NA,NA,TRUE,2026-09-21T05:04:08Z,vcs,scanner
 36e4c4272d80bf21,TRUE,2026-09-21T05:39:16Z,GET,/.composer-auth.json,HTTP/1.1,404,528,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",NA,NA,NA,TRUE,2026-09-21T05:39:16Z,none,scanner
 fddc11286f0d176f,TRUE,2026-09-21T09:54:57Z,GET,/.amplifyrc,HTTP/1.1,404,529,NA,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36,NA,NA,NA,TRUE,2026-09-21T09:54:57Z,none,scanner
-2bc08d18b6921f0c,TRUE,2026-09-21T15:11:24Z,GET,/localhost.key,HTTP/1.1,404,528,NA,Mozilla/5.0 (compatible; PanguBot/1.0; +https://www.huaweicloud.com/),NA,NA,NA,TRUE,2026-09-21T15:11:24Z,none,bot
+2bc08d18b6921f0c,TRUE,2026-09-21T15:11:24Z,GET,/localhost.key,HTTP/1.1,404,528,NA,Mozilla/5.0 (compatible; PanguBot/1.0; +https://www.huaweicloud.com/),NA,NA,NA,TRUE,2026-09-21T15:11:24Z,none,scanner
 2bc08d18b6921f0c,TRUE,2026-09-21T15:11:27Z,GET,/api/.env/public/.env,HTTP/1.1,404,528,NA,Mozilla/5.0 (compatible; cohere-ai; +https://cohere.com/crawler),NA,NA,NA,TRUE,2026-09-21T15:11:27Z,env,scanner
 bf67c956a3ae86b0,TRUE,2026-09-21T16:45:49Z,GET,/,HTTP/1.1,200,774,NA,"Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.8010.47 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",NA,NA,NA,TRUE,2026-09-21T16:45:49Z,none,bot
 54b2274376e65378,FALSE,2026-09-21T19:31:51Z,GET,/login/.env,HTTP/1.1,404,531,NA,Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:42.0) Gecko/20100101 Firefox/42.0,NA,NA,NA,TRUE,2026-09-21T19:31:51Z,env,scanner
@@ -1700,7 +1700,7 @@ a93ea9545665a2f0,FALSE,2026-09-22T05:55:13Z,GET,/,HTTP/1.1,200,1089,NA,Mozilla/5
 54b2274376e65378,FALSE,2026-09-22T07:55:56Z,GET,/.kube/config,HTTP/1.1,404,531,NA,"Mozilla/5.0 (Linux; U; Android 4.1.2; es-es; V865M Build/JZO54K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",NA,NA,NA,TRUE,2026-09-22T07:55:56Z,none,scanner
 a905ac708dc5afc9,TRUE,2026-09-22T08:02:24Z,GET,/admin/.env,HTTP/1.1,404,528,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15 (Applebot/0.1)",NA,NA,NA,TRUE,2026-09-22T08:02:24Z,env,scanner
 a905ac708dc5afc9,TRUE,2026-09-22T08:02:24Z,GET,/config/.env,HTTP/1.1,404,528,NA,Mozilla/5.0 (compatible; DeepSeekBot/1.0; +https://www.deepseek.com/),NA,NA,NA,TRUE,2026-09-22T08:02:24Z,env,scanner
-c14768e671109540,TRUE,2026-09-22T08:02:31Z,GET,/v1/onboarding/config,HTTP/1.1,404,528,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; GPTBot/1.4; +https://openai.com/gptbot",NA,NA,NA,TRUE,2026-09-22T08:02:31Z,none,bot
+c14768e671109540,TRUE,2026-09-22T08:02:31Z,GET,/v1/onboarding/config,HTTP/1.1,404,528,NA,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; GPTBot/1.4; +https://openai.com/gptbot",NA,NA,NA,TRUE,2026-09-22T08:02:31Z,none,scanner
 e6a28ba2b49d7786,TRUE,2026-09-22T09:16:03Z,GET,/.git/objects/1d/,HTTP/1.1,404,528,NA,git/2.34.1,NA,NA,NA,TRUE,2026-09-22T09:16:03Z,vcs,scanner
 37f2a9935babfd6a,TRUE,2026-09-22T09:16:04Z,GET,/.git/objects/32/,HTTP/1.1,404,528,NA,git/2.34.1,NA,NA,NA,TRUE,2026-09-22T09:16:04Z,vcs,scanner
 595be907c6669a45,TRUE,2026-09-22T09:16:08Z,GET,/.git/objects/c3/,HTTP/1.1,404,529,NA,git/2.34.1,NA,NA,NA,TRUE,2026-09-22T09:16:08Z,vcs,scanner
@@ -1708,14 +1708,14 @@ e6a28ba2b49d7786,TRUE,2026-09-22T09:16:03Z,GET,/.git/objects/1d/,HTTP/1.1,404,52
 6fffff858f55ce4b,TRUE,2026-09-22T10:07:33Z,GET,/.git/FETCH_HEAD,HTTP/1.1,200,742,NA,Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0,NA,NA,NA,TRUE,2026-09-22T10:07:33Z,vcs,scanner
 4d6662eac945298c,FALSE,2026-09-22T11:06:14Z,GET,/facturacion/.env,HTTP/1.1,404,531,NA,Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; EIE10;ENGBMCM; rv:11.0) like Gecko,NA,NA,NA,TRUE,2026-09-22T11:06:14Z,env,scanner
 f5bb21b83ab7addc,FALSE,2026-09-22T12:49:55Z,GET,/lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php,HTTP/1.1,404,531,NA,libredtail-http,NA,NA,NA,TRUE,2026-09-22T12:49:55Z,device_exploit,scanner
-ff07d74c6444085d,TRUE,2026-09-22T16:59:59Z,GET,/@fs/var/run/secrets/kubernetes.io/serviceaccount/token,HTTP/1.1,404,536,NA,Mozilla/5.0 (compatible; YouBot/1.0; +https://you.com/bot),NA,NA,NA,TRUE,2026-09-22T16:59:59Z,none,bot
-ff07d74c6444085d,TRUE,2026-09-22T16:59:59Z,GET,/__vite_rsc_findSourceMapURL,HTTP/1.1,404,536,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15 (Applebot/0.1)",NA,NA,NA,TRUE,2026-09-22T16:59:59Z,none,bot
-ff07d74c6444085d,TRUE,2026-09-22T17:00:01Z,GET,/@fs/proc/self/cmdline,HTTP/1.1,404,536,NA,Mozilla/5.0 (compatible; PanguBot/1.0; +https://www.huaweicloud.com/),NA,NA,NA,TRUE,2026-09-22T17:00:01Z,none,bot
+ff07d74c6444085d,TRUE,2026-09-22T16:59:59Z,GET,/@fs/var/run/secrets/kubernetes.io/serviceaccount/token,HTTP/1.1,404,536,NA,Mozilla/5.0 (compatible; YouBot/1.0; +https://you.com/bot),NA,NA,NA,TRUE,2026-09-22T16:59:59Z,none,scanner
+ff07d74c6444085d,TRUE,2026-09-22T16:59:59Z,GET,/__vite_rsc_findSourceMapURL,HTTP/1.1,404,536,NA,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15 (Applebot/0.1)",NA,NA,NA,TRUE,2026-09-22T16:59:59Z,none,scanner
+ff07d74c6444085d,TRUE,2026-09-22T17:00:01Z,GET,/@fs/proc/self/cmdline,HTTP/1.1,404,536,NA,Mozilla/5.0 (compatible; PanguBot/1.0; +https://www.huaweicloud.com/),NA,NA,NA,TRUE,2026-09-22T17:00:01Z,none,scanner
 a7bd2c28a4d622db,TRUE,2026-09-22T17:00:10Z,POST,/lib/terminal-xhr.php,HTTP/1.1,404,536,NA,Mozilla/5.0 (compatible; Meta-ExternalAgent/1.0; +https://developers.facebook.com/docs/sharing/webmasters/crawler),NA,NA,NA,TRUE,2026-09-22T17:00:10Z,php_probe,scanner
 abbf173ca817895f,FALSE,2026-09-22T17:00:18Z,OPTIONS,*,HTTP/1.0,200,126,NA,Apache/2.4.67 (Debian) PHP/8.2.31 (internal dummy connection),NA,NA,NA,TRUE,2026-09-22T17:00:18Z,none,internal
 bd7d3c918b851cb2,TRUE,2026-09-22T18:48:50Z,POST,/icecoder/lib/terminal-xhr.php,HTTP/1.1,404,535,NA,Mozilla/5.0 (compatible; YouBot/1.0; +https://you.com/bot),NA,NA,NA,TRUE,2026-09-22T18:48:50Z,php_probe,scanner
 54b2274376e65378,FALSE,2026-09-22T19:15:14Z,GET,/.env.orig,HTTP/1.1,404,531,NA,Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0,NA,NA,NA,TRUE,2026-09-22T19:15:14Z,env,scanner
-a3699d87ea7f6837,TRUE,2026-09-22T19:57:23Z,GET,/files/,HTTP/1.1,404,528,www.binance.com,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-09-22T19:57:23Z,none,human
+a3699d87ea7f6837,TRUE,2026-09-22T19:57:23Z,GET,/files/,HTTP/1.1,404,528,www.binance.com,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-09-22T19:57:23Z,none,scanner
 53f5c014eabbc17d,TRUE,2026-09-22T21:41:06Z,GET,/circle.yml,HTTP/1.1,404,528,NA,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36,NA,NA,NA,TRUE,2026-09-22T21:41:06Z,none,scanner
 0adafa822b4df276,TRUE,2026-09-22T21:41:06Z,GET,/node-api/.env,HTTP/1.1,404,528,NA,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36,NA,NA,NA,TRUE,2026-09-22T21:41:06Z,env,scanner
 68173df895d6deea,TRUE,2026-09-22T21:41:08Z,GET,/.env.bak,HTTP/1.1,404,532,NA,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36,NA,NA,NA,TRUE,2026-09-22T21:41:08Z,env,scanner
@@ -1915,7 +1915,7 @@ bd414dbd20a2bb09,TRUE,2026-09-28T21:25:12Z,GET,/.git/objects/fa/734880b6965527dc
 54b2274376e65378,FALSE,2026-09-28T23:00:51Z,GET,/css/.env,HTTP/1.1,404,476,NA,"Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.82 Safari/537.36 OPR/35.0.2066.37",NA,NA,NA,TRUE,2026-09-28T23:00:51Z,env,scanner
 b2bee8954dfd451d,TRUE,2026-09-29T03:37:58Z,GET,/.git/objects/fd/8bf159bc499e5b6e625031707e40ab5f01aafb,HTTP/1.1,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-09-29T03:37:58Z,vcs,scanner
 9ecf7f64fb778adb,TRUE,2026-09-29T03:38:00Z,GET,/.aws/secret.json,HTTP/1.1,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-09-29T03:38:00Z,config_leak,scanner
-9ecf7f64fb778adb,TRUE,2026-09-29T03:38:00Z,GET,/aws-exports.json,HTTP/1.1,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-09-29T03:38:00Z,none,bot
+9ecf7f64fb778adb,TRUE,2026-09-29T03:38:00Z,GET,/aws-exports.json,HTTP/1.1,404,528,NA,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-09-29T03:38:00Z,none,scanner
 26c69bda9fefd1c6,TRUE,2026-09-29T04:24:54Z,GET,/.env.ci,HTTP/1.1,404,528,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-09-29T04:24:54Z,env,scanner
 26c69bda9fefd1c6,TRUE,2026-09-29T04:24:57Z,GET,/en/.env,HTTP/1.1,404,528,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-09-29T04:24:57Z,env,scanner
 26c69bda9fefd1c6,TRUE,2026-09-29T04:24:59Z,GET,/development/.env,HTTP/1.1,404,528,NA,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",NA,NA,NA,TRUE,2026-09-29T04:24:59Z,env,scanner

@@ -22,7 +22,7 @@ kapsiar.sk is a small personal portfolio site, yet its traffic is far larger tha
 |---|---|
 | Metric | Share of requests and of outgoing bytes per class (human / bot / scanner / internal / unknown) |
 | Data | Anonymised access log (`client_class` from `classify_requests()`), later enriched with country/ASN (KAP-72) |
-| Success criteria | (a) Rule-based classifier reaches ≥ 90% accuracy on 200 hand-labelled requests (stratified by class); (b) the share of `unknown` is ≤ 5% of requests; (c) an unsupervised clustering of clients (KAP-69) agrees with the rule classes on the large majority of clients, and disagreements are listed and explained |
+| Success criteria | (a) Rule-based classifier agrees with independent labellers on ≥ 90% of the decisive rows of a fresh, stratified 200-request test sample (four AI labellers measured 98.1%, see `analysis/labelling/README.md`; AI labels are not ground truth, so a human check of disagreements is still advisable); (b) the share of `unknown` is ≤ 5% of requests; (c) an unsupervised clustering of clients (KAP-69) agrees with the rule classes on the large majority of clients, and disagreements are listed and explained |
 | Issues | KAP-55, KAP-69, KAP-72 |
 
 ### RQ2 – What drives the volume, and can the incoming/outgoing volume be explained?

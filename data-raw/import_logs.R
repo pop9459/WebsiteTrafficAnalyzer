@@ -12,7 +12,11 @@
 devtools::load_all(quiet = TRUE)
 
 args <- commandArgs(trailingOnly = TRUE)
-files <- if (length(args)) args else list.files("data/raw", full.names = TRUE)
+# Default: the regular files directly in data/raw/. The folder data/raw/vps/
+# (scripts/fetch_logs.sh) is used by analysis/fix_effect.R; pass its files as
+# arguments to import them here.
+default_files <- list.files("data/raw", full.names = TRUE)
+files <- if (length(args)) args else default_files[!dir.exists(default_files)]
 if (!length(files)) stop("No raw log files found in data/raw/.")
 
 raw <- dplyr::bind_rows(lapply(files, read_raw_log))
