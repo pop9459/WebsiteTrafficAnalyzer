@@ -27,13 +27,14 @@ Rscript -e 'devtools::test(filter = "parse")'    # one test file (test-parse.R)
 Rscript -e 'devtools::check(args = "--no-manual")'
 Rscript data-raw/import_logs.R                   # data/raw/* -> data/processed/*.rds + data/sample/requests_sample.csv
 Rscript analysis/first_look.R                    # figures + analysis/first_look_summary.md
+Rscript data-raw/export_dashboard.R [--sample]   # dashboard aggregates -> data/processed/dashboard.json
 ```
 
 Tests use only the synthetic fixture in `tests/testthat/fixtures/` (documentation IP ranges).
 
 ## Architecture
 
-Pipeline: read logs → parse → anonymise → classify (human/bot/scanner) → aggregate → export JSON → dashboard. Built so far: everything up to classify. Aggregation/JSON export is KAP-56.
+Pipeline: read logs → parse → anonymise → classify (human/bot/scanner) → aggregate → export JSON → dashboard. Built so far: everything up to the JSON export (`R/aggregate.R`, `data-raw/export_dashboard.R`). The dashboard is KAP-58/KAP-59.
 
 - **Engine:** an R package. Being an R package also replaces the course's CS50R packaging task, so keep it a proper package (DESCRIPTION, `R/`, `tests/testthat/`).
   - `R/read_logs.R` `read_raw_log()`: detects Docker json-file / `--timestamps` / plain Apache format.
@@ -52,6 +53,12 @@ Pipeline: read logs → parse → anonymise → classify (human/bot/scanner) →
 - The site is behind **Cloudflare**: ~56% of requests are logged with a Cloudflare edge IP, not the visitor's, so per-IP features only mean something for direct-to-origin traffic (`via_cloudflare == FALSE`). Logging `CF-Connecting-IP` is part of KAP-49.
 - The website repo is mounted as the web root (`.:/var/www/html`), so `/.git/`, `docker-compose.yaml` and `.env.example` are publicly served. `/.git/objects/` downloads by scanners are ~95% of all outgoing bytes.
 - Without `%I`, the logs do not record incoming bytes. The 09/2025 "64 GB incoming" spike in the pitch may not be explainable from these logs (KAP-54).
+
+## Progress tracking
+
+- `docs/progress_log.md`: one dated entry per phase report (done, decisions taken, open questions, what Peter must be able to explain, next).
+- `docs/decisions/NNNN-<slug>.md`: decision records (context, options, choice, why, how to reverse).
+- Agent sessions on this project must end up in the AI record: run `python3 ../../ai-sessions/collect.py` after a work session (see that script's docstring).
 
 ## Data and privacy rules
 
