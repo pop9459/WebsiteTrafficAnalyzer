@@ -39,4 +39,5 @@ IPs are hashed with a salted HMAC. The salt comes from the `WTA_SALT` environmen
 | `traffic_by_period()` | Requests, clients and bytes per day/hour and client class |
 | `status_by_period()` | Status-class counts and shares per day/hour |
 | `top_values()` | Top paths, user agents or referer hosts per class (IPs masked, minimum count) |
+| `parse_error_log()` | Parses Apache/PHP error-log lines into module, level, `AH` code, PHP error type and a grouped `message_template` (client IPs dropped) |
 | `export_dashboard_json()` | Writes all dashboard aggregates to one JSON file |
