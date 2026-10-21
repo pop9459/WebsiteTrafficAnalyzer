@@ -41,3 +41,4 @@ IPs are hashed with a salted HMAC. The salt comes from the `WTA_SALT` environmen
 | `top_values()` | Top paths, user agents or referer hosts per class (IPs masked, minimum count) |
 | `parse_error_log()` | Parses Apache/PHP error-log lines into module, level, `AH` code, PHP error type and a grouped `message_template` (client IPs dropped) |
 | `export_dashboard_json()` | Writes all dashboard aggregates to one JSON file |
+| `aggregate_log_chunk()`, `combine_history_chunks()` | Chunked aggregates (per day: class, status, probe family, clients) of huge json-file logs; used by `data-raw/import_history.R` (KAP-104) |
