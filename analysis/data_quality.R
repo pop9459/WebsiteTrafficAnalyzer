@@ -149,12 +149,23 @@ n_ips <- n_distinct(requests$ip_hash)
 
 # 6. Error log --------------------------------------------------------------
 errors$day <- as.Date(errors$time, tz = "UTC")
-err_daily <- count(errors, day)
-err_all <- tibble(day = seq(min(errors$day), max(errors$day), by = "day")) |>
+# A few lines in the plain error.log files have no timestamp at all
+# (e.g. the Apache start-up notice); they count in the total but not per day.
+err_no_time <- sum(is.na(errors$day))
+err_daily <- count(filter(errors, !is.na(day)), day)
+err_all <- tibble(day = seq(min(errors$day, na.rm = TRUE), max(errors$day, na.rm = TRUE), by = "day")) |>
   left_join(err_daily, by = "day") |>
   mutate(n = coalesce(n, 0L))
 err_q <- quantile(err_all$n, c(0.25, 0.75))
 err_max <- err_all |> slice_max(n, n = 1, with_ties = FALSE)
+
+# Extended log format (%I %O %D) and other numbers used in the prose
+ext_rows <- !is.na(requests$bytes_in)
+n_ext <- sum(ext_rows)
+ext_start <- if (n_ext > 0) format(min(requests$time[ext_rows]), "%d %B %Y") else NA
+ua_miss <- mean(is.na(requests$user_agent) | requests$user_agent %in% c("-", ""))
+ref_miss <- mean(is.na(requests$referer) | requests$referer %in% c("-", ""))
+n_zero_bytes <- sum(requests$bytes == 0, na.rm = TRUE)
 
 # Write the report ----------------------------------------------------------
 gap_txt <- if (nrow(gap_days) == 0) {
@@ -226,7 +237,10 @@ lines <- c(
   "",
   "*Figure 8. Share of missing values per field. Orange bars mark fields that exist only in the extended log format.*",
   "",
-  "`bytes_in`, `bytes_out` and `duration_us` are structurally missing. They come from the `%I %O %D` directives of the extended log format, which the server uses only from 7 October 2026. This dataset ends before that date, so these fields are 100% missing by design and not a data error. `method` and `path` are missing exactly for the malformed request lines (section 2); `protocol` is missing for those plus a handful of other rows with an incomplete request line. `referer` and `user_agent` are `NA` where the client sent `-` (the parser converts the Apache placeholder to `NA`), so a missing referer (about 98%) mostly means direct or script traffic, and a missing user agent (about 13%) means the client sent none. `status` and `bytes` are always present (responses without a body are logged with 0 bytes, 420 rows here).",
+  sprintf(
+    "`bytes_in`, `bytes_out` and `duration_us` are structurally missing. They come from the `%%I %%O %%D` directives of the extended log format, which the server writes only since the log persistence change of 7 October 2026 (KAP-49). %s rows have them (from %s on); all older rows lack them by design, which is not a data error. `method` and `path` are missing exactly for the malformed request lines (section 2); `protocol` is missing for those plus a handful of other rows with an incomplete request line. `referer` and `user_agent` are `NA` where the client sent `-` (the parser converts the Apache placeholder to `NA`), so a missing referer (%s) mostly means direct or script traffic, and a missing user agent (%s) means the client sent none. `status` and `bytes` are always present (responses without a body are logged with 0 bytes, %s rows here).",
+    fmt(n_ext), ifelse(is.na(ext_start), "never", ext_start), pct(ref_miss, 0), pct(ua_miss, 0), fmt(n_zero_bytes)
+  ),
   "",
   "## 4. Duplicates and clock",
   "",
@@ -250,7 +264,7 @@ lines <- c(
   "",
   if (length(off_ok) > 0) {
     sprintf(
-      "`received` is the time Docker received the line; `time` is the time Apache logged for the request. The difference `received - time` (seconds) over %s rows: minimum %.1f, median %.1f, 99th percentile %.1f, maximum %.1f. %s rows are negative and %s rows differ by more than 60 seconds.",
+      "`received` is the time Docker received the line; `time` is the time Apache logged for the request. Only rows from the Docker export have a `received` time; the server log files written since 7 October do not. The difference `received - time` (seconds) over %s rows: minimum %.1f, median %.1f, 99th percentile %.1f, maximum %.1f. %s rows are negative and %s rows differ by more than 60 seconds.",
       fmt(length(off_ok)), off_stats[["min"]], off_stats[["median"]], off_stats[["p99"]], off_stats[["max"]], fmt(off_stats[["neg"]]), fmt(off_stats[["over60"]])
     )
   } else {
@@ -259,7 +273,8 @@ lines <- c(
   "",
   "## 5. Known blind spots",
   "",
-  sprintf("- **No incoming bytes.** `bytes_in` is absent before the format change on 7 October 2026, so request sizes and upload volume cannot be analysed (this limits KAP-54)."),
+  sprintf("- **Incoming bytes only recently.** `bytes_in` exists only from %s (%s rows), so incoming volume before that date, including the 09/2025 spike, cannot be analysed from these logs (this limits KAP-54).", ifelse(is.na(ext_start), "no date", ext_start), fmt(n_ext)),
+  "- **Export gap 3 to 7 October 2026.** The manual Docker export ends on 3 October and the persisted server logs start on 7 October (KAP-49), so the days in between are missing here. Those requests exist only in the local-only backup of 7 October (KAP-104).",
   sprintf(
     "- **Cloudflare.** %s of requests (%s of %s) carry a Cloudflare edge address instead of the visitor's (`via_cloudflare == TRUE`; %d rows undetermined). Per-client statistics, such as requests per IP, are only valid for the remaining direct-to-origin traffic (%s distinct hashed addresses overall, mixing both kinds).",
     pct(cf_share), fmt(sum(requests$via_cloudflare, na.rm = TRUE)), fmt(n_req), cf_na, fmt(n_ips)
@@ -272,15 +287,16 @@ lines <- c(
   "## 6. Error log",
   "",
   sprintf(
-    "`errors.rds` holds %s lines (Apache error log, stderr) from %s to %s. Lines per day over the %d calendar days in that range: median %s, interquartile range %s to %s, maximum %s (on %s). Only the volume is described here; the content of the error log is analysed separately (KAP-71).",
-    fmt(nrow(errors)), format(min(errors$day), "%d %b %Y"), format(max(errors$day), "%d %b %Y"), nrow(err_all),
-    fmt(round(median(err_all$n))), fmt(round(err_q[[1]])), fmt(round(err_q[[2]])), fmt(err_max$n), format(err_max$day, "%d %b %Y")
+    "`errors.rds` holds %s lines (Apache error log, stderr) from %s to %s. Lines per day over the %d calendar days in that range: median %s, interquartile range %s to %s, maximum %s (on %s). %s Only the volume is described here; the content of the error log is analysed separately (KAP-71).",
+    fmt(nrow(errors)), format(min(errors$day, na.rm = TRUE), "%d %b %Y"), format(max(errors$day, na.rm = TRUE), "%d %b %Y"), nrow(err_all),
+    fmt(round(median(err_all$n))), fmt(round(err_q[[1]])), fmt(round(err_q[[2]])), fmt(err_max$n), format(err_max$day, "%d %b %Y"),
+    ifelse(err_no_time > 0, sprintf("%s line(s) carry no timestamp and are left out of the per-day figures.", fmt(err_no_time)), "")
   ),
   "",
   "## Implications for the analysis",
   "",
   sprintf("- Daily trends are reliable over the covered range; treat the %d gap day(s) and the partial first and last day as missing data, not as zero traffic.", nrow(gap_days)),
-  "- Do not use `bytes_in`, `bytes_out` or `duration_us`; use `bytes` (outgoing body bytes) for volume.",
+  sprintf("- Use `bytes` (outgoing body bytes) for volume over the whole range. `bytes_in`, `bytes_out` and `duration_us` are usable only from %s; compare them only within that period.", ifelse(is.na(ext_start), "no date", ext_start)),
   sprintf("- Per-client statistics (requests per IP, session-like features) hold only for direct traffic; %s of requests come via Cloudflare and need a separate treatment until `CF-Connecting-IP` is logged.", pct(cf_share, 0)),
   "- Keep malformed requests as their own probe family instead of dropping them; they have no method, path or protocol.",
   "- Exact duplicates are plausible same-second repeats, so they are not removed.",

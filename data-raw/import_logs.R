@@ -12,18 +12,28 @@
 devtools::load_all(quiet = TRUE)
 
 args <- commandArgs(trailingOnly = TRUE)
-# Default: the regular files directly in data/raw/. The folder data/raw/vps/
-# (scripts/fetch_logs.sh) is used by analysis/fix_effect.R; pass its files as
-# arguments to import them here.
+# Default: the regular files directly in data/raw/. To include the persisted
+# server logs from scripts/fetch_logs.sh, pass them as arguments too, e.g.
+#   Rscript data-raw/import_logs.R data/raw/*.gz data/raw/vps/access.log* data/raw/vps/error.log*
 default_files <- list.files("data/raw", full.names = TRUE)
 files <- if (length(args)) args else default_files[!dir.exists(default_files)]
 if (!length(files)) stop("No raw log files found in data/raw/.")
 
-raw <- dplyr::bind_rows(lapply(files, read_raw_log))
+# Plain Apache error logs (data/raw/vps/error.log*) have no stream marker, so
+# their lines are treated as the stderr stream, like Docker's json-file log.
+read_one <- function(path) {
+  out <- read_raw_log(path)
+  if (grepl("^error\\.log", basename(path))) out$stream <- "stderr"
+  out
+}
+raw <- dplyr::bind_rows(lapply(files, read_one))
 salt <- get_salt(create = TRUE)
 
 access <- raw[raw$stream %in% "stdout", ]
 errors <- raw[raw$stream %in% "stderr", c("time", "line")]
+# Plain error.log files carry no Docker receive time: take it from the line.
+no_time <- is.na(errors$time)
+errors$time[no_time] <- parse_error_log(errors$line[no_time])$time
 
 parsed <- parse_access_log(access$line)
 parsed$received <- access$time

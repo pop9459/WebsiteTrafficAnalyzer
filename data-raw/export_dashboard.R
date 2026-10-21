@@ -3,6 +3,8 @@
 # Usage (from the repo root):
 #   Rscript data-raw/export_dashboard.R           # full data, after import_logs.R
 #   Rscript data-raw/export_dashboard.R --sample  # committed sample only
+#   Rscript data-raw/export_dashboard.R --out <file>  # write somewhere else, e.g. the
+#     website's public/json/traffic.json for local review (aggregates only, not committed)
 #
 # Writes
 #   data/processed/dashboard.json      from data/processed/requests.rds (git-ignored)
@@ -17,6 +19,9 @@ if ("--sample" %in% commandArgs(trailingOnly = TRUE)) {
   requests <- readRDS("data/processed/requests.rds")
   out <- "data/processed/dashboard.json"
 }
+
+args <- commandArgs(trailingOnly = TRUE)
+if ("--out" %in% args) out <- args[[match("--out", args) + 1]]
 
 export_dashboard_json(requests, out)
 cat(sprintf("Wrote %s: %d requests, %s to %s\n", out, nrow(requests),
