@@ -69,7 +69,7 @@ p1 <- ggplot(weekly, aes(week, n, fill = client_class)) +
   scale_y_continuous(labels = scales::label_comma(), expand = expansion(c(0, 0.05))) +
   labs(
     title = "Most traffic to kapsiar.sk comes from scanners",
-    subtitle = "Requests per week, by client class (rule-based first pass)",
+    subtitle = "Requests per week, by client class (rule-based classifier, KAP-55)",
     x = NULL, y = "Requests", caption = source_caption
   ) +
   theme_wta()
