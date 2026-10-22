@@ -1,5 +1,32 @@
 # Paths that really exist on kapsiar.sk. Other PHP paths are probes.
-site_php_regex <- "^/(index\\.php|phpcontent/.+\\.php)$"
+site_php_regex <- "^/(index\\.php|traffic\\.php|phpcontent/.+\\.php)$"
+
+# Section URLs that kapsiar.sk serves since KAP-112 (rewritten to index.php by
+# Apache; the list matches public/scripts/sections.js of the website), plus the
+# dashboard page.
+site_section_regex <- paste0(
+  "^/(about|traffic\\.php|",
+  "projects/(personal-website|maturity-project|sunny-socks-website|campus-link|battlebot)|",
+  "portfolio1/(reflection-report|study-career-coaching|feedback-forms|project-plan|",
+  "communication|presentation|meeting-techniques|edumundo-assignments)|",
+  "portfolio2/(reflection|feedback|pdp|project-plan|communication|presenting|",
+  "edumundo-assignments|meeting-techniques|final-interview))/?$"
+)
+
+#' Is a request path one of the site's own pages?
+#'
+#' True for `/`, the real PHP files (`index.php`, `phpContent/...`) and the
+#' section URLs added in KAP-112 (`/about`, `/projects/<name>`,
+#' `/portfolio1/<name>`, `/portfolio2/<name>`, `/traffic.php`). Used to rank
+#' "top pages" without counting probes.
+#'
+#' @param path Character vector of request paths without query string.
+#' @return Logical vector; `NA` paths give `FALSE`.
+#' @export
+is_site_page <- function(path) {
+  p <- tolower(path)
+  !is.na(p) & (p == "/" | grepl(site_php_regex, p) | grepl(site_section_regex, p))
+}
 
 # Checked in order; the first match wins.
 probe_patterns <- c(

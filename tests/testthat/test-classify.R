@@ -152,3 +152,12 @@ test_that("bot_ua_regex is the union of crawler and generic client patterns", {
   expect_false(grepl(generic_client_ua_regex, "googlebot"))
   expect_true(grepl(bot_ua_regex, "googlebot") && grepl(bot_ua_regex, "wget/1.2"))
 })
+
+test_that("the site's section URLs (KAP-112) are real pages, not probes", {
+  sections <- c("/about", "/projects/battlebot", "/projects/campus-link/",
+                "/portfolio1/presentation", "/portfolio2/pdp", "/traffic.php")
+  expect_true(all(is_site_page(sections)))
+  expect_equal(probe_family(sections), rep("none", length(sections)))
+  expect_false(any(is_site_page(c("/.env", "/admin", "/projects/../etc/passwd", "/wp-login.php"))))
+  expect_true(all(is_site_page(c("/", "/index.php", "/phpContent/aboutMe.php"))))
+})

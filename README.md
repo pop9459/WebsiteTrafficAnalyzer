@@ -43,6 +43,7 @@ IPs are hashed with a salted HMAC. The salt comes from the `WTA_SALT` environmen
 | `anonymise_requests()` | Adds `via_cloudflare` and `ip_hash`; drops the IP |
 | `in_cloudflare()` | Checks whether an address is a Cloudflare edge address |
 | `probe_family()` | Groups scanner paths (`.env`, `.git`, WordPress, …) into families |
+| `is_site_page()` | True for the site's own pages: `/`, its PHP files and the section URLs from KAP-112 |
 | `classify_requests()` | Rule-based `client_class`: human / bot / scanner / internal / unknown |
 | `traffic_by_period()` | Requests, clients and bytes per day/hour and client class |
 | `status_by_period()` | Status-class counts and shares per day/hour |

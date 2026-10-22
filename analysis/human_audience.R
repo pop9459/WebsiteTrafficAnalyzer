@@ -120,7 +120,7 @@ sessions_all <- human |>
 client_days <- human |> group_by(client) |> summarise(days = n_distinct(day), .groups = "drop")
 
 # 3. Pages, referrers, devices, browsers --------------------------------------
-site_page <- human$path == "/" | grepl(site_php_regex, tolower(human$path))
+site_page <- is_site_page(human$path)
 pages <- human[site_page, ] |>
   count(path, name = "requests", sort = TRUE) |>
   filter(requests >= 5) |>
