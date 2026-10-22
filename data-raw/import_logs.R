@@ -54,6 +54,13 @@ set.seed(42)
 sample_rows <- requests[sort(sample.int(nrow(requests), min(2000, nrow(requests)))), ]
 sample_rows$query <- NULL
 sample_rows$request <- NULL
+# Geo: no organisation names, and country/ASN only where the pair is common
+# enough in the sample (>= 5 requests) not to single out a home connection.
+sample_rows$as_org <- NULL
+pair_n <- ave(seq_len(nrow(sample_rows)), sample_rows$country, sample_rows$asn, FUN = length)
+rare <- is.na(sample_rows$country) | is.na(sample_rows$asn) | pair_n < 5
+sample_rows$country[rare] <- NA
+sample_rows$asn[rare] <- NA
 sample_rows$referer <- sub("^[a-z]+://([^/]+).*$", "\\1", sample_rows$referer, ignore.case = TRUE)
 ipv4 <- "\\b([0-9]{1,3}\\.){3}[0-9]{1,3}\\b"
 sample_rows$path <- gsub(ipv4, "<ip>", sample_rows$path)
@@ -65,5 +72,7 @@ cat(sprintf("Unparsed lines:     %d\n", sum(!parsed$parse_ok)))
 cat(sprintf("Requests:           %d from %s to %s\n", nrow(requests),
             format(min(requests$time)), format(max(requests$time))))
 cat(sprintf("Via Cloudflare:     %.1f%%\n", 100 * mean(requests$via_cloudflare, na.rm = TRUE)))
+cat(sprintf("Geo resolved:       %.1f%% of direct-to-origin requests\n",
+            100 * mean(!is.na(requests$country[requests$via_cloudflare %in% FALSE]))))
 cat("Client classes:\n")
 print(dplyr::count(requests, client_class, sort = TRUE) |> dplyr::mutate(share = round(n / sum(n), 3)))

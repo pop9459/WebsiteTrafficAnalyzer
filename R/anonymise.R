@@ -64,28 +64,50 @@ hash_ip <- function(ip, salt) {
 
 #' Anonymise parsed requests
 #'
-#' Derives the fields that need the real IP address first (currently
-#' `via_cloudflare`; geo/ASN lookups belong here too), then replaces `ip`
+#' Derives the fields that need the real IP address first (`via_cloudflare`,
+#' and `country`, `asn` and `as_org` from [geo_lookup()]), then replaces `ip`
 #' with `ip_hash` and drops the `ident`, `user` and `peer_ip` fields.
 #'
 #' `via_cloudflare` is based on the connecting address: `peer_ip` when the log
 #' has it (extended format), otherwise `ip`.
 #'
+#' Geo fields describe the logged client address `ip`. Since the extended log
+#' format (7 Oct 2026) that is the visitor's own address even for requests via
+#' Cloudflare (`peer_ip` is the edge). When `ip` itself is a Cloudflare edge
+#' server (old format, proxied request), the geo fields are `NA`: the edge's
+#' country and ASN say nothing about the visitor. They are also `NA` when no database is
+#' available (a message is shown once), so tests and CI work without one.
+#'
 #' @param requests Output of [parse_access_log()].
 #' @param salt Secret salt, see [get_salt()].
-#' @return `requests` with `ip_hash` and `via_cloudflare` instead of `ip`,
-#'   `ident`, `user` and `peer_ip`.
+#' @param geo_db Database from [load_geo_db()]. The default loads (and caches)
+#'   the one in [geo_dir()], or uses `NA` geo fields if there is none.
+#' @return `requests` with `ip_hash`, `via_cloudflare`, `country`, `asn` and
+#'   `as_org` instead of `ip`, `ident`, `user` and `peer_ip`.
 #' @export
-anonymise_requests <- function(requests, salt) {
+anonymise_requests <- function(requests, salt, geo_db = default_geo_db()) {
   connecting_ip <- requests$ip
   if ("peer_ip" %in% names(requests)) {
     connecting_ip <- dplyr::coalesce(requests$peer_ip, connecting_ip)
   }
   requests$via_cloudflare <- in_cloudflare(connecting_ip)
+  if (is.null(geo_db)) {
+    geo <- tibble::tibble(country = rep(NA_character_, nrow(requests)),
+                          asn = NA_integer_, as_org = NA_character_)
+  } else {
+    # Look up the logged client address (`ip`). In the extended format that is
+    # the visitor even behind Cloudflare; in the old format it is the edge.
+    lookup_ip <- requests$ip
+    lookup_ip[in_cloudflare(lookup_ip) %in% TRUE] <- NA
+    geo <- geo_lookup(lookup_ip, geo_db)
+  }
+  requests$country <- geo$country
+  requests$asn <- geo$asn
+  requests$as_org <- geo$as_org
   requests$ip_hash <- hash_ip(requests$ip, salt)
   requests$ip <- NULL
   requests$ident <- NULL
   requests$user <- NULL
   requests$peer_ip <- NULL
-  dplyr::relocate(requests, "ip_hash", "via_cloudflare")
+  dplyr::relocate(requests, "ip_hash", "via_cloudflare", "country", "asn", "as_org")
 }

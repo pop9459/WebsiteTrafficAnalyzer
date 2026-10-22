@@ -4,23 +4,33 @@
 \alias{anonymise_requests}
 \title{Anonymise parsed requests}
 \usage{
-anonymise_requests(requests, salt)
+anonymise_requests(requests, salt, geo_db = default_geo_db())
 }
 \arguments{
 \item{requests}{Output of \code{\link[=parse_access_log]{parse_access_log()}}.}
 
 \item{salt}{Secret salt, see \code{\link[=get_salt]{get_salt()}}.}
+
+\item{geo_db}{Database from \code{\link[=load_geo_db]{load_geo_db()}}. The default loads (and caches)
+the one in \code{\link[=geo_dir]{geo_dir()}}, or uses \code{NA} geo fields if there is none.}
 }
 \value{
-\code{requests} with \code{ip_hash} and \code{via_cloudflare} instead of \code{ip},
-\code{ident}, \code{user} and \code{peer_ip}.
+\code{requests} with \code{ip_hash}, \code{via_cloudflare}, \code{country}, \code{asn} and
+\code{as_org} instead of \code{ip}, \code{ident}, \code{user} and \code{peer_ip}.
 }
 \description{
-Derives the fields that need the real IP address first (currently
-\code{via_cloudflare}; geo/ASN lookups belong here too), then replaces \code{ip}
+Derives the fields that need the real IP address first (\code{via_cloudflare},
+and \code{country}, \code{asn} and \code{as_org} from \code{\link[=geo_lookup]{geo_lookup()}}), then replaces \code{ip}
 with \code{ip_hash} and drops the \code{ident}, \code{user} and \code{peer_ip} fields.
 }
 \details{
 \code{via_cloudflare} is based on the connecting address: \code{peer_ip} when the log
 has it (extended format), otherwise \code{ip}.
+
+Geo fields describe the logged client address \code{ip}. Since the extended log
+format (7 Oct 2026) that is the visitor's own address even for requests via
+Cloudflare (\code{peer_ip} is the edge). When \code{ip} itself is a Cloudflare edge
+server (old format, proxied request), the geo fields are \code{NA}: the edge's
+country and ASN say nothing about the visitor. They are also \code{NA} when no database is
+available (a message is shown once), so tests and CI work without one.
 }
