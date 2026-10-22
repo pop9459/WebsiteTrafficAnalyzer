@@ -7,3 +7,4 @@
 # Raw logs and full processed data never go into git
 data/raw/
 data/processed/
+data/public/
