@@ -85,3 +85,28 @@ Dated entries per phase report: done, decisions taken, open questions, what Pete
 
 **Next (running now)**
 - KAP-70 human audience, KAP-69 client clustering, KAP-72 country/ASN (DB-IP Lite).
+
+## 2026-10-22 (evening): KAP-70, KAP-69, KAP-72
+
+**Done**
+- KAP-72 (`2c80c46`): DB-IP Lite country and ASN in `anonymise_requests()` before hashing (`R/geo.R`). Scanners come mostly from the US (36%) and DE (22%). A handful of bulk hosters with fewer than 20 clients each send the most requests.
+- KAP-70 (`4ed2b5e`): `sessions_per_day()` and `analysis/human_audience.md`. The fixed-hour monitors are gone from the human class. About 38 sessions per day (median), 42% mobile, 97% of page loads are `/`.
+- KAP-69 (`c22cc8e`): `client_features()` and `analysis/cluster_validation.md`. Weak overall agreement (ARI 0.055). The scanner core is recovered cleanly. Single-request "scanner" clients are the weakest part of the rules.
+- `216c2bc`: README and CLAUDE.md updated. Suite of 238 tests, check 0/0/0.
+
+**Decisions taken (veto-able)**
+- Geo uses the logged client address. Since 7 Oct that is the visitor even behind Cloudflare, so 74,766 proxied requests now have a country. Only rows whose address is itself a Cloudflare edge get NA.
+- No classifier change for monitors (none found). DBSCAN was skipped (no package installed).
+- The leak check allows the DB-IP attribution URL and the site's own pages.
+
+**Open questions (to Peter)**
+- Should `unknown` direct-to-origin browsers (5,868 requests) count as audience on the dashboard?
+- Should the scanner rule be revisited for single-request clients (KAP-69 finding)?
+
+**What Peter must be able to explain (T2a)**
+- Why geo lookup happens before hashing, and why Cloudflare edge addresses are excluded (`R/anonymise.R`).
+- How a session is defined, and why the 30-minute gap was chosen (`R/sessions.R`).
+- What ARI and purity say, and why weak agreement doesn't automatically mean the rules are wrong (`analysis/cluster_validation.md`).
+
+**Next**
+- KAP-64 public-dataset comparison; dashboard polish on the project branch (status colours, merged top paths); KAP-60 scheduled run (draft only; the server changes are Peter's call).
