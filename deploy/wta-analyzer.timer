@@ -1,0 +1,11 @@
+[Unit]
+Description=Run the website traffic analyzer nightly
+
+[Timer]
+OnCalendar=*-*-* 03:30:00 UTC
+Persistent=true
+RandomizedDelaySec=2min
+Unit=wta-analyzer.service
+
+[Install]
+WantedBy=timers.target

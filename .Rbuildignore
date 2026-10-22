@@ -10,3 +10,4 @@
 ^\.Rprofile$
 ^docs$
 ^scripts$
+^deploy$

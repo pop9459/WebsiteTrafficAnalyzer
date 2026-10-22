@@ -1,0 +1,30 @@
+# KAP-60: batch service for /root/personalWebsite. Not started by `docker compose up`.
+# Use together with the website's compose file:
+#   docker compose -f docker-compose.yaml -f compose.kap60.yaml run --rm analyzer
+services:
+  analyzer:
+    image: wta-analyzer:latest        # built on the VPS from the analyzer repo, see docs/deploy.md
+    profiles: [batch]                 # only runs when asked for explicitly
+    network_mode: none                # reads files and writes a file; needs no network
+    read_only: true                   # the container filesystem is immutable
+    tmpfs:
+      - /tmp:size=256m
+    mem_limit: 1g
+    memswap_limit: 1g
+    cpus: 1.0
+    pids_limit: 128
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    user: "33:33"                     # www-data on the web image, so the output files match what Apache serves
+    environment:
+      WTA_GEO_DIR: /geo               # remove this line (and the geo volume) to run without country/ASN
+    volumes:
+      - /var/log/website:/logs:ro     # persisted Apache logs, read-only
+      - ./public/json:/out            # traffic.json lands here (gitignored in the website repo)
+      - /root/.local/share/wta/geo:/geo:ro   # DB-IP Lite CSVs, optional
+    secrets:
+      - wta_salt
+
+secrets:
+  wta_salt:
+    file: /root/.config/wta/salt      # chmod 600, owned by root; never in git
