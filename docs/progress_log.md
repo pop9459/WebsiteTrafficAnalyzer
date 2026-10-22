@@ -110,3 +110,24 @@ Dated entries per phase report: done, decisions taken, open questions, what Pete
 
 **Next**
 - KAP-64 public-dataset comparison; dashboard polish on the project branch (status colours, merged top paths); KAP-60 scheduled run (draft only; the server changes are Peter's call).
+
+## 2026-10-22 (night): KAP-64, KAP-60 draft, dashboard polish
+
+**Done**
+- KAP-64 (`da8b492`): comparison with crawler-user-agents, NASA-HTTP 1995 and Cloudflare's 2025 review. Traffic is 97% automated vs about 53% at Cloudflare. 4xx is 85% vs NASA's 0.6% (Cramér's V 0.89). For humans only, V is 0.02, so real visitors see a normal site. Suite of 264 tests, check clean.
+- KAP-60 draft (`e933e53`): container, systemd timer and `docs/deploy.md`. Tested locally: 96,825 requests in 12 s, 623 MB peak. Not deployed.
+- Dashboard polish (`5442a8e`) merged into the project branch `pop9459/kap-10-traffic-dashboard`. `live` is untouched.
+- CLAUDE.md "Log source" brought up to date (`754ded3`).
+
+**Decisions taken (veto-able)**
+- Cloudflare reference: the published 2025 HTML figure (47% human). The Radar API needs a token.
+- The pipeline container runs without network, with a read-only root and as uid 33. It keeps the previous JSON on failure.
+
+**Open questions (to Peter)**
+- KAP-55 rule order: 33% of scanner requests come from declared crawlers (Googlebot, curl, AI crawlers) that hit probe paths. Should they be bot or scanner? This changes the headline shares.
+- KAP-60: deploy it? Build on the VPS or pull from GHCR? Do you want a notification when a run fails?
+- Should I get a free Cloudflare Radar token for a series over our exact dates?
+
+**What Peter must be able to explain (T2a)**
+- Why a chi-squared p-value is meaningless at n = 2M and Cramér's V is used instead (`analysis/public_comparison.md`).
+- How the container keeps the salt out of the image and never serves a half-written JSON (`deploy/run_pipeline.sh`).
