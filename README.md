@@ -17,6 +17,10 @@ devtools::test()
 
 IPs are hashed with a salted HMAC. The salt comes from the `WTA_SALT` environment variable or `~/.config/websitetrafficanalyzer/salt`, and is created on first import if missing. Never commit it.
 
+## Geolocation data
+
+`anonymise_requests()` adds `country`, `asn` and `as_org` from the free DB-IP Lite databases if they are present in `~/.local/share/websitetrafficanalyzer/geo/` (or `WTA_GEO_DIR`): `dbip-country-lite-YYYY-MM.csv.gz` and `dbip-asn-lite-YYYY-MM.csv.gz` from https://db-ip.com/db/lite.php. Without them the columns are `NA`. IP Geolocation by DB-IP (https://db-ip.com), licensed under CC BY 4.0.
+
 ## Running the pipeline
 
 1. Put the raw export in `data/raw/`. This folder is git-ignored and raw logs are never committed. The export is either a copy of Docker's `*-json.log` or the output of `docker logs --timestamps web`.
@@ -41,4 +45,7 @@ IPs are hashed with a salted HMAC. The salt comes from the `WTA_SALT` environmen
 | `top_values()` | Top paths, user agents or referer hosts per class (IPs masked, minimum count) |
 | `parse_error_log()` | Parses Apache/PHP error-log lines into module, level, `AH` code, PHP error type and a grouped `message_template` (client IPs dropped) |
 | `export_dashboard_json()` | Writes all dashboard aggregates to one JSON file |
+| `sessions_per_day()` | Visits per day: consecutive requests of one client (ip_hash + user agent) with gaps under `gap_minutes` (default 30); approximate behind Cloudflare |
+| `client_features()` | One row per direct-to-origin client with 8 behaviour features and its majority class; input for the clustering check (KAP-69) |
+| `load_geo_db()`, `geo_lookup()` | DB-IP Lite country and ASN lookup (IPv4/IPv6) used by `anonymise_requests()` before hashing |
 | `aggregate_log_chunk()`, `combine_history_chunks()` | Chunked aggregates (per day: class, status, probe family, clients) of huge json-file logs; used by `data-raw/import_history.R` (KAP-104) |
