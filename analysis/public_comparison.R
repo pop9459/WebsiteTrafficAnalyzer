@@ -332,7 +332,7 @@ report <- c(
     num(bot_cov$requests), num(bot_cov$matched), pct(bot_cov$share), num(bot_no_ua), pct(bot_matched_of_ua)
   ),
   sprintf(
-    "- Disagreement the other way: %s of the %s scanner requests (%s) also match the list. Most come from declared crawlers and generic HTTP clients that requested probe paths, so the classifier's scanner rule (which runs before the bot rule) puts them in the scanner class.",
+    "- Disagreement the other way: %s of the %s scanner requests (%s) also match the list. Since decision 0002 declared crawlers are bots even on probe paths, so what remains is mostly generic HTTP clients (curl, Go-http-client, Python) and scanning tools that requested probe paths, which the list also contains and the classifier keeps as scanners.",
     num(matched_scanner_total), num(coverage$requests[coverage$client_class == "scanner"]), pct(coverage$share[coverage$client_class == "scanner"])
   ),
   sprintf(
@@ -418,7 +418,7 @@ report <- c(
     pct(human_status[3] / sum(human_status)), pct(nasa_status[3] / sum(nasa_status))
   ),
   sprintf(
-    "- Classifier validation (RQ1): the public list recognises %s of bot requests and %s of those that send a user agent. The unmatched bot requests are mostly browser-like user agents that the classifier labelled bot by behaviour, which a user-agent list cannot confirm or refute. %s of scanner requests match the list, which shows that the scanner rule overrides declared crawlers that request probe paths; whether such requests should be counted as bots or as scanners is a definition question for the report.",
+    "- Classifier validation (RQ1): the public list recognises %s of bot requests and %s of those that send a user agent. The unmatched bot requests are browser-like user agents that the classifier labelled bot by behaviour (which a user-agent list cannot confirm or refute) and newer AI crawlers that name themselves but are not in the list yet (GrokBot, KimiBot, Qwenbot, ...). %s of scanner requests still match the list; they are generic HTTP clients and scanning tools on probe paths, which the classifier deliberately keeps as scanners (decision 0002).",
     pct(bot_cov$share), pct(bot_matched_of_ua), pct(coverage$share[coverage$client_class == "scanner"])
   ),
   "- The hourly comparison supports only a weak claim, because the human sample is small; see the correlations above."

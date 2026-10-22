@@ -13,27 +13,27 @@ Clients by majority class:
 
 | majority_class | Freq |
 |---|---|
-| bot | 484 |
+| bot | 561 |
 | internal | 2 |
-| scanner | 2903 |
+| scanner | 2826 |
 | unknown | 1273 |
 
 Feature means by majority class (unscaled):
 
 | majority_class | clients | requests_per_client | active_days | share_4xx | share_probe | distinct_paths_ratio | share_no_ua | requests_per_active_hour | share_night |
 |---|---|---|---|---|---|---|---|---|---|
-| bot | 484 | 3.576 | 1.535 | 0.284 | 0.133 | 0.855 | 0.434 | 2.178 | 0.212 |
+| bot | 561 | 65.916 | 1.504 | 0.362 | 0.178 | 0.843 | 0.381 | 35.724 | 0.208 |
 | internal | 2 | 11792.500 | 51.000 | 0.500 | 0.250 | 0.500 | 0.500 | 19.830 | 0.090 |
-| scanner | 2903 | 42.613 | 1.760 | 0.695 | 0.491 | 0.838 | 0.241 | 20.972 | 0.255 |
+| scanner | 2826 | 31.301 | 1.772 | 0.691 | 0.492 | 0.840 | 0.246 | 14.825 | 0.257 |
 | unknown | 1273 | 3.747 | 2.007 | 0.180 | 0.022 | 0.754 | 0.021 | 1.593 | 0.374 |
 
 Clients by number of requests (rows: majority class):
 
 | majority_class | 1 | 2-4 | 5-20 | >20 |
 |---|---|---|---|---|
-| bot | 193 | 203 | 79 | 9 |
+| bot | 193 | 204 | 125 | 39 |
 | internal | 0 | 1 | 0 | 1 |
-| scanner | 1320 | 782 | 420 | 381 |
+| scanner | 1320 | 781 | 374 | 351 |
 | unknown | 627 | 486 | 138 | 22 |
 
 ## Choosing k
@@ -54,13 +54,13 @@ Best k by silhouette: **8** (0.378). k = 3 and k = 4 are also reported for inter
 
 ## Agreement with the rule-based class
 
-Purity = share of clients whose cluster's most common majority class equals their own. Always predicting the largest class gives a purity of 0.623. The adjusted Rand index (ARI) is 0 for random agreement and 1 for identical partitions.
+Purity = share of clients whose cluster's most common majority class equals their own. Always predicting the largest class gives a purity of 0.606. The adjusted Rand index (ARI) is 0 for random agreement and 1 for identical partitions.
 
 | k | purity | ari |
 |---|---|---|
-| 8 | 0.689 | 0.039 |
-| 3 | 0.623 | 0.018 |
-| 4 | 0.645 | 0.042 |
+| 8 | 0.672 | 0.043 |
+| 3 | 0.606 | 0.037 |
+| 4 | 0.629 | 0.053 |
 
 ## k = 8 (best silhouette)
 
@@ -81,14 +81,14 @@ Cluster x majority class (counts, then row %):
 
 | cluster | clients | bot | internal | scanner | unknown | bot % | internal % | scanner % | unknown % |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 390 | 40 | 0 | 339 | 11 | 10.3 | 0.0 | 86.9 | 2.8 |
+| 1 | 390 | 46 | 0 | 333 | 11 | 11.8 | 0.0 | 85.4 | 2.8 |
 | 2 | 665 | 70 | 0 | 157 | 438 | 10.5 | 0.0 | 23.6 | 65.9 |
-| 3 | 361 | 0 | 0 | 358 | 3 | 0.0 | 0.0 | 99.2 | 0.8 |
-| 4 | 440 | 1 | 0 | 438 | 1 | 0.2 | 0.0 | 99.5 | 0.2 |
-| 5 | 1430 | 121 | 0 | 822 | 487 | 8.5 | 0.0 | 57.5 | 34.1 |
+| 3 | 361 | 65 | 0 | 293 | 3 | 18.0 | 0.0 | 81.2 | 0.8 |
+| 4 | 440 | 4 | 0 | 435 | 1 | 0.9 | 0.0 | 98.9 | 0.2 |
+| 5 | 1430 | 122 | 0 | 821 | 487 | 8.5 | 0.0 | 57.4 | 34.1 |
 | 6 | 49 | 8 | 1 | 28 | 12 | 16.3 | 2.0 | 57.1 | 24.5 |
 | 7 | 633 | 166 | 1 | 466 | 0 | 26.2 | 0.2 | 73.6 | 0.0 |
-| 8 | 694 | 78 | 0 | 295 | 321 | 11.2 | 0.0 | 42.5 | 46.3 |
+| 8 | 694 | 80 | 0 | 293 | 321 | 11.5 | 0.0 | 42.2 | 46.3 |
 
 ## k = 3
 
@@ -104,9 +104,9 @@ Cluster x majority class (counts, then row %):
 
 | cluster | clients | bot | internal | scanner | unknown | bot % | internal % | scanner % | unknown % |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 2806 | 346 | 0 | 1250 | 1210 | 12.3 | 0.0 | 44.5 | 43.1 |
-| 2 | 1398 | 131 | 1 | 1224 | 42 | 9.4 | 0.1 | 87.6 | 3.0 |
-| 3 | 458 | 7 | 1 | 429 | 21 | 1.5 | 0.2 | 93.7 | 4.6 |
+| 1 | 2806 | 353 | 0 | 1243 | 1210 | 12.6 | 0.0 | 44.3 | 43.1 |
+| 2 | 1398 | 134 | 1 | 1221 | 42 | 9.6 | 0.1 | 87.3 | 3.0 |
+| 3 | 458 | 74 | 1 | 362 | 21 | 16.2 | 0.2 | 79.0 | 4.6 |
 
 ## k = 4
 
@@ -124,9 +124,9 @@ Cluster x majority class (counts, then row %):
 | cluster | clients | bot | internal | scanner | unknown | bot % | internal % | scanner % | unknown % |
 |---|---|---|---|---|---|---|---|---|---|
 | 1 | 953 | 131 | 1 | 358 | 463 | 13.7 | 0.1 | 37.6 | 48.6 |
-| 2 | 2152 | 242 | 0 | 1103 | 807 | 11.2 | 0.0 | 51.3 | 37.5 |
-| 3 | 387 | 0 | 0 | 384 | 3 | 0.0 | 0.0 | 99.2 | 0.8 |
-| 4 | 1170 | 111 | 1 | 1058 | 0 | 9.5 | 0.1 | 90.4 | 0.0 |
+| 2 | 2152 | 249 | 0 | 1096 | 807 | 11.6 | 0.0 | 50.9 | 37.5 |
+| 3 | 387 | 67 | 0 | 317 | 3 | 17.3 | 0.0 | 81.9 | 0.8 |
+| 4 | 1170 | 114 | 1 | 1055 | 0 | 9.7 | 0.1 | 90.2 | 0.0 |
 
 ## PCA
 
@@ -136,22 +136,25 @@ The first two components explain 30% and 22% of the variance.
 
 ## Discussion
 
+Numbers below are from the tables above (rule order of decision 0002: declared crawlers are bots even on probe paths).
+
 **What the data say.**
 
 - **No human clients are reachable in this test.** All 5,137 `human` requests arrive through Cloudflare, so the direct-to-origin population has no client whose majority class is `human`. The check can therefore only compare scanner, bot and unknown (plus two internal clients). It says nothing about whether the human rule is right; that needs the Cloudflare-side client address (KAP-49) or the hand-labelled sample.
 - **The structure is weak.** The silhouette rises monotonically from k = 2 (0.27) to k = 8 (0.38), the edge of the range. The gain at k = 6 to 8 comes from small, extreme clusters (about 50 clients) and from splitting the large mass of single-request clients, not from a clear natural k. Treat k = 8 as the best of a poor set, not as strong evidence of eight behaviours.
-- **Agreement with the rules is low.** Purity at k = 8 is 0.68 against 0.62 for always predicting `scanner`, and the adjusted Rand index is 0.02 to 0.06. The unsupervised clusters recover almost none of the rule-based partition.
+- **Agreement with the rules is low.** Purity at k = 8 is 0.67 against 0.61 for always predicting `scanner`, and the adjusted Rand index is 0.04 to 0.05. The unsupervised clusters recover almost none of the rule-based partition.
 
 **Which clusters map to which class.**
 
-- **Scanner-like clusters agree well.** At k = 8, one cluster of 359 clients has the highest 4xx share (0.88), probe share (0.71) and about 150 requests per active hour. It is 99% `scanner`. The same pattern appears at k = 4 (387 clients, 99% scanner) and k = 3. Another cluster (538 clients) with a probe share near 0.8 and almost no user agent is 81% scanner and 19% bot. High-volume, high-4xx, probing behaviour is what the scanner rule intends, and the clustering finds it independently.
-- **A small heavy cluster is mixed.** The 49 clients that are active for about 27 days and send over 1,000 requests each (repetitive paths, low 4xx) are 57% scanner, 16% bot, 25% unknown. These are persistent crawlers or monitors; the rule-based split between scanner and bot is not stable for them.
-- **Bot clients are not separable.** Bots are 9% to 19% of every cluster at k = 8 and never the majority anywhere. Their behavioural features overlap with scanners (bots average a probe share of 0.13 and 4xx share of 0.28 against 0.49 and 0.69 for scanners, but they are mixed into the same clusters). Bot is mostly defined by user agent, which is not among the clustering features.
+- **Scanner-like clusters agree well.** At k = 8, one cluster of 440 clients has a 4xx share of 0.90 and a probe share of 0.92; it is 99% `scanner` (435 of 440). Another cluster of 361 clients has a 4xx share of 0.88, a probe share of 0.71 and about 150 requests per active hour; it is 81% scanner, 18% bot. At k = 4 the high-volume cluster (387 clients) is 82% scanner and the probe-heavy one (1,170 clients) is 90% scanner. Two more clusters with probe shares of 0.59 and 0.75 and a high share of requests without user agent (390 and 633 clients) are 85% and 74% scanner. High-volume, high-4xx, probing behaviour is what the scanner rule intends, and the clustering finds it independently.
+- **A small heavy cluster is mixed.** The 49 clients that are active for about 27 days and send over 1,000 requests each (repetitive paths, 4xx share 0.42) are 57% scanner, 16% bot, 24% unknown (plus one internal client). These are persistent crawlers or monitors; the rule-based split between scanner and bot is not stable for them.
+- **Bot clients are not separable.** Bots are 1% to 26% of every cluster at k = 8 and never the majority anywhere. Their behavioural features overlap with scanners (bots average a probe share of 0.18 and a 4xx share of 0.36 against 0.49 and 0.69 for scanners, but they are mixed into the same clusters). Bot is mostly defined by user agent, which is not among the clustering features.
 
 **Where they disagree.**
 
-- **`unknown` clients sit in quiet clusters, not in the scanner cluster.** `unknown` clients average a probe share of 0.02, a 4xx share of 0.18 and almost always send a user agent. Two thirds of the biggest `unknown` cluster (681 clients, 65% unknown) look like low-volume visitors that a human would produce. Only 3 of 359 clients in the strongest scanner cluster are `unknown`. So the rules do not hide scanner behaviour in `unknown`; instead `unknown` mostly holds quiet clients that could be humans, search crawlers or one-off hits.
-- **Many `scanner` clients do not look like scanners.** Of the 2,903 scanner-majority clients, 1,320 sent a single request and 1,250 land in the k = 3 cluster that is only 44.5% scanner (probe share 0.04). At k = 8, clusters 6 and 7 (1,661 clients with very low probe share, about one request each, split into a daytime cluster and a night-time cluster) are 47% to 51% scanner. The scanner rule evidently fires on signals outside these features (burst, user agent, a single high-risk path), or flags one-off requests too eagerly. Because these clients make up about 45% of the scanner class, the rule is the more likely source of disagreement than the clusters.
+- **`unknown` clients sit in quiet clusters, not in the scanner clusters.** `unknown` clients average a probe share of 0.02, a 4xx share of 0.18 and almost always send a user agent. The biggest `unknown` cluster (665 clients, 66% unknown, 4xx share 0.09) looks like low-volume visitors that a human would produce. Only 3 of 361 clients in the high-volume scanner cluster and 1 of 440 in the probe-heavy one are `unknown`. So the rules do not hide scanner behaviour in `unknown`; instead `unknown` mostly holds quiet clients that could be humans, search crawlers or one-off hits.
+- **Many `scanner` clients do not look like scanners.** Of the 2,826 scanner-majority clients, 1,320 (47%) sent a single request and 1,243 land in the k = 3 cluster that is only 44% scanner (probe share 0.04). At k = 8, clusters 5 and 8 (2,124 clients with very low probe share, about two requests each, split into a daytime and a night-time cluster) are 57% and 42% scanner and hold 1,114 scanner clients, 39% of the class. The scanner rule evidently fires on signals outside these features (burst, user agent, a single high-risk path, a 404 for an unknown path), or flags one-off requests too eagerly. The rule is the more likely source of disagreement than the clusters.
+- **Effect of the rule change (decision 0002).** Moving declared crawlers from `scanner` to `bot` made the scanner class cleaner (the high-volume scanner cluster is 81% scanner and the probe-heavy cluster 99%) but did not make bots separable by behaviour, since crawlers that probe look like scanners in these features.
 
 **What it says about the rules.**
 

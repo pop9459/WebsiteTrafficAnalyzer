@@ -29,8 +29,17 @@ A rule-based classification (KAP-55). Rules, in order:
 \details{
 \enumerate{
 \item \strong{internal}: Apache's own \verb{OPTIONS *} health checks.
+\item \strong{scanner (tool)}: the user agent is a known scanning tool. This wins
+even if the user agent also says "bot" (\verb{Nuclei bot}).
+\item \strong{bot (declared crawler)}: the user agent names a crawler, preview or
+monitoring product, i.e. matches \code{crawler_ua_regex} (bot, crawl, spider,
+slurp, claude, perplexity, fetcher, preview, monitor, uptime, ...). This
+holds even on probe paths or after 404s: Googlebot asking for \verb{/.env} is
+a bot (decision 0002). Generic HTTP clients (curl, wget, python, go-http,
+java, okhttp, axios, scrapy, headless, ...) do not count as declared
+crawlers, because scanners use them; on probe paths they stay scanners.
 \item \strong{scanner}: the path belongs to a probe family (see \code{\link[=probe_family]{probe_family()}}),
-the user agent is a known scanning tool, or the client reached the
+or the client reached the
 origin directly and at least \code{min_requests} of its requests got a 4xx
 with a share of at least \code{min_4xx_share}. The same test is applied to
 one user agent within one hour (\code{min_requests} requests, share of 4xx at

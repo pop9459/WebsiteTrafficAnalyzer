@@ -70,8 +70,8 @@ No line carries a `PHP <type>:` prefix. All 49,291 `php` module lines are "scrip
 
 - Hours compared: 2,408 (hours with at least one access-log request).
 - Spearman correlation, all hours: **0.80**.
-- Spearman correlation, only hours with scanner requests or error lines: 0.80 (2,359 hours).
-- Hours with error lines: 1,517; hours with scanner requests: 2,359.
+- Spearman correlation, only hours with scanner requests or error lines: 0.79 (2,359 hours).
+- Hours with error lines: 1,517; hours with scanner requests: 2,358.
 
 ![Error lines vs scanner requests per hour](figures/09_errors_vs_scanner_requests.png)
 

@@ -40,7 +40,7 @@ Pipeline: read logs → parse → anonymise → classify (human/bot/scanner) →
   - `R/read_logs.R` `read_raw_log()`: detects Docker json-file / `--timestamps` / plain Apache format.
   - `R/parse.R` `parse_access_log()`: regex for `combined` plus optional `%I %O %D`; non-matching lines keep a row with `parse_ok = FALSE`.
   - `R/anonymise.R`, `R/cloudflare.R` and `R/geo.R`: fields that need the real IP (`via_cloudflare`, `country`, `asn`, `as_org`) are derived in `anonymise_requests()` **before** `hash_ip()` replaces the IP.
-  - `R/classify.R`: `probe_family()` (ordered regex families; the site's real PHP files are whitelisted in `site_php_regex`), then `classify_requests()` rules in order: internal → scanner → bot → human → unknown. This is a first pass; KAP-55 refines it.
+  - `R/classify.R`: `probe_family()` (ordered regex families; the site's real PHP files are whitelisted in `site_php_regex`), then `classify_requests()` rules in order: internal → scanner-tool UA → declared crawler (bot) → scanner (probe family, 4xx, 404) → bot (generic client, burst, ...) → human → unknown (decision 0002).
   - `data-raw/` and `analysis/` are scripts, excluded from the package build.
 - **Dashboard:** integrated into the existing website, not a standalone app. The website repo is `~/Documents/_MyProjects/personalWebsite`: PHP served by the `php:8.2-apache` Docker image, deployed by a webhook that git-pulls the `live` branch. The leading option is an R job that writes aggregated JSON, which a new PHP/JS page renders. Decided in `docs/decisions/0001-dashboard-architecture.md`: option (a), no Shiny or plumber.
 - **Scheduled run on the VPS:** a containerised R job (KAP-60).

@@ -38,12 +38,22 @@ scanner_ua_regex <- paste0(
   "odin|zmap|netcraft|l9scan|leakix|infrawat|palo alto|security research|scan"
 )
 
-# Crawlers, previews and generic HTTP clients.
-bot_ua_regex <- paste0(
+# Declared crawlers: the user agent names a crawler, preview or monitoring
+# product (Googlebot, GPTBot, facebookexternalhit, UptimeRobot, ...).
+crawler_ua_regex <- paste0(
   "bot|crawl|spider|slurp|externalagent|facebookexternalhit|ccbot|claude|",
-  "perplexity|bytespider|curl|wget|python|go-http|java/|okhttp|libwww|",
-  "httpclient|axios|node-fetch|scrapy|headless|phantom|fetcher|preview|monitor|uptime"
+  "perplexity|bytespider|fetcher|preview|monitor|uptime"
 )
+
+# Generic HTTP libraries and tools. Scanners use them too, so they do not
+# count as declared crawlers.
+generic_client_ua_regex <- paste0(
+  "curl|wget|python|go-http|java/|okhttp|libwww|",
+  "httpclient|axios|node-fetch|scrapy|headless|phantom"
+)
+
+# Union of both, kept for backwards compatibility.
+bot_ua_regex <- paste0(crawler_ua_regex, "|", generic_client_ua_regex)
 
 browser_ua_regex <- "^mozilla/5\\.0 \\(.*(chrome|firefox|safari|edg)/"
 
@@ -98,8 +108,17 @@ probe_family <- function(path, site_php = site_php_regex) {
 #' A rule-based classification (KAP-55). Rules, in order:
 #'
 #' 1. **internal**: Apache's own `OPTIONS *` health checks.
-#' 2. **scanner**: the path belongs to a probe family (see [probe_family()]),
-#'    the user agent is a known scanning tool, or the client reached the
+#' 2. **scanner (tool)**: the user agent is a known scanning tool. This wins
+#'    even if the user agent also says "bot" (`Nuclei bot`).
+#' 3. **bot (declared crawler)**: the user agent names a crawler, preview or
+#'    monitoring product, i.e. matches `crawler_ua_regex` (bot, crawl, spider,
+#'    slurp, claude, perplexity, fetcher, preview, monitor, uptime, ...). This
+#'    holds even on probe paths or after 404s: Googlebot asking for `/.env` is
+#'    a bot (decision 0002). Generic HTTP clients (curl, wget, python, go-http,
+#'    java, okhttp, axios, scrapy, headless, ...) do not count as declared
+#'    crawlers, because scanners use them; on probe paths they stay scanners.
+#' 4. **scanner**: the path belongs to a probe family (see [probe_family()]),
+#'    or the client reached the
 #'    origin directly and at least `min_requests` of its requests got a 4xx
 #'    with a share of at least `min_4xx_share`. The same test is applied to
 #'    one user agent within one hour (`min_requests` requests, share of 4xx at
@@ -108,13 +127,13 @@ probe_family <- function(path, site_php = site_php_regex) {
 #'    the usual browser and crawler requests (favicon, `robots.txt`, sitemaps,
 #'    feeds, `.well-known/`) also counts: the site has only a few real pages,
 #'    so a 404 is a probe, whatever the user agent says.
-#' 3. **bot**: a crawler or HTTP-library user agent, no user agent, a request
+#' 5. **bot**: a crawler or HTTP-library user agent, no user agent, a request
 #'    for `robots.txt`, a sitemap or `.well-known/`, or a user agent that sends
 #'    at least `burst_requests` requests within one hour. A real visitor does
 #'    not do that on a site this size.
-#' 4. **human**: a browser user agent on a request that came through
+#' 6. **human**: a browser user agent on a request that came through
 #'    Cloudflare.
-#' 5. **unknown**: everything else, including browser user agents that
+#' 7. **unknown**: everything else, including browser user agents that
 #'    reached the origin directly.
 #'
 #' The per-client 4xx rule only uses direct requests: behind Cloudflare the
@@ -158,12 +177,16 @@ classify_requests <- function(requests, min_requests = 20, min_4xx_share = 0.9,
     !grepl(benign_404_regex, tolower(requests$path))
 
   ua <- tolower(requests$user_agent)
+  # A declared crawler is a bot whatever it requests; only a scanning-tool user
+  # agent (checked first) outranks it.
+  declared_crawler <- !is.na(ua) & grepl(crawler_ua_regex, ua)
   noisy_client <- !requests$via_cloudflare %in% TRUE & requests$ip_hash %in% clients$ip_hash
 
   requests$client_class <- dplyr::case_when(
     grepl("(internal dummy connection)", ua, fixed = TRUE) | requests$path %in% "*" ~ "internal",
-    requests$probe_family != "none" ~ "scanner",
     grepl(scanner_ua_regex, ua) ~ "scanner",
+    declared_crawler ~ "bot",
+    requests$probe_family != "none" ~ "scanner",
     noisy_client ~ "scanner",
     noisy_ua_hour ~ "scanner",
     junk_404 ~ "scanner",

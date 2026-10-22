@@ -19,8 +19,8 @@ Cloudflare's 2025 Year in Review states (HTML requests across its customer base,
 | Measure | Share |
 |---|---|
 | kapsiar.sk: bot + scanner | 97.0% |
-| kapsiar.sk: bot only | 8.8% |
-| kapsiar.sk: scanner only | 88.2% |
+| kapsiar.sk: bot only | 33.7% |
+| kapsiar.sk: scanner only | 63.3% |
 | kapsiar.sk: human | 1.4% |
 | kapsiar.sk: unknown | 1.6% |
 | Cloudflare: human (HTML requests, 2 Dec 2025) | 47.0% |
@@ -34,13 +34,13 @@ Each request's user agent was matched against the 1,501 patterns of the crawler 
 
 | Client class | Requests | Matched by list | Share |
 |---|---|---|---|
-| bot | 32,780 | 26,824 | 81.8% |
-| scanner | 327,606 | 109,514 | 33.4% |
+| bot | 125,271 | 105,294 | 84.1% |
+| scanner | 235,115 | 31,044 | 13.2% |
 | human | 5,137 | 142 | 2.8% |
 | unknown | 5,868 | 170 | 2.9% |
 
-- Of the 32,780 requests classified bot, 26,824 (81.8%) have a user agent in the list. 900 of the bot requests carry no user agent at all and cannot match; among bot requests that do send one the share is 84.1%.
-- Disagreement the other way: 109,514 of the 327,606 scanner requests (33.4%) also match the list. Most come from declared crawlers and generic HTTP clients that requested probe paths, so the classifier's scanner rule (which runs before the bot rule) puts them in the scanner class.
+- Of the 125,271 requests classified bot, 105,294 (84.1%) have a user agent in the list. 900 of the bot requests carry no user agent at all and cannot match; among bot requests that do send one the share is 84.7%.
+- Disagreement the other way: 31,044 of the 235,115 scanner requests (13.2%) also match the list. Since decision 0002 declared crawlers are bots even on probe paths, so what remains is mostly generic HTTP clients (curl, Go-http-client, Python) and scanning tools that requested probe paths, which the list also contains and the classifier keeps as scanners.
 - Human requests matching the list: 142 of 5,137 (2.8%). Unknown: 170 of 5,868 (2.9%).
 
 Top 10 user-agent families of bot requests that the list does not match (versions stripped; families with at least 5 requests):
@@ -48,26 +48,26 @@ Top 10 user-agent families of bot requests that the list does not match (version
 | UA family | Requests |
 |---|---|
 | Chrome | 4,497 |
-| Safari | 177 |
-| Edge | 51 |
-| jscrawler | 29 |
-| Firefox | 23 |
-| Reflectionbot | 17 |
-| Meta-ExternalAgent | 15 |
-| GrokBot | 12 |
-| Meta-ExternalFetcher | 12 |
-| MoonshotBot | 12 |
+| GrokBot | 1,818 |
+| KimiBot | 1,343 |
+| MoonshotBot | 1,342 |
+| Qwenbot | 1,331 |
+| Kimi-SearchBot | 1,325 |
+| Meta-ExternalAgent | 1,311 |
+| Bravebot | 1,305 |
+| Meta-WebIndexer | 1,216 |
+| Meta-ExternalFetcher | 1,176 |
 
 Scanner requests that the list does match, by family (top families with at least 5 requests):
 
 | UA family | Requests |
 |---|---|
-| Googlebot | 29,225 |
 | curl | 19,950 |
-| meta-externalagent | 8,175 |
-| CCBot | 4,678 |
 | Go-http-client | 4,168 |
-| ChatGPT-User | 2,751 |
+| Mozilla-compatible | 1,944 |
+| l9explore | 1,924 |
+| CensysInspect | 510 |
+| Python-urllib | 322 |
 
 ![Share of requests matching the public crawler list, by client class](figures/19_bot_ua_coverage.png)
 
@@ -124,5 +124,5 @@ Daily volume: NASA-HTTP has a median of 64,670 requests per day (28 days); kapsi
 
 - RQ3: kapsiar.sk is far more automated than the public reference. About 97% of its requests are bot or scanner traffic, against roughly 53% non-human HTML requests reported by Cloudflare across its customers. The gap is large, but the definitions differ, so the direction is solid and the exact size is not.
 - The status mix is the clearest contrast: 85% of requests to kapsiar.sk are 4xx against 0.6% at NASA, with V = 0.89. Probing for paths that do not exist produces that pattern; a clean public site does not. For humans alone the 4xx share is 3.2%, which is higher than NASA's 0.6% but only by a few percentage points.
-- Classifier validation (RQ1): the public list recognises 81.8% of bot requests and 84.1% of those that send a user agent. The unmatched bot requests are mostly browser-like user agents that the classifier labelled bot by behaviour, which a user-agent list cannot confirm or refute. 33.4% of scanner requests match the list, which shows that the scanner rule overrides declared crawlers that request probe paths; whether such requests should be counted as bots or as scanners is a definition question for the report.
+- Classifier validation (RQ1): the public list recognises 84.1% of bot requests and 84.7% of those that send a user agent. The unmatched bot requests are browser-like user agents that the classifier labelled bot by behaviour (which a user-agent list cannot confirm or refute) and newer AI crawlers that name themselves but are not in the list yet (GrokBot, KimiBot, Qwenbot, ...). 13.2% of scanner requests still match the list; they are generic HTTP clients and scanning tools on probe paths, which the classifier deliberately keeps as scanners (decision 0002).
 - The hourly comparison supports only a weak claim, because the human sample is small; see the correlations above.

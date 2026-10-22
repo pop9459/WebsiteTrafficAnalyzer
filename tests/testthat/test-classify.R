@@ -121,3 +121,34 @@ test_that("a 404 for a path the site does not serve is a probe, whatever the use
     c("scanner", "scanner", "scanner", "human", "bot", "human", "scanner")
   )
 })
+
+test_that("a declared crawler is a bot even on probe paths (KAP-55)", {
+  req <- tibble::tibble(
+    ip_hash = letters[1:7],
+    via_cloudflare = TRUE,
+    time = as.POSIXct("2026-07-10 12:00:00", tz = "UTC") + (0:6) * 4000,
+    path = c("/.env", "/.env", "/.env", "/", "/.git/config", "/missing-page", "/wp-login.php"),
+    status = c(404L, 404L, 404L, 200L, 404L, 404L, 404L),
+    user_agent = c(
+      "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+      "curl/8.7.1",
+      "Mozilla/5.0 (compatible; Nuclei bot)",
+      "Mozilla/5.0; GPTBot/1.1; +https://openai.com/gptbot",
+      "python-requests/2.31",
+      "Mozilla/5.0 (compatible; bingbot/2.0)",
+      "Mozilla/5.0 (compatible; ClaudeBot/1.0)"
+    )
+  )
+  expect_equal(
+    classify_requests(req)$client_class,
+    c("bot", "scanner", "scanner", "bot", "scanner", "bot", "bot")
+  )
+})
+
+test_that("bot_ua_regex is the union of crawler and generic client patterns", {
+  expect_true(grepl(crawler_ua_regex, "googlebot"))
+  expect_false(grepl(crawler_ua_regex, "curl/8.7.1"))
+  expect_true(grepl(generic_client_ua_regex, "curl/8.7.1"))
+  expect_false(grepl(generic_client_ua_regex, "googlebot"))
+  expect_true(grepl(bot_ua_regex, "googlebot") && grepl(bot_ua_regex, "wget/1.2"))
+})

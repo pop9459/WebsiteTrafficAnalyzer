@@ -7,6 +7,7 @@ KAP-61. Problem definition is graded once, at the mid-term, so every question be
 kapsiar.sk is a small personal portfolio site, yet its traffic is far larger than expected (the pitch cited 64.3 GB incoming in 09/2025). The first look at the access log (9 Jul – 3 Oct 2026, 298,296 requests) shows why a plain traffic counter is not enough:
 
 - Only about 1.5% of requests look human; about 85% come from scanners and 6.5% from known bots (classifier after KAP-55).
+- Rule change (decision 0002, 22 Oct 2026): declared crawlers are now bots even on probe paths. On the full dataset (9 Jul – 21 Oct 2026, 395,121 requests) the shares are 59.5% scanner, 31.7% bot, 6.0% internal, 1.5% unknown and 1.3% human (before: 82.9% scanner, 8.3% bot); the figures above describe the period up to 3 Oct under the old rule order.
 - 81% of requests end in a 4xx error.
 - Scanners downloading the accidentally public `.git` folder caused about 95% of the outgoing bytes (9.07 of 9.51 GB).
 - 56% of requests are logged with a Cloudflare address instead of the visitor's.
