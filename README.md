@@ -30,6 +30,10 @@ IPs are hashed with a salted HMAC. The salt comes from the `WTA_SALT` environmen
 3. Run `Rscript analysis/first_look.R` to write the figures in `analysis/figures/` and `analysis/first_look_summary.md`.
 4. Run `Rscript data-raw/export_dashboard.R` to write the dashboard aggregates to `data/processed/dashboard.json` (git-ignored). With `--sample` it uses only the committed sample and writes `data/sample/dashboard_sample.json`.
 
+## Scheduled run on the server
+
+`deploy/` holds a container that turns the server's Apache logs into the dashboard JSON every night (KAP-60). Server steps, resource use and rollback are in `docs/deploy.md`.
+
 ## Package functions
 
 | Function | Purpose |
@@ -48,4 +52,7 @@ IPs are hashed with a salted HMAC. The salt comes from the `WTA_SALT` environmen
 | `sessions_per_day()` | Visits per day: consecutive requests of one client (ip_hash + user agent) with gaps under `gap_minutes` (default 30); approximate behind Cloudflare |
 | `client_features()` | One row per direct-to-origin client with 8 behaviour features and its majority class; input for the clustering check (KAP-69) |
 | `load_geo_db()`, `geo_lookup()` | DB-IP Lite country and ASN lookup (IPv4/IPv6) used by `anonymise_requests()` before hashing |
+| `load_crawler_patterns()`, `match_crawler_ua()` | Flags user agents listed in the public crawler-user-agents list (KAP-64) |
+| `ua_family()` | Reduces a user agent to its product family, without versions |
+| `read_clf_log()` | Reads a Common Log Format file such as the NASA-HTTP trace |
 | `aggregate_log_chunk()`, `combine_history_chunks()` | Chunked aggregates (per day: class, status, probe family, clients) of huge json-file logs; used by `data-raw/import_history.R` (KAP-104) |
