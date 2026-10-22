@@ -61,3 +61,27 @@ Dated entries per phase report: done, decisions taken, open questions, what Pete
 
 **Next**
 - KAP-70 human audience, KAP-69 clustering, KAP-72 country/ASN.
+
+## 2026-10-22: KAP-104 results and the September 2025 spike
+
+**What happened**
+- `wta-kap104` ran at boot (10:30 to 10:44). The import, summary and leak check all exited 0, and all outputs are CLEAN. The local worker step failed (exit 127): at boot the user manager's PATH has no `~/.local/bin`. Fixed in `job.sh`; re-run by hand, OVERALL CLEAN.
+- The 14:00 cron follow-up stopped on that failed step, as designed, so it committed nothing.
+
+**Done**
+- `3fe97c0`: `analysis/history_summary.md` and `analysis/history_other_services.md`. The summary script now uses MB/KB, because GB showed 0.00, and no longer wrongly says "processed by the local worker".
+- The backup is not the 2025 website history. It holds the current Apache container, a Rust service (22.5M WARN-heavy lines), an Elixir/Phoenix web app (about 2M requests), PostgreSQL and a near-idle Apache container. These were identified from masked line skeletons.
+- KAP-54: the website logged 848 requests and about 22 KB in September 2025, so the 64.3 GB incoming was not HTTP traffic to kapsiar.sk. The main suspects are the Rust service (its WARN flood starts that month) and the Phoenix app (151k requests). SSH brute force is constant background at 210k-460k failed logins a month.
+- Linear: KAP-104 Done, KAP-54 In Review.
+
+**Decisions taken (veto-able)**
+- Service formats were identified from skeletons (letters → `a`, digits → `9`), and monthly counts were computed locally. No line content reached an AI tool.
+- The 3-7 Oct gap is not filled from `container_331fe250…`, because that would put local-only rows into `data/processed/`.
+
+**Open questions (to Peter)**
+- What were the Rust service and the Phoenix app on the VPS in 2025-26?
+- Do you have the provider's per-day traffic graph for September 2025?
+- Should the 3-7 Oct gap be filled from the backup's web container?
+
+**Next (running now)**
+- KAP-70 human audience, KAP-69 client clustering, KAP-72 country/ASN (DB-IP Lite).
