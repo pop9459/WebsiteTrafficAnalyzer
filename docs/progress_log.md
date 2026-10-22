@@ -131,3 +131,31 @@ Dated entries per phase report: done, decisions taken, open questions, what Pete
 **What Peter must be able to explain (T2a)**
 - Why a chi-squared p-value is meaningless at n = 2M and Cramér's V is used instead (`analysis/public_comparison.md`).
 - How the container keeps the salt out of the image and never serves a half-written JSON (`deploy/run_pipeline.sh`).
+
+## 2026-10-22 (late): steering answers applied (rule order, KAP-112/113, KAP-54)
+
+**Peter's answers**
+- Declared crawlers are bots, even on probe paths (decision 0002).
+- KAP-60: Peter deploys it himself later with `docs/deploy.md`.
+- Go for KAP-113 and KAP-112.
+- KAP-54: the Rust and Phoenix services are unknown.
+
+**Done**
+- `c99cce1` (KAP-55): new rule order, test-first. Over 395,121 requests: scanner 82.9% → 59.5%, bot 8.3% → 31.7%. All analyses regenerated.
+- `a9ef4d5` (KAP-54): HTTP in/out since 7 Oct is 1.02, against 12.4 in 09/2025, and incoming is about 600× lower. The website can't produce the spike; it stays a documented limitation.
+- personalWebsite `39f5fd4` (KAP-113: robots.txt, sitemap, meta description) and `2b5a1f2` (KAP-112: 23 section URLs), merged into the project branch. `live` is untouched.
+- `ffc226e`: `is_site_page()`. Fixed a bug where `/traffic.php` would have been classed as a scanner probe. Suite of 274, check clean.
+
+**Decisions taken (veto-able)**
+- A declared crawler is a crawler product user agent. Generic clients (curl, python, ...) on probe paths stay scanners.
+- The crawler rule outranks all scanner rules except a scanning-tool user agent.
+
+**Open questions**
+- Should `/` keep fetching `aboutMe.php` (it over-counts About me), or should the analyzer discount it?
+
+**What Peter must be able to explain (T2a)**
+- Rule order in `classify_requests()` and why the order matters (the shares moved by 23 percentage points).
+- Why the 1.02 vs 12.4 in/out ratio rules out website HTTP as the source of the 09/2025 spike.
+
+**Remaining (mostly Peter's)**
+- KAP-11 problem definition, KAP-12 mid-term upload (1 Nov), KAP-13 T1 talk, KAP-63 AI reflection, KAP-19 feedback record, KAP-114 hand labels. Deploy KAP-60, then KAP-116 merge to `live` when the project is done.
